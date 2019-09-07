@@ -1,18 +1,10 @@
 ---
-layout: page
 title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I’m Håkon K. Olafsen a Norwegian that lives in Oslo with my Australian girlfriend and our dog Odin. I worked as a scientist at Kjeller and my main areas of (academic / work related) interest were software development and robotics / unmanned vehicles with focus on drones. Now I work as a Senior Software Engineer at Sopra Steria AS, writing C# code.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I've been told that I can also use the title _a bit flinging cyber ninja_. Not sure that's any better than _rockstar programmer_ or _10x programmer_...
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+These thoughts are mine and mine alone, and should not be accredited to my former or current employers.
