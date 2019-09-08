@@ -18,5 +18,3 @@ There are several very good reasons why this is the policy of wordpress.com and 
 Unfortunately this means I had to find a new name for my blog, and I decided to just make it personal and use my name.
 
 So here it is, my blog, where I intend to write about what I find interesting, when I come across it…
-
-

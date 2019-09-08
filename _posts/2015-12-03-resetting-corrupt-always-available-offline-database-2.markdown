@@ -26,6 +26,3 @@ It's important to remember to re-add the folders to make them available offline 
 To reapply group policies use the command ([from this page](https://support.microsoft.com/en-us/kb/942974)):
 
 > gpupdate /force
-
-
-

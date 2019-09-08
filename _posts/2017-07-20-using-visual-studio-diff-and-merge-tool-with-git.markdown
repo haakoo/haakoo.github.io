@@ -35,7 +35,6 @@ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Commo
 "$LOCAL" "$REMOTE" "$BASE" "$MERGED" //m
 ```
 
-
 ## Git defaults using Git Bash
 
 To change the git defaults using `Git Bash` you can do the following:
@@ -49,7 +48,6 @@ git config --global mergetool.visualstudio.trustExitCode true
 git config --global diff.tool visualstudio
 git config --global merge.tool visualstudio
 ```
-
 
 ## Git defaults using cmd.exe
 

@@ -41,4 +41,3 @@ user_filter: '(&(objectClass=person)(memberOf:1.2.840.113556.1.4.1941:=cn=Gitlab
 --- 
 
 Cover photo [Simple Circles](https://unsplash.com/photos/9Eheu3sIgrM) by [Tyler Lastovich](https://unsplash.com/@lastly) from [Unsplash](https://unsplash.com/)
-

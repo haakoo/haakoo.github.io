@@ -18,5 +18,3 @@ for %f in (*.*) do rename "%f" "prefix-%f"
 ```
 
 This will add ```prefix-``` to all files in that folder.
-
-

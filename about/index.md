@@ -2,6 +2,7 @@
 layout: page
 title: About
 navigation: true
+cover: 'assets/images2/tents-in-the-night.jpg'
 logo: 'assets/images/ghost.png'
 current: about
 ---

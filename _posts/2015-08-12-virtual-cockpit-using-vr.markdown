@@ -18,14 +18,10 @@ On Friday I had the pleasure of trying Oculus Rift in a setting where it finally
 
 I've leaned a bit more towards _"meh"_ than _OK_, but my general feeling has been that <dfn><abbr title="Virtual reality">VR</abbr></dfn> is over-hyped. Jeff comes at it from a different angle than me though, him being a gamer and general _consumer_ of VR. My perspective is through my work with unmanned vehicles and situational awareness. Reading his [blog post](http://blog.codinghorror.com/i-tried-vr-and-it-was-just-ok/) the same day I experienced VR that _just works_, I realised I should write down my thoughts about VR for situational awareness in unmanned systems or other remote operated systems.
 
-
-
 ## Why situational awareness and not automation?
 For unmanned vehicles the goal is to make them autonomous enough so that we don't need a human to control each individual vehicle. I think this is still several years into the future for larger more complex systems, especially if you want to benefit from data gathered in (close to) real time.
 
 Therefore I believe that there is a need for an interim solution for <dfn><abbr title="Unmanned x (aerial / ground / surface / under water) vehicle">UxV</abbr></dfn> control systems that help the operator obtain and maintain situational awareness.
-
-
 
 ## Situational awareness for unmanned vehicles
 One of the main challenges when controlling a remote operated vehicle is local situational awareness. You basically want to know what's going on around your vehicle and if it will limit your freedom of movement. I've seen several solutions trying to solve this problem, from cramming all the information into a couple of vertically stacked displays to using large, curved, multi-display set-ups that surround the operator. These solutions require fairly large rooms, lots of expensive screens and then they end up not working all that well.
@@ -35,8 +31,6 @@ This is where my experience from Friday changed my view on virtual reality. When
 This solved one of the main problems I've seen with earlier demonstrations. There was no head tracking jitter / lag! The virtual cockpit ran with ~75 Hz refresh rate, so my head movement felt natural and jitter free. This means that even though the video feeds were only 30 fps, placing them on virtual screens made this a very comfortable user experience.
 
 When driving the vehicle around, there was a small but noticeable delay in the video feed. This made it slightly awkward driving close to other objects, but had no effect on me and how I felt when wearing VR-goggles. This is the same problem all remote controlled systems have when there is a delay between user input and feedback and usually results in small, jerky movements with short pauses between.
-
-
 
 ## Problems and possible improvements
 This was a very rough first implementation with lots of problems. One of the first issues I noticed was that the cameras had different exposures. The cameras were left on auto exposure so two adjoining cameras could have quite different colour and brightness. This should be easy to fix by taking control over the cameras' exposures.
@@ -49,13 +43,10 @@ I also had a bit of trouble figuring out my viewpoint in relation to the vehicle
 
 Being used to having a map as one of the main views during operations, I realised that the virtual cockpit could easily contain that and more. It has always felt natural to look down at a map for me, so placing a map view in my virtual lap seems like a brilliant idea. I would still have an unobstructed view of the surroundings and quick access to a map with the overview of the situation.
 
-
-
 ## Last thoughts
 This post ended up a bit longer than I first intended, but I think it turned out well. It's in no way a comprehensive discussion of VR and unmanned systems, but it summarises most of my (present) thoughts around VR and its usage regarding remote operated vehicles and systems. I didn't touch on the subject of immersion here, and I plan to write more about that in a future post.
 
 I'm pretty sure the market for VR-glasses by professionals, where they control remote systems and need to look around, ends up being larger than that for private entertainment.
-
 
 --- 
 

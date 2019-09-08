@@ -15,5 +15,3 @@ The page is now added to my RSS feed and I’ll give each new question a few min
 > “If life begins at the end of your comfort zone — as indeed it does …”
 
 it’s not a bad idea to ask yourself some hard questions that will get you out of your comfort zone.
-
-

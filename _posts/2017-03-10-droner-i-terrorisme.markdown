@@ -17,7 +17,6 @@ Entusiasme og kunnskap er ikke nok for å lage en drone. Det er i tillegg behov 
 
 Droner kjøpt over disk har normalt begrenset løfteevne. Løfteevnen er ofte ikke mer enn i overkant av et halvt kilo. Ved å kjøpe deler via internett kan en person med teknisk innsikt relativt enkelt bygge en drone med betydelig større løfteevne. Informasjonen er tilgjengelig på internett.
 
-
 ## Misbruk av droner
 
 Foreløpig er det grunn til å tro at de fleste rapporterte hendelser med droner i Norge ikke er gjort med overlegg. Det er ofte uvettig og lite gjennomtenkt bruk som er årsaken. Dette kan for eksempel være noen som tester den nye dronen i hagen mens naboen sitter ute på sin egen terrasse eller står ved vinduet i femte etasje. Disse flyvningene utgjør ikke en stor risiko for liv og helse, men er et problem med tanke på personvern og privatliv. Det er også mange som ikke er klar over begrensningene som gjelder ved privat flyvning av droner og flyr høyere eller lengre unna enn det som er tillatt. Dette har medført farlige situasjoner mellom droner og annen luftfart og for andre på bakken. Private droner i nærheten av kommersielle flyplasser er et av de største problemene med droner.
@@ -30,11 +29,9 @@ Foreløpig kjenner vi til tre terrorrelaterte hendelser med droner i Vest-Europa
 
 Den islamske stat (IS) har publisert videoer hvor de benytter droner fra Syria. Dronene er benyttet for å skaffe oversikt og slagmarken på samme måte som det norske forsvaret gjør. Det finnes også en video som viser droner med nødbluss som skytes nedover. Videre ligger det en teknisk håndbok på internett som forklarer hvordan rekkevidden og flytiden kan utvides for en kommersiell drone. Dette tyder på at IS har kunnskap om og teknisk forståelse av droner og droneteknologi.
 
-
 ## Sikkerhetsutfordringer med droner
 
 I lang tid har offentlige bygninger blitt beskyttet mot angrep fra bakken. De er fysisk beskyttet med hindringer for kjøretøy, eksplosivsikkert glass, gjerder og andre barrierer som vanskeliggjør angrep via bakken. En del av disse tiltakene er ikke effektive mot droner. En drone kan enkelt fly over et gjerde, inn i en bakgård eller til toppen av en bygning. Dette fordrer at man begynner å tenke nytt rundt sikring av bygg. Droner utgjør derfor en økt trussel for det som tradisjonelt sett har vært sikre områder. Bruken av droner reduserer også risikoen for angriperen. Det er mulig å fjernstyre angrepet fra avstand.
-
 
 ## Hva kan vi gjøre?
 
@@ -45,6 +42,5 @@ Videre er det nyttig med krav om registering eller merking av droner. Da vil myn
 Hva kan vi gjøre hvis det kommer en drone inn i et område den ikke skal være? Den største utfordringen vil være å detektere dronen tidlig nok. Det finnes systemer for dette, men det er fortsatt vanskelig. En drone kan enkelt holde seg skjult bak vegetasjon, bygninger eller terreng på vei mot et mål. Ved å benytte forskjellige jammeteknikker er det mulig å redusere muligheten for kommersielle droner å fly i et område. Ofte vil dette innebære jamming av GPS eller Wifi, noe som ofte ikke er ønskelig. Siden droner har en trådløs kontroll-link hadde det vært ønskelig å ta over kontrollen, men med nyere droner er ofte kontroll-linken beskyttet, noe som gjør dette vanskelig. Siste utvei vil ofte være å skyte ned dronen med egnet våpen. Det finnes våpen som skyter nett på dronen som gjør at den faller ukontrollert ned på bakken. På grunn av faren for å skade en tredjepart er det sjelden ønskelig å gjøre dette. Det viktigste mottiltaket er å tenke igjennom scenarier på forhånd og ha prosedyrer og planer på plass før det oppstår en hendelse.
 
 Moderne droner er enkle å fly, men det er så mange usikkerhetsmomenter knyttet til nøyaktighet og kontroll, at risikoen for mislykkede angrep er stor. For terrorister er det fortsatt enklere å gjennomføre angrep med automatvåpen og selvmordsbombere, fordi det er større sannsynlighet for å lykkes med slike angrep.
-
 
 *Først publisert i [LUFTLED Luftmaktstidsskrift // NR. 2 JUNI 2016](http://www.luftmils.no/index_htm_files/LUFTLED%202%202016.pdf).*

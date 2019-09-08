@@ -22,7 +22,6 @@ Then you need to update grub by running `sudo update-grub`.[^1]
 
 The important next step is to **power cycle** your machine. A normal **reboot will not work** (not sure why). This caused me an hour's worth of grief yesterday, before I finally gave up and turned off the computer. When I started it this morning the touchpad worked.
 
-
 ## Other diagnostics
 
 There is something you can do to figure out if you have the same problem that I did. You should check if the problem relates to the Linux kernel or driver. Run the command:[^3]
@@ -32,7 +31,6 @@ cat /proc/bus/input/devices
 ```
 
 and if you can't see an entry with "Touchpad" the kernel hasn't found the hardware, and my fix might work. If you do see an entry with "Touchpad" then the problem is probably related to the driver, and this fix will not work.
-
 
 ### Footnotes
 [^1]: http://www.howtogeek.com/196655/how-to-configure-the-grub2-boot-loaders-settings/

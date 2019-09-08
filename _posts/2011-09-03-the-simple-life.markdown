@@ -18,5 +18,3 @@ I read an article in the [New York Times](http://www.nytimes.com/) a few days ag
 My advice if you go travelling is to think about what you want before you book tours. Is it a trip where you want peace and privacy, or do you want a more engaging experience?
 
 And a tip for a really nice (but quite basic) tour through Australia’s wilderness, I’d recommend [Heading Bush](http://www.headingbush.com/), from Adelaide to Alice Springs.
-
-
