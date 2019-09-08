@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Getting Ghost up and running on Mac OS X
 date: '2015-07-18 21:51:50'
 tags:
@@ -9,6 +11,9 @@ tags:
 - development
 - node-js
 - mac-os-x
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 I figured it would be nice to have Ghost up and running locally on my machine if I'm to mess around with themes. So today I installed [Node.js](https://nodejs.org/), cloned Ghost from [GitHub](https://github.com/TryGhost/Ghost) and got it all working.

@@ -1,6 +1,8 @@
 ---
 layout: post
-title: The simple life
+tcover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
+itle: The simple life
 date: '2011-09-03 11:18:44'
 tags:
 - english
@@ -8,6 +10,9 @@ tags:
 - travel
 - backpacking
 - organised-tours
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 

@@ -1,11 +1,16 @@
 ---
 layout: post
-title: DRONER I TERRORISME
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
+title: Droner i terrorisme
 date: '2017-03-10 15:00:00'
 tags:
 - norsk
 - droner
 - terror
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 De siste årene har vi sett en enorm økning i bruk av droner. Du kan nå gå på Elkjøp og kjøpe et fiks ferdig multikopter. Når du kommer hjem tar det deg kun minutter før du har det i lufta. Timer senere tar du flotte videoopptak fra fugleperspektiv. Men – hva om målet ditt ikke var fine bilder, men noe helt annet?

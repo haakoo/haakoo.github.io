@@ -1,10 +1,15 @@
 ---
 layout: post
-title: Trouble with Scrivener on Windows 7
+tcover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
+itle: Trouble with Scrivener on Windows 7
 date: '2016-06-30 09:40:50'
 tags:
 - windows
 - english
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 I've had a problem running [Scrivener](https://www.literatureandlatte.com/scrivener.php) on my work computer with Windows 7 since I got the computer last year. Today I finally decided to see if I could fix it.

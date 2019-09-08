@@ -1,11 +1,16 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Using nested AD groups to filter access to Gitlab
 date: '2017-07-15 18:30:00'
 tags:
 - english
 - gitlab
 - active-directory
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 I struggled while trying to limit access to our internal omnibus Gitlab instance using the LDAP-setting `user_filter:`. We use nested groups in Microsoft AD to handle users and access rights, which works with Gitlab, when you know about the secret sauce.

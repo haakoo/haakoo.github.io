@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Disqus inserting ads in your comments?
 date: '2015-07-16 07:23:06'
 tags:
@@ -7,6 +9,9 @@ tags:
 - disqus
 - blog
 - comments
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 As I continued looking into which system to use for comments I came across a [blog post](http://john.do/discourse-comments/) by John Saddington about using Discourse for comments. What I found most interesting though, was this comment about Disqus.

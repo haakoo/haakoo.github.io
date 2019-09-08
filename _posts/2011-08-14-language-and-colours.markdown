@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Language and colours
 date: '2011-08-14 19:45:22'
 tags:
@@ -7,6 +9,9 @@ tags:
 - languages
 - colours
 - colors
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 

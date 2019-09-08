@@ -1,10 +1,15 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Thought Questions - questions worth asking
 date: '2011-08-07 11:29:48'
 tags:
 - english
 - thought-questions
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 

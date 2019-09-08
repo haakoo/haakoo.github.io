@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Happy with Ghost as my blogging platform
 date: '2015-07-30 20:09:00'
 tags:
@@ -7,6 +9,9 @@ tags:
 - ghost-tag
 - blog
 - happy
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 Today I finally found the time to go back to my blog, it's been a busy week and a half. One of the first things I usually do is to log on to [Ghost's Slack](http://ghost.slack.com) to see if there has been any activity. Today was no different and I was again happily surprised when browsing through the backlog in the channels.

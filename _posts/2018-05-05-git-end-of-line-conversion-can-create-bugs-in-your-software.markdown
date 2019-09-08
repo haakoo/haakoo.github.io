@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Git end-of-line conversion can create bugs in your software
 date: '2018-05-05 06:25:10'
 tags:
@@ -10,6 +12,9 @@ tags:
 - fix
 - c
 - net
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 We were experiencing a strange bug with a C# library with an embedded binary file. It worked on the developers machine, but not after it was released after being built on a build server.

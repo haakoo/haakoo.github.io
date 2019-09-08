@@ -189,6 +189,7 @@ body {
     font-size: 1.8rem;
     line-height: 1.75em;
     color: #3A4145;
+    font-feature-settings: 'kern' 1;
     -webkit-font-feature-settings: 'kern' 1;
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
@@ -205,6 +206,7 @@ body {
 
 h1, h2, h3,
 h4, h5, h6 {
+    font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
@@ -253,6 +255,7 @@ a:hover {
 }
 
 p, ul, ol, dl {
+    font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
@@ -846,8 +849,6 @@ body.nav-opened .nav {
 .blog-logo {
     display: block;
     float: left;
-    background: none !important; /* Makes sure there is never a background */
-    border: none !important; /* Makes sure there is never a border */
 }
 
 .blog-logo img {
@@ -858,6 +859,42 @@ body.nav-opened .nav {
     height: 38px;
     padding: 1px 0 5px 0;
     width: auto;
+    background: none !important; /* Makes sure there is never a background */
+    border: none !important; /* Makes sure there is never a border */
+}
+
+.text-logo {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 38px;
+    padding: 0 15px;
+    border-style: solid;
+    border-width: 1px;
+    opacity: 1;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 35px;
+    white-space: nowrap;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.text-logo:hover {
+    color: #222;
+    background: #fff;
+}
+
+.no-cover .text-logo {
+    color: #9EABB3;
+    border-color: #BFC8CD;
+}
+
+.no-cover .text-logo:hover {
+    color: #555;
 }
 
 .menu-button {

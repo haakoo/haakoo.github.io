@@ -11,7 +11,6 @@ tags:
 - git
 - gitlab
 subclass: 'post' #important(!)
-logo: 'assets/images/ghost.png'
 author: haakoo
 categories: haakoo
 ---

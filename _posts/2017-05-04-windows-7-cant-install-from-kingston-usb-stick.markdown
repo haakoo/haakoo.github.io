@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Windows 7 can't install from Kingston USB stick
 date: '2017-05-04 19:41:26'
 tags:
@@ -7,6 +9,9 @@ tags:
 - windows
 - error
 - install
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 I recently discovered that it's impossible to install Windows 7 from a Kingston USB stick. It turns out this is a known problem with [Kingston](https://blogs.technet.microsoft.com/asiasupp/2012/03/06/error-we-couldnt-create-a-new-partition-or-locate-an-existing-one-for-more-information-see-the-setup-log-files-when-you-try-to-install-windows-8-cp/) [DataTravel](https://superuser.com/a/789435/117037) sticks. I had this problem while installing Windows 7 Pro on an old Panasonic Toughbook CF-31.

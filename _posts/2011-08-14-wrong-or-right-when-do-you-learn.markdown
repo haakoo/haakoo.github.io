@@ -1,10 +1,15 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Wrong or right? When do you learn?
 date: '2011-08-14 20:45:59'
 tags:
 - english
 - learning
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 

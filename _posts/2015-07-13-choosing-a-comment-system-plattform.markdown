@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Choosing a comment system / platform
 date: '2015-07-13 20:09:22'
 tags:
@@ -14,6 +16,9 @@ tags:
 - comments
 - facebook
 - google
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 After playing with [Ghost](http://www.ghost.org) for a couple of days I still haven't figured out what to do with comments. Ideally I want something like Wordpress' built in system, where you can post "anonymously" without registering and still get updates by email.

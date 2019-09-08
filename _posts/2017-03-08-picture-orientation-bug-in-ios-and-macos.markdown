@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Picture orientation bug in iOS and macOS
 date: '2017-03-08 20:51:40'
 tags:
@@ -10,6 +12,9 @@ tags:
 - exif
 - photos
 - pictures
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 A friend showed me a problem she had with one of the pictures on her webpage, http://lenefredriksen.com/. In Safari, Chrome and Vivaldi on macOS Sierra and Chrome and Vivaldi on Windows 7, all the pictures had the correct orientation. As in the following screen capture of Safari on macOS below.

@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Delingsøkonomi og profesjonelle aktører
 date: '2016-01-06 13:40:35'
 tags:
@@ -7,6 +9,9 @@ tags:
 - delingsokonomi
 - uber
 - airbnb
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 Hvorfor omtales Uber som en del av "delingsøkonomien"? Det samme lurer jeg på for profesjonelle utleiere som benytter AirBnb.

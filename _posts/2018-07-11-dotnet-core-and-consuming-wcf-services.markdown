@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: ".Net Core and consuming WCF services"
 date: '2018-07-11 14:01:21'
 tags:
@@ -11,6 +13,9 @@ tags:
 - core
 - english
 - net
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 I got stuck trying to figure out where the Visual Studio plugin _Visual Studio WCF Connected Service_ had gone today. It turns out it's no longer a plugin, but part of Visual Studio since version [15.5](https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools).

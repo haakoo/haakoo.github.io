@@ -1,11 +1,16 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Batch add prefix to filenames windows 7
 date: '2012-08-10 14:09:07'
 tags:
 - command-line
 - windows
 - english
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 

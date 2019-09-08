@@ -1,11 +1,16 @@
 ---
 layout: post
-title: Responsible timing?
+tcover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
+itle: Responsible timing?
 date: '2011-09-03 10:56:45'
 tags:
 - english
 - planning
 - responsible
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 

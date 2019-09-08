@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Personal names in applications
 date: '2011-08-23 19:58:19'
 tags:
@@ -8,6 +10,9 @@ tags:
 - web-development
 - user-experience
 - ux
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 

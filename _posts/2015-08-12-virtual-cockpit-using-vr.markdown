@@ -1,6 +1,8 @@
 ---
 layout: post
-title: Virtual cockpit using VR
+tcover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
+itle: Virtual cockpit using VR
 date: '2015-08-12 07:30:00'
 tags:
 - oculus-rift
@@ -9,6 +11,9 @@ tags:
 - situational-awareness
 - unmanned-vehicles
 - command-and-control
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 On Friday I had the pleasure of trying Oculus Rift in a setting where it finally _made sense_ to me. I've been disappointed when trying Oculus Rift on previous occasions and had the same feeling as Jeff Atwood (Codinghorror): 

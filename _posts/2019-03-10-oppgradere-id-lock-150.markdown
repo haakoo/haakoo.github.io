@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Oppgradere ID Lock 150
 date: '2019-03-10 17:01:50'
 tags:
@@ -9,6 +11,9 @@ tags:
 - smart-house
 - id-lock
 - id-lock-150
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 Problemer med å oppgradere ID Lock 150? Her er et tips.

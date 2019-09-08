@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: How to program the "TV-part" of a Yamaha V465 receiver remote
 date: '2013-09-10 13:27:15'
 tags:
@@ -8,6 +10,9 @@ tags:
 - v465
 - yamaha
 - english
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 When I got my brothers old TV a little while back we were using the remote for the TV-decoder to turn the TV on and off. Since we now longer have a TV-decoder I need to program the AV-receiver remote instead. The Yamaha RX-V465 AV-receiver have buttons to control the TV at the bottom, but no information about how to program them in the manual. After a bit of googling I found the answer on [avsforum.com](http://www.avsforum.com/t/1152126/yamaha-rx-v465-remote-question).

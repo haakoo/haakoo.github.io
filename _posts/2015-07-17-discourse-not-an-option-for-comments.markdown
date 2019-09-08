@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: I'm not using Discourse for blog comments
 date: '2015-07-17 10:48:09'
 tags:
@@ -7,6 +9,9 @@ tags:
 - discourse
 - blog
 - comments
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 After reading more about using Discourse for comments I've realised that it's not a good fit for me. There is a solution for Discourse where you can get X number of the best replies shown under a blog post or article. But you will not have a "leave a comment" area under the blog post, the reader will have to go to the Discourse forum, sign in and then leave a comment.

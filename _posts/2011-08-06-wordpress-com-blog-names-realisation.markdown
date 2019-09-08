@@ -1,11 +1,16 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Wordpress.com blog names realisation
 date: '2011-08-06 22:53:06'
 tags:
 - english
 - wordpress-com
 - wordpress
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 

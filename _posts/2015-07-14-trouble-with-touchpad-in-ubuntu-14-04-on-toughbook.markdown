@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Trouble with touchpad in Ubuntu 14.04 on Toughbook CF-31
 date: '2015-07-14 07:20:59'
 tags:
@@ -8,6 +10,9 @@ tags:
 - toughbook
 - touchpad
 - fix
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 After I installed Ubuntu 14.04 LTS on a Toughbook CF-31 the touchpad wasn't working. The touch screen was working, and I could connect a USB mouse and use that. I tried to find a solution to the problem and searched and tried several things before I found the answer.

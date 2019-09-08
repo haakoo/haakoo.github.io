@@ -1,11 +1,16 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Resetting corrupt "always available offline" database
 date: '2015-12-03 13:01:05'
 tags:
 - english
 - microsoft
 - windows
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 For my work computer I keep a Outlook Data File (.pst), as a place to backup email. I keep the pst-file on my network share, which ensure that it's backed up. Recently I've experienced trouble with this solution when I've disconnected from the network while Outlook is running. I end up with a corrupt Offline Files Database which fail when syncing the pst-file. I can access the file while I'm not connected to a network, but as soon as I connect the file size appear to be 0 kB.

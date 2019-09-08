@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Using Visual Studio diff and merge tool with Git
 date: '2017-07-20 10:00:00'
 tags:
@@ -11,6 +13,9 @@ tags:
 - merge
 - vs2017
 - visual-studio
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 On Windows I prefer to use Visual Studio's diff and merge tools. And since I use git I decided to change the default diff and merge tools to Visual Studio 2017 (VS2017).

@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/tents-in-the-night.jpg'
+navigation: True
 title: Telex - Anticensorship in the Network infrastructur
 date: '2011-08-07 15:43:55'
 tags:
@@ -8,6 +10,9 @@ tags:
 - tor
 - the-onion-router
 - telex
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
 ---
 
 
