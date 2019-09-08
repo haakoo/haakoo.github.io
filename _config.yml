@@ -1,89 +1,70 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-# https://help.github.com/en/articles/configuring-jekyll
-title: nothing gold can stay
-email: haakoo@ifi.uio.no
-description: >- # this means to ignore newlines until "baseurl:"
-  my ramblings about *
-baseurl: / # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: haakoo
-github_username:  haakoo
-
-# Build settings
-markdown: kramdown
-
-# https://pages.github.com/themes/
-#theme: jekyll-theme-cayman
-# jekyll-theme-leap-day
-# jekyll-theme-slate
-
-# remote_theme: jekyller/jasper2
-remote_theme: daviddarnes/alembic
-
 # Jekyll configuration
+#markdown: redcarpet
+#highlighter: pygments
 markdown: kramdown
 highlighter: rouge
-paginate: 100 # it will paginate after this number
+paginate: 5
 language: 'en-uk'
-words_per_minute: 200
 
-plugins:
-  - jekyll-feed
-  - jekyll-remote-theme
+# Website info
+name: 'nothing gold can stay'
+description: "my ramblings about *"
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+short_url: 'haakoo.github.io/'
+google_analytics:  # TODO: Change
+disqus: haakoo
+# edit baseurl to simply '/' if using as your personal page (instead of a project page)
+baseurl: /
 
-include: [".well-known"]
+# Permalinks
+permalink: /:title
+# permalink: /author/:username
+# permalink: /tag/:tag
+
+# gems and other configs
+plugins: [jekyll-paginate]
+
+# Additional settings available on the front-matter
+# Site logo in the index.html (as in demo.ghost.io)
+# Author's page cover in _layouts/author.html
+# The same for page.html and tag.html layouts
+# Post's page cover as a per-post basis _posts/...
+# Disqus comments as a per-post basis
+# ...
 
 
+# Settings for builing master branch with travis-ci
+# with jekyll-travis
 
-# 9. Site navigation
-navigation_header:
-- title: Home
-  url: /
-- title: Categories
-  url: /categories/
-- title: Search
-  url: /search/
-- title: About
-  url: /about
+# Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# username defaults to ENV['GIT_NAME'] used by Travis
+# repo defaults to USERNAME.github.io
+# Branch defaults to "source" for USERNAME.github.io
+# or "master" otherwise
+safe: false
+lsi: false
+username: jekyller
+repo: jasper
+branch: master
+relative_source: ../jasper/
+destination: ../jasper-pages/
+production_url:  https://jekyller.github.io/jasper/
+source_url:  https://github.com/jekyller/jasper/
 
-navigation_footer:
-- title: Created by David Darnes
-  url: https://darn.es
+exclude:
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - changelog.md
+  - "*.Rmd"
+  - vendor
+  - .travis.yml
+  - node_modules
+  - .git
 
-social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
-  Twitter: https://twitter.com/DavidDarnes
-  LinkedIn: https://www.linkedin.com/in/daviddarnes
-  GitHub: https://github.com/daviddarnes
-  link: https://darn.es
-  RSS: /feed.xml
-
-sharing_links: # Appear at the bottom of single blog posts, add as desired. The value can be 'true' or the desired button colour
-  Twitter: "#0d94e7"
-  facebook: "#3B5998"
-  Email: true
+include:
+  - .well-known
+  

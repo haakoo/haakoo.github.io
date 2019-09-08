@@ -1,6 +1,9 @@
 ---
+layout: page
 title: About
-permalink: /about/
+navigation: true
+logo: 'assets/images/ghost.png'
+current: about
 ---
 
 I’m Håkon K. Olafsen a Norwegian that lives in Oslo with my Australian girlfriend and our dog Odin. I worked as a scientist at Kjeller and my main areas of (academic / work related) interest were software development and robotics / unmanned vehicles with focus on drones. Now I work as a Senior Software Engineer at Sopra Steria AS, writing C# code.

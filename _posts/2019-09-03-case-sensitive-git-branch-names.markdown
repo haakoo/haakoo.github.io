@@ -1,5 +1,7 @@
 ---
 layout: post
+cover: 'assets/images2/git-case-sensitive-branch-names.png'
+navigation: True
 title: case sensitive git branch names
 date: '2019-09-03 07:17:31'
 tags:
@@ -8,6 +10,10 @@ tags:
 - linux
 - git
 - gitlab
+subclass: 'post' #important(!)
+logo: 'assets/images/ghost.png'
+author: haakoo
+categories: haakoo
 ---
 
 I've had some fun with `git` again... I was checking out a remote branch with `git` on the command line and couldn't pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.
