@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images2/2018/05/unsplash.com-photo-1496096265110-f83ad7f96608.jpg'
+cover: 'assets/images/2018/05/unsplash.com-photo-1496096265110-f83ad7f96608.jpg'
 navigation: True
 title: Git end-of-line conversion can create bugs in your software
 date: '2018-05-05 06:25:10'

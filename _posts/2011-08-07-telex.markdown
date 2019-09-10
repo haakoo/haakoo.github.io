@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images2/tents-in-the-night.jpg'
+cover: 'assets/images/tents-in-the-night.jpg'
 navigation: True
 title: Telex - Anticensorship in the Network infrastructur
 date: '2011-08-07 15:43:55'

@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images2/tents-in-the-night.jpg'
+cover: 'assets/images/tents-in-the-night.jpg'
 navigation: True
 title: Keyboard trouble in Ubuntu
 date: '2012-08-26 17:14:03'

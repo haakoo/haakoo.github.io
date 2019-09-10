@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images2/tents-in-the-night.jpg'
+cover: 'assets/images/tents-in-the-night.jpg'
 navigation: True
 title: I'm not using Discourse for blog comments
 date: '2015-07-17 10:48:09'

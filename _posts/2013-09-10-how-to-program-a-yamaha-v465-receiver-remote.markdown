@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images2/tents-in-the-night.jpg'
+cover: 'assets/images/tents-in-the-night.jpg'
 navigation: True
 title: How to program the "TV-part" of a Yamaha V465 receiver remote
 date: '2013-09-10 13:27:15'

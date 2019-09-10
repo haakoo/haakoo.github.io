@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images2/tents-in-the-night.jpg'
+cover: 'assets/images/tents-in-the-night.jpg'
 navigation: True
 title: Getting Ghost up and running on Mac OS X
 date: '2015-07-18 21:51:50'

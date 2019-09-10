@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images2/2019/03/ID-Lock-150-on-blue-door.jpg'
+cover: 'assets/images/2019/03/ID-Lock-150-on-blue-door.jpg'
 navigation: True
 title: Oppgradere ID Lock 150
 date: '2019-03-10 17:01:50'

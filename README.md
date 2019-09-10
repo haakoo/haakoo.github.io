@@ -12,51 +12,6 @@ to the original theme. This port is based on the last Casper v1.3.7 (same as v1.
 
 **New:** Check out **[Jasper2](https://github.com/jekyller/jasper2)**, a new port of Casper version 2!
 
-## Live demo
-
-[Jasper Live Demo](https://jekyller.github.io/jasper)
-
-[Casper's Original Here](https://demo.ghost.io)
-
-
-## Screenshots
-
-**Home page**
-![home page](https://raw.githubusercontent.com/jekyller/jasper/master/assets/images/jasper_screen1.png)
-
-**Post page**
-![post page](https://raw.githubusercontent.com/jekyller/jasper/master/assets/images/jasper_screen2.png)
-
-**Author page**
-![author page](https://raw.githubusercontent.com/jekyller/jasper/master/assets/images/jasper_screen3.png)
-
-**Related posts page**
-![tag page](https://raw.githubusercontent.com/jekyller/jasper/master/assets/images/jasper_screen4.png)
-
-**Tags page with opened sidebar**
-![sidebar page](https://raw.githubusercontent.com/jekyller/jasper/master/assets/images/jasper_screen5.png)
-
-**404 page**
-![related page](https://raw.githubusercontent.com/jekyller/jasper/master/assets/images/jasper_screen6.png)
-
-## Jasper theme includes
-
-* Pagination
-* Google Analytics tracking
-* Author's profile with picture
-* Disqus comments (not Ghost standard)
-* Author page (New 07.02.2015)
-* Tag page(s) (New 07.02.2015)
-* 404 page (New 07.02.2015)
-* Toggleable sliding sidebar (New 07.02.2015)
-* Related posts view (New 30.10.2015)
-* Tag description(s) (New 30.10.2015)
-* Code Syntax Highlight (New 24.11.2015)
-* Code Syntax Highlight with [highlight.js](https://highlightjs.org/) (New 06.04.2016)
-* Rss updated to Jekyll v3 (New 06.04.2016)
-* Updated to Casper v1.3.7 **(New 17.11.2017)**  
-* 'Out of the box' support for Multiple Authors **(New 17.11.2017)**  
-
 ## How to use it
 
 ### Deployment

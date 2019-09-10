@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images2/2019/09/git-case-sensitive-branch-names.png'
+cover: 'assets/images/2019/09/git-case-sensitive-branch-names.png'
 navigation: True
 title: case sensitive git branch names
 date: '2019-09-03 07:17:31'

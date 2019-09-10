@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images2/2018/07/DotNetCore_AddConnectedServiceContextMenu.png'
+cover: 'assets/images/2018/07/DotNetCore_AddConnectedServiceContextMenu.png'
 navigation: True
 title: ".Net Core and consuming WCF services"
 date: '2018-07-11 14:01:21'

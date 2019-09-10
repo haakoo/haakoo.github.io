@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images2/tents-in-the-night.jpg'
+cover: 'assets/images/tents-in-the-night.jpg'
 navigation: True
 title: Trouble with touchpad in Ubuntu 14.04 on Toughbook CF-31
 date: '2015-07-14 07:20:59'

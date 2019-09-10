@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images2/Delingsokonomi.png'
+cover: 'assets/images/Delingsokonomi.png'
 navigation: True
 title: Delingsøkonomi og profesjonelle aktører
 date: '2016-01-06 13:40:35'

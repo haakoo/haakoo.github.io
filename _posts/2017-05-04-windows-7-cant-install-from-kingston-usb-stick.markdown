@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images2/2017/05/Windows-7-Install-error-when-installing-from-Kingston-DataTraveler-USB-stick.jpg'
+cover: 'assets/images/2017/05/Windows-7-Install-error-when-installing-from-Kingston-DataTraveler-USB-stick.jpg'
 navigation: True
 title: Windows 7 can't install from Kingston USB stick
 date: '2017-05-04 19:41:26'
@@ -20,7 +20,7 @@ It's not obvious that you can't install from these USB sticks, since you can boo
 
 > Setup was unable to create a new system partition or locate an existing system partition. For more information, see the Setup log files.
 
-![Screen shot showing the error message while installing Windows 7 from a Kingston DataTraveler USB stick.](/assets/images2/2017/05/Windows-7-Install-error---Setup-was-unable-to-create-a-new-system-partition-or-locate-an-existing-system-partition.-For-more-information--see-the-Setup-log-files.-1.jpg)
+![Screen shot showing the error message while installing Windows 7 from a Kingston DataTraveler USB stick.](/assets/images/2017/05/Windows-7-Install-error---Setup-was-unable-to-create-a-new-system-partition-or-locate-an-existing-system-partition.-For-more-information--see-the-Setup-log-files.-1.jpg)
 
 ## Solution?
 Use a different USB stick. I had a SanDisk stick that worked as expected.

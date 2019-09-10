@@ -45,17 +45,17 @@ The package for the UiO master front page is called *duomasterforside*, and it h
 
 I looked around the web to find a guide for installing local packages in macOS, and found one over at *Tex - LaTeX Stack Exchange* and the answer to the question [How to have local package override default package](http://tex.stackexchange.com/a/8359/10647). It turns out it is very easy to install local LaTeX packages for your own user. All you have to do is add the LaTeX package to the folder `~/Library/texmf/tex/LaTeX`. To do this open a new Finder window and press `Cmd (⌘) + Shift (⇧) + G` to open the *Go to the folder:* dialog. Then type in `~/Library`and hit enter.
 
-![macOS Finder with the Go to the folder: dialog](/assets/images2/2017/05/Finder-with-the-Go-to-the-folder-dialog.png)
+![macOS Finder with the Go to the folder: dialog](/assets/images/2017/05/Finder-with-the-Go-to-the-folder-dialog.png)
 
 Find the `texmf` folder or create it, if it is missing. Then create the `tex` folder inside that again. In the `tex` folder you create a `latex` folder and a `doc` folder. Inside both of these you create a `duomasterforside` folder, this is where you'll put the package files.
 
 From the extracted files you copy or move all the files[^1] in the main folder (not the `doc` folder) into the `~/Library/texmf/tex/latex/duomasterforside` folder.
 
-![macOS Finder showing the content of the ~/Library/texmf/tex/latex/duomasterforside folder](/assets/images2/2017/05/Finder-with-content-of-latex-duomasterforside-folder.png)
+![macOS Finder showing the content of the ~/Library/texmf/tex/latex/duomasterforside folder](/assets/images/2017/05/Finder-with-content-of-latex-duomasterforside-folder.png)
 
 Then you copy or move the remaining file[^2] in the extracted `doc` folder into `~/Library/texmf/tex/doc/duomasterforside`
 
-![macOS Finder showing the content of the ~/Library/texmf/tex/doc/duomasterforside folder](/assets/images2/2017/05/Finder-with-content-of-doc-duomasterforside-folder.png)
+![macOS Finder showing the content of the ~/Library/texmf/tex/doc/duomasterforside folder](/assets/images/2017/05/Finder-with-content-of-doc-duomasterforside-folder.png)
 
 
 

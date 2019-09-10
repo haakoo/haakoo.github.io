@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images2/2017/07/vsDiffMerge.exe.png'
+cover: 'assets/images/2017/07/vsDiffMerge.exe.png'
 navigation: True
 title: Using Visual Studio diff and merge tool with Git
 date: '2017-07-20 10:00:00'
