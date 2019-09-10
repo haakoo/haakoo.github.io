@@ -25,7 +25,7 @@ It arrived this Thursday and I installed it immediately. To my horror it didn't 
 
 The UniFi Controller have a nice topology map view, you can see an example with (almost) all our devices here: **MARK COPYRIGHT CC...??**
 
-![Ubiquiti UniFi topology map for our home network](/content/images/2017/01/Herskapshuset-UniFi-topology-map-1.png)
+![Ubiquiti UniFi topology map for our home network](/assets/images2/2017/01/Herskapshuset-UniFi-topology-map.png)
 
 I still haven't configured VPN, mainly because the present version of the UniFi Controller (version 5.3.8) only supports PPTP and we only have iOS 10 devices, which does not support PPTP. Ubiquiti are working on support for configuring L2TP over IPSec through the GUI (it's already supported using CLI configuration), but it's still a little while away. More information on their [community site](https://community.ubnt.com/t5/UniFi-Routing-Switching/USG-Remote-User-VPN-with-iPhone/m-p/1791336#M31894). 
 

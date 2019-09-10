@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images2/tents-in-the-night.jpg'
+cover: 'assets/images2/2017/07/Gitlab-nested-AD-groups-Unsplash-tyler-lastovich-272588-edited.jpg'
 navigation: True
 title: Using nested AD groups to filter access to Gitlab
 date: '2017-07-15 18:30:00'

@@ -1,6 +1,6 @@
 ---
 layout: post
-tcover: 'assets/images2/tents-in-the-night.jpg'
+cover: 'assets/images2/2015/08/Full_Flight_Simulator_-5573438825--cropped.jpg'
 navigation: True
 itle: Virtual cockpit using VR
 date: '2015-08-12 07:30:00'
