@@ -15,3 +15,5 @@ master <- generated static site content
 release <- Jekyll code to be generated into site
 develop <- Branch that contains changes until merged into release
 ```
+
+**Does it work?**
