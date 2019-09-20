@@ -16,8 +16,9 @@ script: JEKYLL_ENV=production bundle exec jekyll build --destination site --trac
 
 deploy:
   provider: pages
-  edge: true # opt in to dpl v2
-  keep_history: false
+  #edge: true # opt in to dpl v2
+  skip_cleanup: true
+  keep_history: true
   local-dir: ./site
   target-branch: master
   email: deploy@travis-ci.org
