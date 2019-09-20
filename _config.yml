@@ -65,7 +65,9 @@ exclude:
   - node_modules
   - .git
   - GHOST.txt
+  - Jasper-README.md
+  - readme.md
 
 include:
+  - .nojekyll
   - .well-known
-  
