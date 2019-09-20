@@ -16,7 +16,6 @@ script: JEKYLL_ENV=production bundle exec jekyll build --destination site --trac
 
 deploy:
   provider: pages
-  cleanup: true
   edge: true # opt in to dpl v2
   local-dir: ./site
   target-branch: master
