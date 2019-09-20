@@ -65,7 +65,6 @@ exclude:
   - node_modules
   - .git
   - GHOST.txt
-  - LICENSE.txt
 
 include:
   - .well-known
