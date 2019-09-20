@@ -67,6 +67,5 @@ exclude:
   - GHOST.txt
 
 include:
-  - .nojekyll
   - .well-known
   
