@@ -1,0 +1,2 @@
+Contact: haakoo@ifi.uio.no
+Preferred-Languages: en, no

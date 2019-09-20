@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Move to Jekyll</title>
+	  <link>//Move-to-Jekyll</link>
+	  <author></author>
+	  <pubDate>2019-09-15T21:00:00+00:00</pubDate>
+	  <guid>//Move-to-Jekyll</guid>
+	  <description><![CDATA[
+	     <p>This is a post!</p>
+
+<p>Nothing here yet though.</p>
+
+<p>I’m moving to jekyll, if you couldn’t guess.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>
