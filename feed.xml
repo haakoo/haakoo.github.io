@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nothing gold can stay - Articles</title>
+    <description>my ramblings about *</description>
+    <link>
+    </link>
+    
+      
+      <item>
+        <title>Move to Jekyll</title>
+        
+          <description>&lt;p&gt;This is a post!&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 15 Sep 2019 21:00:00 +0000</pubDate>
+        <link>
+        /Move-to-Jekyll</link>
+        <guid isPermaLink="true">/Move-to-Jekyll</guid>
+      </item>
+      
+    
+  </channel>
+</rss>
