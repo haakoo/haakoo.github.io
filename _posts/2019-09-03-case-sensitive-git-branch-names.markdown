@@ -19,7 +19,7 @@ I've had some fun with `git` again... I was checking out a remote branch with `g
 
 I used `git checkout branch-name` to get a local copy of the remote branch. When I tried to use `git pull` in that branch I got the following error message:
 
-```
+```git
 Your configuration specifies to merge with the ref 'refs/heads/branch-name' from the remote, but no such ref was fetched.
 ```
 
