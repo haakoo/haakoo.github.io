@@ -1,0 +1,39 @@
+---
+layout: post
+cover: 'assets/images/tents-in-the-night.jpg'
+navigation: True
+title: speil
+date: '2015-07-19 07:25:00'
+tags:
+- norwegian
+- norsk
+- dikt
+- poem
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
+---
+
+Tilbake i førsteklasse på videregående skrev jeg dette diktet som en norsk oppgave. Jeg skrev det på en PC, men som følge av at en harddisk døde trodde jeg det var borte. Etter at foreldrene mine nå ryddet i kjelleren fant de igjen en bunke med mine papirer fra VGS. Jeg gikk igjennom papirene og fant igjen dette diktet. Jeg var godt fornøyd med det da og jeg er fortsatt fornøyd med det nå.
+
+> speil
+>
+> tenk så trist å være speil<br>
+> ikke ha eget utseende<br>
+> kan se ut som alt<br>
+> tenk så trist å være speil<br>
+>
+> tenk så fint å være speil<br>
+> ikke ha eget utseende<br>
+> kan se ut som alt<br>
+> tenk så fint å være speil<br>
+>
+> tenk så kjedelig å være speil<br>
+> ikke ha eget utseende<br>
+> kan se ut som alt<br>
+> tenk så kjedelig å være speil<br>
+>
+> tenk så morsomt å være speil<br>
+> ikke ha eget utseende<br>
+> kan se ut som alt<br>
+> tenk så morsomt å være speil<br>

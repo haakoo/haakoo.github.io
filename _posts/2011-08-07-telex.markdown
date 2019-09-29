@@ -1,0 +1,23 @@
+---
+layout: post
+cover: 'assets/images/tents-in-the-night.jpg'
+navigation: True
+title: Telex - Anticensorship in the Network infrastructur
+date: '2011-08-07 15:43:55'
+tags:
+- english
+- censorship
+- tor
+- the-onion-router
+- telex
+subclass: 'post' #important(!)
+author: haakoo
+categories: haakoo
+---
+
+
+[Telex.cc](https://telex.cc/) is a response to on-line censorship, that relies on cooperation from [ISPs](http://en.wikipedia.org/wiki/Internet_Service_Provider). I see the benefits and the need for services like this and [Tor](https://www.torproject.org/), but will it become mainstream? People that live in areas with strong censorship or other treats might use these services.
+
+Telex will work without relying on to many “normal” users, but the help of one or a few ISPs. Will the ISPs be willing to help? Tor on the other hand relies on widespread use. There are some legal and ethical problems with Tor, you never now where the traffic leaving the network from your node will end up.
+
+I don’t see a personal use for these technologies now, but I’m glad people are working on them. Who knows when we’ll need them?
