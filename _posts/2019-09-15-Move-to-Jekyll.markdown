@@ -13,9 +13,6 @@ author: haakoo
 categories: haakoo
 ---
 
+So I've moved to jekyll, if you couldn't guess.
 
-This is a post!
-
-Nothing here yet though.
-
-I'm moving to jekyll, if you couldn't guess.
+I'll write up why and how I migrated when I have a bit more time.
