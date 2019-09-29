@@ -18,11 +18,111 @@
 	  <pubDate>2019-09-15T21:00:00+00:00</pubDate>
 	  <guid>//Move-to-Jekyll</guid>
 	  <description><![CDATA[
-	     <p>This is a post!</p>
+	     <p>So I’ve moved to jekyll, if you couldn’t guess.</p>
 
-<p>Nothing here yet though.</p>
+<p>I’ll write up why and how I migrated when I have a bit more time.</p>
 
-<p>I’m moving to jekyll, if you couldn’t guess.</p>
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Happy with Ghost as my blogging platform</title>
+	  <link>//happy-with-ghost-as-my-blogging-platform</link>
+	  <author></author>
+	  <pubDate>2015-07-30T20:09:00+00:00</pubDate>
+	  <guid>//happy-with-ghost-as-my-blogging-platform</guid>
+	  <description><![CDATA[
+	     <p>Today I finally found the time to go back to my blog, it’s been a busy week and a half. One of the first things I usually do is to log on to <a href="http://ghost.slack.com">Ghost’s Slack</a> to see if there has been any activity. Today was no different and I was again happily surprised when browsing through the backlog in the channels.</p>
+
+<p>The <a href="https://ghost.slack.com/messages/help/team/">Ghost team</a> isn’t large, but they are very active on their Slack and questions often get a reply within minutes. There are a lot of questions about Ghost, and almost every single one seems to have a simple solution. I’m getting a very good vibe about Ghost and the work that’s gone into it so far.</p>
+
+<p>The team also answers a lot of non-Ghost questions, about anything from hosting (including <a href="https://www.digitalocean.com/">Digital Ocean</a> and other places) to configuring your webserver. It’s very reassuring to see such a competent team working on Ghost. I’m really looking forward to modifying <a href="https://github.com/haakoo/Findlay">my theme</a> and adding functionality in the coming months.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Getting Ghost up and running on Mac OS X</title>
+	  <link>//getting-ghost-up-and-running-on-mac-os-x</link>
+	  <author></author>
+	  <pubDate>2015-07-18T21:51:50+00:00</pubDate>
+	  <guid>//getting-ghost-up-and-running-on-mac-os-x</guid>
+	  <description><![CDATA[
+	     <p>I figured it would be nice to have Ghost up and running locally on my machine if I’m to mess around with themes. So today I installed <a href="https://nodejs.org/">Node.js</a>, cloned Ghost from <a href="https://github.com/TryGhost/Ghost">GitHub</a> and got it all working.</p>
+
+<p>I followed the instructions from https://github.com/TryGhost/Ghost#developer-install-from-git with a few tweaks. You need to run the <code class="highlighter-rouge">npm install</code> commands using sudo (they will fail and then tell you to rerun as root). I also downloaded and installed Node.js v0.10.40 from <a href="http://blog.nodejs.org/release/">install package</a>. Node.js v0.10.40 has several security fixes and is probably a better choice than v0.10.36 I saw recommended somewhere.</p>
+
+<p>Surprisingly easy to get it all running when I figured out that <code class="highlighter-rouge">npm install</code> needs root permissions and <code class="highlighter-rouge">grunt</code>does not after a tip from <a href="https://ghost.slack.com/archives/ghost/p1437257215000010">@acburdine in #ghost on Ghost Slack</a>.</p>
+
+<p><em>Edit 2015-07-19:</em> It should be possible to run <code class="highlighter-rouge">npm install</code> without <code class="highlighter-rouge">sudo</code>, according to <a href="https://ghost.slack.com/archives/ghost/p1437262059000023">@fabian over at Ghost Slack</a>. I’ll see if I can reproduce my troubles from yesterday and figure out what was wrong.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>I'm not using Discourse for blog comments</title>
+	  <link>//discourse-not-an-option-for-comments</link>
+	  <author></author>
+	  <pubDate>2015-07-17T10:48:09+00:00</pubDate>
+	  <guid>//discourse-not-an-option-for-comments</guid>
+	  <description><![CDATA[
+	     <p>After reading more about using Discourse for comments I’ve realised that it’s not a good fit for me. There is a solution for Discourse where you can get X number of the best replies shown under a blog post or article. But you will not have a “leave a comment” area under the blog post, the reader will have to go to the Discourse forum, sign in and then leave a comment.</p>
+
+<p>I can see that this might be a good idea for larger sites with lots of comments and where you’re trying to build a community. It looks good over at <a href="http://blog.codinghorror.com/">Codinghorror’s blog</a>, but I think it’s the wrong solution for me, for now. And you can’t leave a guest comment when using Discourse.</p>
+
+<p>Jeff Atwood’s (@codinghorror) answer to the question:</p>
+
+<blockquote>
+  <p>Do you have any plans to enable in-post and anonymous commenting via this plugin? - <a href="https://meta.discourse.org/t/discourse-and-wordpress-integration/531/62">@erlend_sh</a></p>
+</blockquote>
+
+<p>makes it very clear that they do not intend to support guest comments in the future either:</p>
+
+<blockquote>
+  <p>No, none whatsoever. - <a href="(https://meta.discourse.org/t/discourse-and-wordpress-integration/531/62)">@codinghorror</a></p>
+</blockquote>
+
+<p>So Discourse will not be my choice now.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Disqus inserting ads in your comments?</title>
+	  <link>//disqus-inserting-ads-in-your-comments</link>
+	  <author></author>
+	  <pubDate>2015-07-16T07:23:06+00:00</pubDate>
+	  <guid>//disqus-inserting-ads-in-your-comments</guid>
+	  <description><![CDATA[
+	     <p>As I continued looking into which system to use for comments I came across a <a href="http://john.do/discourse-comments/">blog post</a> by John Saddington about using Discourse for comments. What I found most interesting though, was this comment about Disqus.</p>
+
+<blockquote>
+  <p>Things are changing though and Disqus is moving to capitalize on commenters and even going as far as inserting advertisements in the comment stream layer that look like legitimate comments from real users.</p>
+</blockquote>
+
+<p>If this is true, I will not be using Disqus.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Choosing a comment system / platform</title>
+	  <link>//choosing-a-comment-system-plattform</link>
+	  <author></author>
+	  <pubDate>2015-07-13T20:09:22+00:00</pubDate>
+	  <guid>//choosing-a-comment-system-plattform</guid>
+	  <description><![CDATA[
+	     <p>After playing with <a href="http://www.ghost.org">Ghost</a> for a couple of days I still haven’t figured out what to do with comments. Ideally I want something like Wordpress’ built in system, where you can post “anonymously” without registering and still get updates by email.</p>
+
+<p>I have read a few blog posts recently that made me look at using Twitter for comments. That might work out for me, since I use Twitter so much, but not if I’m to use Ghost for other people’s blogs.</p>
+
+<p>After I realised that <a href="https://disqus.com/websites/">Disqus</a> allows commenting without signing up I thought that might be a good fit. But they do not support notifications without signing up, and I do not want my readers to have to sign up to Disqus, so it’s not a perfect fit for me.</p>
+
+<p>I looked at <a href="https://muut.com/">Muut</a> but it seems to be overkill for what I want (a simple comment system). The same goes for <a href="http://web.livefyre.com/">Livefyre</a>.</p>
+
+<p>Since I want readers to post without signing up Facebook and Google+ comments are out of the question. It doesn’t help that I rarely use the services myself.</p>
+
+<p>Then we have <a href="http://www.discourse.org/">Discourse</a>, but last time I looked it looked too focused on creating a “forum”, and not a comments system. I’ll have a new look at Discourse tomorrow.</p>
 
 	  ]]></description>
 	</item>

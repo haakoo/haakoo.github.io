@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>speil</title>
+	  <link>//speil</link>
+	  <author></author>
+	  <pubDate>2015-07-19T07:25:00+00:00</pubDate>
+	  <guid>//speil</guid>
+	  <description><![CDATA[
+	     <p>Tilbake i førsteklasse på videregående skrev jeg dette diktet som en norsk oppgave. Jeg skrev det på en PC, men som følge av at en harddisk døde trodde jeg det var borte. Etter at foreldrene mine nå ryddet i kjelleren fant de igjen en bunke med mine papirer fra VGS. Jeg gikk igjennom papirene og fant igjen dette diktet. Jeg var godt fornøyd med det da og jeg er fortsatt fornøyd med det nå.</p>
+
+<blockquote>
+  <p>speil</p>
+
+  <p>tenk så trist å være speil<br />
+ikke ha eget utseende<br />
+kan se ut som alt<br />
+tenk så trist å være speil<br /></p>
+
+  <p>tenk så fint å være speil<br />
+ikke ha eget utseende<br />
+kan se ut som alt<br />
+tenk så fint å være speil<br /></p>
+
+  <p>tenk så kjedelig å være speil<br />
+ikke ha eget utseende<br />
+kan se ut som alt<br />
+tenk så kjedelig å være speil<br /></p>
+
+  <p>tenk så morsomt å være speil<br />
+ikke ha eget utseende<br />
+kan se ut som alt<br />
+tenk så morsomt å være speil<br /></p>
+</blockquote>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

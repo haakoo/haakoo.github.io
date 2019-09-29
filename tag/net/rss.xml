@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>.Net Core and consuming WCF services</title>
+	  <link>//dotnet-core-and-consuming-wcf-services</link>
+	  <author></author>
+	  <pubDate>2018-07-11T14:01:21+00:00</pubDate>
+	  <guid>//dotnet-core-and-consuming-wcf-services</guid>
+	  <description><![CDATA[
+	     <p>I got stuck trying to figure out where the Visual Studio plugin <em>Visual Studio WCF Connected Service</em> had gone today. It turns out it’s no longer a plugin, but part of Visual Studio since version <a href="https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools">15.5</a>.</p>
+
+<p>I’m converting an old .Net 4.0 project to .Net Core, and it is consuming a WCF-service. Everywhere i looked I found references to a Visual Studio plugin called <em>Visual Studio WCF Connected Service</em>, but it wasn’t on the <a href="https://marketplace.visualstudio.com/">Visual Studio Marketplace</a> anymore. After wasting about 30 minutes trying to figure out where to get the plugin I just tried to right click my .Net Core project, and lo and behold there I found <em>Add Connected Service</em> and I could add my WCF-reference.</p>
+
+<p>If only Microsoft could have left the plugin on the Marketplace and told us it was now part of Visual Studio…</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Git end-of-line conversion can create bugs in your software</title>
+	  <link>//git-end-of-line-conversion-can-create-bugs-in-your-software</link>
+	  <author></author>
+	  <pubDate>2018-05-05T06:25:10+00:00</pubDate>
+	  <guid>//git-end-of-line-conversion-can-create-bugs-in-your-software</guid>
+	  <description><![CDATA[
+	     <p>We were experiencing a strange bug with a C# library with an embedded binary file. It worked on the developers machine, but not after it was released after being built on a build server.</p>
+
+<p>It turns out that the developer had <em>git checkout end-of-line</em> settings that preserved the <code class="highlighter-rouge">LF</code> character, while the build server converted from <code class="highlighter-rouge">LF</code> to <code class="highlighter-rouge">CR LF</code> upon checkout. This corrupted the binary file that was embedded into the library as an <em>embedded resource</em>. Git didn’t recognise the file type and interpreted it as a (partial) text file.</p>
+
+<h2 id="the-fix">The fix</h2>
+<p>I think the preferred way to avoid this is to include a <code class="highlighter-rouge">.gitattributes</code> file in the root-folder of your repo. In the <code class="highlighter-rouge">.gitattributes</code> file you specify how <a href="https://git-scm.com/docs/gitattributes">git should handle different file types</a>. For us the solution was to add the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.pgm binary
+</code></pre></div></div>
+
+<p>I first found the solution for this in an answer on Stack Overflow, <a href="https://stackoverflow.com/a/40821931/930546">How to change line-ending settings</a>.</p>
+
+<h2 id="alternative">Alternative</h2>
+<p>It’s also possible to avoid this by changing the git setting <code class="highlighter-rouge">core.autocrlf</code> to either <code class="highlighter-rouge">input</code> or <code class="highlighter-rouge">false</code>, but this will change the behaviour for all files.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

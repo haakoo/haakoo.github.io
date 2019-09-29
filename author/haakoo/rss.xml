@@ -18,11 +18,308 @@
 	  <pubDate>2019-09-15T21:00:00+00:00</pubDate>
 	  <guid>//Move-to-Jekyll</guid>
 	  <description><![CDATA[
-	     <p>This is a post!</p>
+	     <p>So I’ve moved to jekyll, if you couldn’t guess.</p>
 
-<p>Nothing here yet though.</p>
+<p>I’ll write up why and how I migrated when I have a bit more time.</p>
 
-<p>I’m moving to jekyll, if you couldn’t guess.</p>
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>case sensitive git branch names</title>
+	  <link>//case-sensitive-git-branch-names</link>
+	  <author></author>
+	  <pubDate>2019-09-03T07:17:31+00:00</pubDate>
+	  <guid>//case-sensitive-git-branch-names</guid>
+	  <description><![CDATA[
+	     <p>I’ve had some fun with <code class="highlighter-rouge">git</code> again… I was checking out a remote branch with <code class="highlighter-rouge">git</code> on the command line and couldn’t pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.</p>
+
+<p>I used <code class="highlighter-rouge">git checkout branch-name</code> to get a local copy of the remote branch. When I tried to use <code class="highlighter-rouge">git pull</code> in that branch I got the following error message:</p>
+
+<pre><code class="language-git">Your configuration specifies to merge with the ref 'refs/heads/branch-name' from the remote, but no such ref was fetched.
+</code></pre>
+
+<p>I tried to search for an fix, but couldn’t find anything that worked. The most common explaination for this error message is that the remote branch is missing.</p>
+
+<p>Eventually I remembered that I had used a capital letter in the branch name when creating it. The actuall branch name was something like <code class="highlighter-rouge">branch-Name</code>, notice the capital <strong><em>N</em></strong>. By having the correct capitalising of the branch name during checkout, <code class="highlighter-rouge">git pull</code> works.</p>
+
+<p>This was checking out from Gitlab on a Linux server and to a Windows 10 machine.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Oppgradere ID Lock 150</title>
+	  <link>//oppgradere-id-lock-150</link>
+	  <author></author>
+	  <pubDate>2019-03-10T17:01:50+00:00</pubDate>
+	  <guid>//oppgradere-id-lock-150</guid>
+	  <description><![CDATA[
+	     <p>Problemer med å oppgradere ID Lock 150? Her er et tips.</p>
+
+<p>Jeg hadde store problemer med å få oppgradert programvaren (firmware) på ID Lock 150, den feilet gang på gang. Det som til slutt fungerte var å skru av blåtann (BT) på låsen og så skru den på igjen rett før oppgradering. I bruksanvisningen til låsen står det ikke hvordan du skrur av BT, kun på, men med litt prøving fant jeg ut at styrig av blåtann er som følger:</p>
+
+<p>Dette gjøres med åpen dør.</p>
+
+<p>Skru av BT:</p>
+<ol>
+  <li>Hold inn låseknappen på innsiden i 3 sekunder</li>
+  <li>Trykk inn hovedkoden og trykk <code class="highlighter-rouge">*</code></li>
+  <li>Trykk <code class="highlighter-rouge">3</code> + <code class="highlighter-rouge">*</code> + <code class="highlighter-rouge">0</code></li>
+</ol>
+
+<p>Skru på BT:</p>
+<ol>
+  <li>Hold inn låseknappen på innsiden i 3 sekunder</li>
+  <li>Trykk inn hovedkoden og trykk <code class="highlighter-rouge">*</code></li>
+  <li>Trykk <code class="highlighter-rouge">3</code> + <code class="highlighter-rouge">*</code> + <code class="highlighter-rouge">1</code></li>
+</ol>
+
+<p>Dette gjorde at jeg fikk oppgradert låsen første gang. Gang nummer to fungerte det på første forsøk. Blåtann vil trekke litt strøm, så det kan være en ide og skru det av etter oppgradering så batteriene holder litt lenger.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>.Net Core and consuming WCF services</title>
+	  <link>//dotnet-core-and-consuming-wcf-services</link>
+	  <author></author>
+	  <pubDate>2018-07-11T14:01:21+00:00</pubDate>
+	  <guid>//dotnet-core-and-consuming-wcf-services</guid>
+	  <description><![CDATA[
+	     <p>I got stuck trying to figure out where the Visual Studio plugin <em>Visual Studio WCF Connected Service</em> had gone today. It turns out it’s no longer a plugin, but part of Visual Studio since version <a href="https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools">15.5</a>.</p>
+
+<p>I’m converting an old .Net 4.0 project to .Net Core, and it is consuming a WCF-service. Everywhere i looked I found references to a Visual Studio plugin called <em>Visual Studio WCF Connected Service</em>, but it wasn’t on the <a href="https://marketplace.visualstudio.com/">Visual Studio Marketplace</a> anymore. After wasting about 30 minutes trying to figure out where to get the plugin I just tried to right click my .Net Core project, and lo and behold there I found <em>Add Connected Service</em> and I could add my WCF-reference.</p>
+
+<p>If only Microsoft could have left the plugin on the Marketplace and told us it was now part of Visual Studio…</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Git end-of-line conversion can create bugs in your software</title>
+	  <link>//git-end-of-line-conversion-can-create-bugs-in-your-software</link>
+	  <author></author>
+	  <pubDate>2018-05-05T06:25:10+00:00</pubDate>
+	  <guid>//git-end-of-line-conversion-can-create-bugs-in-your-software</guid>
+	  <description><![CDATA[
+	     <p>We were experiencing a strange bug with a C# library with an embedded binary file. It worked on the developers machine, but not after it was released after being built on a build server.</p>
+
+<p>It turns out that the developer had <em>git checkout end-of-line</em> settings that preserved the <code class="highlighter-rouge">LF</code> character, while the build server converted from <code class="highlighter-rouge">LF</code> to <code class="highlighter-rouge">CR LF</code> upon checkout. This corrupted the binary file that was embedded into the library as an <em>embedded resource</em>. Git didn’t recognise the file type and interpreted it as a (partial) text file.</p>
+
+<h2 id="the-fix">The fix</h2>
+<p>I think the preferred way to avoid this is to include a <code class="highlighter-rouge">.gitattributes</code> file in the root-folder of your repo. In the <code class="highlighter-rouge">.gitattributes</code> file you specify how <a href="https://git-scm.com/docs/gitattributes">git should handle different file types</a>. For us the solution was to add the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.pgm binary
+</code></pre></div></div>
+
+<p>I first found the solution for this in an answer on Stack Overflow, <a href="https://stackoverflow.com/a/40821931/930546">How to change line-ending settings</a>.</p>
+
+<h2 id="alternative">Alternative</h2>
+<p>It’s also possible to avoid this by changing the git setting <code class="highlighter-rouge">core.autocrlf</code> to either <code class="highlighter-rouge">input</code> or <code class="highlighter-rouge">false</code>, but this will change the behaviour for all files.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Using Visual Studio diff and merge tool with Git</title>
+	  <link>//using-visual-studio-diff-and-merge-tool-with-git</link>
+	  <author></author>
+	  <pubDate>2017-07-20T10:00:00+00:00</pubDate>
+	  <guid>//using-visual-studio-diff-and-merge-tool-with-git</guid>
+	  <description><![CDATA[
+	     <p>On Windows I prefer to use Visual Studio’s diff and merge tools. And since I use git I decided to change the default diff and merge tools to Visual Studio 2017 (VS2017).</p>
+
+<h2 id="sourcetree-app">SourceTree App</h2>
+<p>I first changed the diff and merge tools in SourceTree App, just to test the settings. I found a nice blog post <a href="http://blog.dudak.me/2016/using-visual-studio-as-diffmerge-tool-in-sourcetree/">Using Visual Studio as diff/merge tool in Git and SourceTree</a> by Michał Dudak explaining how to do this for VS 2015. Since Visual Studio 2017 have a different folder structure I had to look for <code class="highlighter-rouge">vsdiffmerge.exe</code> and with the help of the <a href="https://gist.github.com/DamianReeves/35adf89992f8d871afe6#gistcomment-2024718">comments for a Gist</a> I found the correct location.</p>
+
+<p>In the <em>Diff Options</em> you choose to use <em>Custom tools</em> and use the following settings:</p>
+
+<p><strong>Command:</strong> (same for both diff and merge)</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\M</span>icrosoft Visual Studio<span class="se">\2</span>017<span class="se">\E</span>nterprise<span class="se">\C</span>ommon7<span class="se">\I</span>DE<span class="se">\C</span>ommonExtensions<span class="se">\M</span>icrosoft<span class="se">\T</span>eamFoundation<span class="se">\T</span>eam Explorer<span class="se">\v</span>sDiffMerge.exe
+</code></pre></div></div>
+
+<p><strong>Diff arguments:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"</span><span class="nv">$LOCAL</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$REMOTE</span><span class="s2">"</span> <span class="s2">"Source"</span> <span class="s2">"Target"</span> //t
+</code></pre></div></div>
+
+<p><strong>Merge arguments:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"</span><span class="nv">$LOCAL</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$REMOTE</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$BASE</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$MERGED</span><span class="s2">"</span> //m
+</code></pre></div></div>
+
+<h2 id="git-defaults-using-git-bash">Git defaults using Git Bash</h2>
+
+<p>To change the git defaults using <code class="highlighter-rouge">Git Bash</code> you can do the following:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> difftool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="se">\$</span><span class="s2">LOCAL </span><span class="se">\$</span><span class="s2">REMOTE Source Target //ignorespace //t"</span>
+
+git config <span class="nt">--global</span> mergetool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="se">\$</span><span class="s2">LOCAL </span><span class="se">\$</span><span class="s2">REMOTE </span><span class="se">\$</span><span class="s2">BASE </span><span class="se">\$</span><span class="s2">MERGED //ignorespace //m"</span>
+git config <span class="nt">--global</span> mergetool.visualstudio.trustExitCode <span class="nb">true
+
+</span>git config <span class="nt">--global</span> diff.tool visualstudio
+git config <span class="nt">--global</span> merge.tool visualstudio
+</code></pre></div></div>
+
+<h2 id="git-defaults-using-cmdexe">Git defaults using cmd.exe</h2>
+
+<p>To change the git defaults using <code class="highlighter-rouge">cmd.exe</code> you can do the following:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> difftool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="nv">$LOCAL</span><span class="s2"> </span><span class="nv">$REMOTE</span><span class="s2"> Source Target //ignorespace //t"</span>
+
+git config <span class="nt">--global</span> mergetool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="nv">$LOCAL</span><span class="s2"> </span><span class="nv">$REMOTE</span><span class="s2"> </span><span class="nv">$BASE</span><span class="s2"> </span><span class="nv">$MERGED</span><span class="s2"> //ignorespace //m"</span>
+git config <span class="nt">--global</span> mergetool.visualstudio.trustExitCode <span class="nb">true
+
+</span>git config <span class="nt">--global</span> diff.tool visualstudio
+git config <span class="nt">--global</span> merge.tool visualstudio
+</code></pre></div></div>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Using nested AD groups to filter access to Gitlab</title>
+	  <link>//using-nested-ad-groups-to-filter-access-to-gitlab</link>
+	  <author></author>
+	  <pubDate>2017-07-15T18:30:00+00:00</pubDate>
+	  <guid>//using-nested-ad-groups-to-filter-access-to-gitlab</guid>
+	  <description><![CDATA[
+	     <p>I struggled while trying to limit access to our internal omnibus Gitlab instance using the LDAP-setting <code class="highlighter-rouge">user_filter:</code>. We use nested groups in Microsoft AD to handle users and access rights, which works with Gitlab, when you know about the secret sauce.</p>
+
+<h2 id="licensing---you-need-an-enterprise-license">Licensing - you need an enterprise license</h2>
+<p>First I tried getting it to work with our Gitlab instance which is running the free community edition. I read through the docs about <a href="https://docs.gitlab.com/ce/administration/auth/ldap.html">LDAP</a>, added <code class="highlighter-rouge">user_filter:</code> to our settings file and it didn’t work. Users that were added directly to the AD group that was used as a filter got access, but not users in groups in the “main” group, e.g. the group <em>Gitlab-access</em> contains <em>User1</em> and <em>User2</em> and <em>Engineering-group</em>, and <em>Enginerring-group</em> contains <em>User3</em>. Using the following filter:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ss">user_filter: </span><span class="s1">'(&amp;(objectClass=person)(memberOf=cn=Gitlab-access,dc=domain,dc=com)'</span>
+</code></pre></div></div>
+
+<p>will only grant access to <em>User1</em> and <em>User2</em>, not <em>User3</em>.</p>
+
+<p>This was’t a trivial discovery, since the Gitlab <a href="https://docs.gitlab.com/ce/administration/auth/ldap.html#using-an-ldap-filter-to-limit-access-to-your-gitlab-server">CE documentation</a> seems to indicate that nested AD groups work. It’s only once you see that the <a href="https://docs.gitlab.com/ee/administration/auth/ldap-ee.html#supported-ldap-group-types-attributes">LDAP Additions to Gitlab EE documentation</a> also mention nested AD groups that you realise this might be an EE feature.</p>
+
+<p>I went along and asked for an EE trial license to see if I could get it to work.</p>
+
+<p><em><strong>Edit 2017-07-18:</strong> It turns out that it is possible to use nested AD groups with <code class="highlighter-rouge">user_filter:</code> in Gitlab CE. After I contacted Gitlab about the confusion the documentation has been <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/12871">updated</a>.</em></p>
+
+<h2 id="special-ad-ldap-query-rules">Special AD LDAP query rules</h2>
+<p>The second hurdle was to realise that the <em>plain</em> LDAP query I show higher up wont work because of Microsoft AD. You need to add a special rule object identifier (OID) to get a <em>recursive</em> version of <code class="highlighter-rouge">memberOf</code> called <code class="highlighter-rouge">LDAP_MATCHING_RULE_IN_CHAIN</code>. More information over at <a href="https://msdn.microsoft.com/en-us/library/aa746475(v=vs.85).aspx">MDSN</a>:</p>
+
+<blockquote>
+  <p>This rule is limited to filters that apply to the DN. This is a special “extended” match operator that walks the chain of ancestry in objects all the way to the root until it finds a match.</p>
+</blockquote>
+
+<p>The resources that helped me understand this were mainly the Stackoverflow questions <a href="https://stackoverflow.com/questions/6195812/ldap-nested-group-membership">ldap nested group membership</a> and <a href="https://stackoverflow.com/questions/9945518/can-ldap-matching-rule-in-chain-return-subtree-search-results-with-attributes">Can LDAP_MATCHING_RULE_IN_CHAIN return ‘subtree search results’ with attributes (specifically “memberOf”)?</a>. I also found some information over at Atlassians help page <a href="https://confluence.atlassian.com/crowdkb/active-directory-user-filter-does-not-search-nested-groups-715130424.html">Active Directory user filter does not search nested groups</a></p>
+
+<p>The <code class="highlighter-rouge">user_filter:</code> setting that finally worked was the following:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ss">user_filter: </span><span class="s1">'(&amp;(objectClass=person)(memberOf:1.2.840.113556.1.4.1941:=cn=Gitlab-access,dc=domain,dc=com)'</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>Cover photo <a href="https://unsplash.com/photos/9Eheu3sIgrM">Simple Circles</a> by <a href="https://unsplash.com/@lastly">Tyler Lastovich</a> from <a href="https://unsplash.com/">Unsplash</a></p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Windows 7 can't install from Kingston USB stick</title>
+	  <link>//windows-7-cant-install-from-kingston-usb-stick</link>
+	  <author></author>
+	  <pubDate>2017-05-04T19:41:26+00:00</pubDate>
+	  <guid>//windows-7-cant-install-from-kingston-usb-stick</guid>
+	  <description><![CDATA[
+	     <p>I recently discovered that it’s impossible to install Windows 7 from a Kingston USB stick. It turns out this is a known problem with <a href="https://blogs.technet.microsoft.com/asiasupp/2012/03/06/error-we-couldnt-create-a-new-partition-or-locate-an-existing-one-for-more-information-see-the-setup-log-files-when-you-try-to-install-windows-8-cp/">Kingston</a> <a href="https://superuser.com/a/789435/117037">DataTravel</a> sticks. I had this problem while installing Windows 7 Pro on an old Panasonic Toughbook CF-31.</p>
+
+<p>It’s not obvious that you can’t install from these USB sticks, since you can boot into the Windows 7 installer. Everything works up until you’re partitioning your harddrive. There, you’ll get an error message saying:</p>
+
+<blockquote>
+  <p>Setup was unable to create a new system partition or locate an existing system partition. For more information, see the Setup log files.</p>
+</blockquote>
+
+<p><img src="/assets/images/2017/05/Windows-7-Install-error---Setup-was-unable-to-create-a-new-system-partition-or-locate-an-existing-system-partition.-For-more-information--see-the-Setup-log-files.-1.jpg" alt="Screen shot showing the error message while installing Windows 7 from a Kingston DataTraveler USB stick." /></p>
+
+<h2 id="solution">Solution?</h2>
+<p>Use a different USB stick. I had a SanDisk stick that worked as expected.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Droner i terrorisme</title>
+	  <link>//droner-i-terrorisme</link>
+	  <author></author>
+	  <pubDate>2017-03-10T15:00:00+00:00</pubDate>
+	  <guid>//droner-i-terrorisme</guid>
+	  <description><![CDATA[
+	     <p>De siste årene har vi sett en enorm økning i bruk av droner. Du kan nå gå på Elkjøp og kjøpe et fiks ferdig multikopter. Når du kommer hjem tar det deg kun minutter før du har det i lufta. Timer senere tar du flotte videoopptak fra fugleperspektiv. Men – hva om målet ditt ikke var fine bilder, men noe helt annet?</p>
+
+<h2 id="teknologiutviklingen">Teknologiutviklingen</h2>
+<p>For mange er mindre droner synonymt med forskjellige former for multikoptere. Med unntak av de siste 3-4 årene er ikke disse først og fremst et resultat av industridrevet utvikling. Fremveksten av kreative maker-miljøer har betydd svært mye for utviklingen av slike farkoster. Disse entusiastene bruker fritiden sin til å eksperimentere og utvikle nye løsninger. Løsningene deles fritt over internett. Både programvare og maskinvaretegninger deles som åpen kildekode og gjør det enkelt for alle å lære av hverandre.  Dette uformelle samarbeidet kan kalles «åpen distribuert innovasjon» og har vist seg å være effektivt.</p>
+
+<p>Entusiasme og kunnskap er ikke nok for å lage en drone. Det er i tillegg behov for forskjellige ferdiglagde komponenter, som motorer, batterier og navigasjonsenheter. Noen av disse ble først tatt i bruk i modellfly, mens andre kom med utviklingen av smarttelefonen. Flere bedrifter så etterhvert et kommersielt potensiale og har laget systemer for forbrukermarkedet. Disse bestilles via internett eller kjøpes i vanlig elektronikkforretninger. Dette har resultert i at «hvem som helst, nå kan fysisk flytte hva som helst, til hvor som helst, når som helst».</p>
+
+<p>Droner kjøpt over disk har normalt begrenset løfteevne. Løfteevnen er ofte ikke mer enn i overkant av et halvt kilo. Ved å kjøpe deler via internett kan en person med teknisk innsikt relativt enkelt bygge en drone med betydelig større løfteevne. Informasjonen er tilgjengelig på internett.</p>
+
+<h2 id="misbruk-av-droner">Misbruk av droner</h2>
+
+<p>Foreløpig er det grunn til å tro at de fleste rapporterte hendelser med droner i Norge ikke er gjort med overlegg. Det er ofte uvettig og lite gjennomtenkt bruk som er årsaken. Dette kan for eksempel være noen som tester den nye dronen i hagen mens naboen sitter ute på sin egen terrasse eller står ved vinduet i femte etasje. Disse flyvningene utgjør ikke en stor risiko for liv og helse, men er et problem med tanke på personvern og privatliv. Det er også mange som ikke er klar over begrensningene som gjelder ved privat flyvning av droner og flyr høyere eller lengre unna enn det som er tillatt. Dette har medført farlige situasjoner mellom droner og annen luftfart og for andre på bakken. Private droner i nærheten av kommersielle flyplasser er et av de største problemene med droner.</p>
+
+<p>I Norge og utlandet er det rapportert hendelser med droner som sendes inn over fengselsmurene. På grensen mellom Mexico og USA blir droner brukt til å smugle narkotika. Det er liten tvil om at kriminelle bruker droner når det reduserer risikoen for å bli tatt eller øker sjansen for å lykkes. I England advares det om at droner benyttes for å kartlegge eiendommer uten direkte innsyn før eventuelle innbrudd. Dette er en form for spionasje og overvåking som vi også kan anta skjer mot andre mål med helt andre hensikter.</p>
+
+<p>I Frankrike og Japan har aktivister benyttet droner på en måte som forstyrrer ro og orden i samfunnet. En drone med spor av radioaktivitet landet på taket til den japanske statsministerens kontor. Dette var muligens en protest mot gjenåpningen av atomanleggene i landet, men myndighetene er ikke sikre. I en periode over flere måneder ble det rapportert om droner som fløy i nærheten av de fleste atomkraftverk i Frankrike. Noen tror dette er aktivister mot atomkraft, men det kan også være rekognoseringsflyvninger for fremtidige aksjoner.</p>
+
+<p>Foreløpig kjenner vi til tre terrorrelaterte hendelser med droner i Vest-Europa. Alle hendelsene ble stoppet av myndighetene før gjennomføring. I 2012 planla en al Qaeda-gruppe i Spania et angrep mot et kjøpesenter i Algeciras nær Gibraltar. Islamister planla i 2013 og fly en drone full av eksplosiver mot et mål. Det ble ikke gitt mer informasjon om mulige mål eller tilhørighet for de arresterte. Den tredje hendelsen er med høyreekstreme i Tyskland. Tre personer planla å fly en drone med eksplosiver inn i en sommercamp for ungdommer. Etter at de satte av en bombe og skadet flere personer under en demonstrasjon i Dortmund i 2013 ble de stoppet før de gjennomførte angrepet med dronen.</p>
+
+<p>Den islamske stat (IS) har publisert videoer hvor de benytter droner fra Syria. Dronene er benyttet for å skaffe oversikt og slagmarken på samme måte som det norske forsvaret gjør. Det finnes også en video som viser droner med nødbluss som skytes nedover. Videre ligger det en teknisk håndbok på internett som forklarer hvordan rekkevidden og flytiden kan utvides for en kommersiell drone. Dette tyder på at IS har kunnskap om og teknisk forståelse av droner og droneteknologi.</p>
+
+<h2 id="sikkerhetsutfordringer-med-droner">Sikkerhetsutfordringer med droner</h2>
+
+<p>I lang tid har offentlige bygninger blitt beskyttet mot angrep fra bakken. De er fysisk beskyttet med hindringer for kjøretøy, eksplosivsikkert glass, gjerder og andre barrierer som vanskeliggjør angrep via bakken. En del av disse tiltakene er ikke effektive mot droner. En drone kan enkelt fly over et gjerde, inn i en bakgård eller til toppen av en bygning. Dette fordrer at man begynner å tenke nytt rundt sikring av bygg. Droner utgjør derfor en økt trussel for det som tradisjonelt sett har vært sikre områder. Bruken av droner reduserer også risikoen for angriperen. Det er mulig å fjernstyre angrepet fra avstand.</p>
+
+<h2 id="hva-kan-vi-gjøre">Hva kan vi gjøre?</h2>
+
+<p>Siden eksisterende mottiltak ikke er veldig effektive mot droner må man her tenke nytt. En stor utfordring med droner er å bestemme intensjonen til dronen. Når det blir oppdaget en drone i nærheten av en folkemengde er det ikke sikkert den utgjør en trussel. Kanskje er det noen som flyr sin private drone for å filme hendelsen. Ved å opprette en flyforbudssone og offentlig informere om dette før et arrangement vil det være lettere å si noe om intensjonen med en flyvning. Det er derfor viktig at vi har lover og regler som begrenser hvor og når vi kan fly.</p>
+
+<p>Videre er det nyttig med krav om registering eller merking av droner. Da vil myndighetene ha mulighet til å utføre kontroller av utstyr og eventuelt finne igjen eieren ved en hendelse. Det er også mulig å legge inn begrensninger i programvaren for droner kjøpt over disk, som å hindre en drone i å fly i nasjonale flyforbudssoner. Noen droner bør kanskje ha begrensninger knyttet til salg, på samme måte som for kunstgjødsel. Kjøp og bruk av større droner som brukes til sprøyting av avlinger er et eksempel.</p>
+
+<p>Hva kan vi gjøre hvis det kommer en drone inn i et område den ikke skal være? Den største utfordringen vil være å detektere dronen tidlig nok. Det finnes systemer for dette, men det er fortsatt vanskelig. En drone kan enkelt holde seg skjult bak vegetasjon, bygninger eller terreng på vei mot et mål. Ved å benytte forskjellige jammeteknikker er det mulig å redusere muligheten for kommersielle droner å fly i et område. Ofte vil dette innebære jamming av GPS eller Wifi, noe som ofte ikke er ønskelig. Siden droner har en trådløs kontroll-link hadde det vært ønskelig å ta over kontrollen, men med nyere droner er ofte kontroll-linken beskyttet, noe som gjør dette vanskelig. Siste utvei vil ofte være å skyte ned dronen med egnet våpen. Det finnes våpen som skyter nett på dronen som gjør at den faller ukontrollert ned på bakken. På grunn av faren for å skade en tredjepart er det sjelden ønskelig å gjøre dette. Det viktigste mottiltaket er å tenke igjennom scenarier på forhånd og ha prosedyrer og planer på plass før det oppstår en hendelse.</p>
+
+<p>Moderne droner er enkle å fly, men det er så mange usikkerhetsmomenter knyttet til nøyaktighet og kontroll, at risikoen for mislykkede angrep er stor. For terrorister er det fortsatt enklere å gjennomføre angrep med automatvåpen og selvmordsbombere, fordi det er større sannsynlighet for å lykkes med slike angrep.</p>
+
+<p><em>Først publisert i <a href="http://www.luftmils.no/index_htm_files/LUFTLED%202%202016.pdf">LUFTLED Luftmaktstidsskrift // NR. 2 JUNI 2016</a>.</em></p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Picture orientation bug in iOS and macOS</title>
+	  <link>//picture-orientation-bug-in-ios-and-macos</link>
+	  <author></author>
+	  <pubDate>2017-03-08T20:51:40+00:00</pubDate>
+	  <guid>//picture-orientation-bug-in-ios-and-macos</guid>
+	  <description><![CDATA[
+	     <p>A friend showed me a problem she had with one of the pictures on her webpage, http://lenefredriksen.com/. In Safari, Chrome and Vivaldi on macOS Sierra and Chrome and Vivaldi on Windows 7, all the pictures had the correct orientation. As in the following screen capture of Safari on macOS below.</p>
+
+<p><img src="/assets/images/2017/03/Safari.png" alt="Screen capture of lenefredriksen.com in Safari on macOS Sierra" /></p>
+
+<p>In Safari on iOS, one of the pictures on the front page was rotated 90 degrees clockwise, as seen in the screen capture from my iPad below. I checked the source in both macOS and on my phone, but it was the same on both platforms and it looked fine.</p>
+
+<p><img src="/assets/images/2017/03/iPad.PNG" alt="Screen capture of lenefredriksen.com in Safari on iOS" /></p>
+
+<p>My next step was to download the picture that was rotated and one of the other pictures to compare them. When opening both pictures in QuickLook on my Mac, one was rotated and one was not. This sort of made sense, since that’s how they appeared on the webpage in iOS.</p>
+
+<p><img src="/assets/images/2017/03/MacOS-Sierra-QuickLook.png" alt="Screen capture of the rotated image in QuickLook on macOS Sierra" /></p>
+
+<p>What didn’t make sense was why both were the right way up on almost all platforms and browsers. Looking at the EXIF data I found that the orientation was set to <code class="highlighter-rouge">1 (Normal)</code> for the one that was right way up, and <code class="highlighter-rouge">6 (Rotated 90 degrees counter clockwise)</code> for the picture that looked rotated.</p>
+
+<p><img src="/assets/images/2017/03/Orientations.png" alt="Showing the EXIF information for the two images in Previews Inspector" /></p>
+
+<p><strong>It turns out that the problem is that QuickLook and Preview on macOS, and Safari on iOS don’t rotate the picture according to the EXIF data.</strong></p>
+
+<p>The solution was simple: open the rotated picture in Preview and rotate it so it’s correct, and then save it. I assume the same can be done using Windows Photo Viewer if you’re using Windows. If it looks the right way up when you open it, try rotating back and forth and save the changes.</p>
+
+<p>A last hint at the end, you’ll find the Inspector for Preview under <code class="highlighter-rouge">Tool</code>and <code class="highlighter-rouge">Show Inspector</code>.</p>
+
+<p><img src="/assets/images/2017/03/Preview-Show-Inspector.png" alt="Screen capture that show where the Inspector can be found in the Preview menus" /></p>
 
 	  ]]></description>
 	</item>

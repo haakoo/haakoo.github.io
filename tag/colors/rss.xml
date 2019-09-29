@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Language and colours</title>
+	  <link>//language-and-colours</link>
+	  <author></author>
+	  <pubDate>2011-08-14T19:45:22+00:00</pubDate>
+	  <guid>//language-and-colours</guid>
+	  <description><![CDATA[
+	     <p>Through Twitter I cam across a video about <a href="http://boingboing.net/2011/08/12/how-language-affects-color-perception.html">How language affects colour perception</a>. It’s very interesting how differently we perceive colour! It’s well worth the 15 minutes!</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

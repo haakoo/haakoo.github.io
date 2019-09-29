@@ -18,11 +18,279 @@
 	  <pubDate>2019-09-15T21:00:00+00:00</pubDate>
 	  <guid>//Move-to-Jekyll</guid>
 	  <description><![CDATA[
-	     <p>This is a post!</p>
+	     <p>So I’ve moved to jekyll, if you couldn’t guess.</p>
 
-<p>Nothing here yet though.</p>
+<p>I’ll write up why and how I migrated when I have a bit more time.</p>
 
-<p>I’m moving to jekyll, if you couldn’t guess.</p>
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>case sensitive git branch names</title>
+	  <link>//case-sensitive-git-branch-names</link>
+	  <author></author>
+	  <pubDate>2019-09-03T07:17:31+00:00</pubDate>
+	  <guid>//case-sensitive-git-branch-names</guid>
+	  <description><![CDATA[
+	     <p>I’ve had some fun with <code class="highlighter-rouge">git</code> again… I was checking out a remote branch with <code class="highlighter-rouge">git</code> on the command line and couldn’t pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.</p>
+
+<p>I used <code class="highlighter-rouge">git checkout branch-name</code> to get a local copy of the remote branch. When I tried to use <code class="highlighter-rouge">git pull</code> in that branch I got the following error message:</p>
+
+<pre><code class="language-git">Your configuration specifies to merge with the ref 'refs/heads/branch-name' from the remote, but no such ref was fetched.
+</code></pre>
+
+<p>I tried to search for an fix, but couldn’t find anything that worked. The most common explaination for this error message is that the remote branch is missing.</p>
+
+<p>Eventually I remembered that I had used a capital letter in the branch name when creating it. The actuall branch name was something like <code class="highlighter-rouge">branch-Name</code>, notice the capital <strong><em>N</em></strong>. By having the correct capitalising of the branch name during checkout, <code class="highlighter-rouge">git pull</code> works.</p>
+
+<p>This was checking out from Gitlab on a Linux server and to a Windows 10 machine.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>.Net Core and consuming WCF services</title>
+	  <link>//dotnet-core-and-consuming-wcf-services</link>
+	  <author></author>
+	  <pubDate>2018-07-11T14:01:21+00:00</pubDate>
+	  <guid>//dotnet-core-and-consuming-wcf-services</guid>
+	  <description><![CDATA[
+	     <p>I got stuck trying to figure out where the Visual Studio plugin <em>Visual Studio WCF Connected Service</em> had gone today. It turns out it’s no longer a plugin, but part of Visual Studio since version <a href="https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools">15.5</a>.</p>
+
+<p>I’m converting an old .Net 4.0 project to .Net Core, and it is consuming a WCF-service. Everywhere i looked I found references to a Visual Studio plugin called <em>Visual Studio WCF Connected Service</em>, but it wasn’t on the <a href="https://marketplace.visualstudio.com/">Visual Studio Marketplace</a> anymore. After wasting about 30 minutes trying to figure out where to get the plugin I just tried to right click my .Net Core project, and lo and behold there I found <em>Add Connected Service</em> and I could add my WCF-reference.</p>
+
+<p>If only Microsoft could have left the plugin on the Marketplace and told us it was now part of Visual Studio…</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Git end-of-line conversion can create bugs in your software</title>
+	  <link>//git-end-of-line-conversion-can-create-bugs-in-your-software</link>
+	  <author></author>
+	  <pubDate>2018-05-05T06:25:10+00:00</pubDate>
+	  <guid>//git-end-of-line-conversion-can-create-bugs-in-your-software</guid>
+	  <description><![CDATA[
+	     <p>We were experiencing a strange bug with a C# library with an embedded binary file. It worked on the developers machine, but not after it was released after being built on a build server.</p>
+
+<p>It turns out that the developer had <em>git checkout end-of-line</em> settings that preserved the <code class="highlighter-rouge">LF</code> character, while the build server converted from <code class="highlighter-rouge">LF</code> to <code class="highlighter-rouge">CR LF</code> upon checkout. This corrupted the binary file that was embedded into the library as an <em>embedded resource</em>. Git didn’t recognise the file type and interpreted it as a (partial) text file.</p>
+
+<h2 id="the-fix">The fix</h2>
+<p>I think the preferred way to avoid this is to include a <code class="highlighter-rouge">.gitattributes</code> file in the root-folder of your repo. In the <code class="highlighter-rouge">.gitattributes</code> file you specify how <a href="https://git-scm.com/docs/gitattributes">git should handle different file types</a>. For us the solution was to add the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.pgm binary
+</code></pre></div></div>
+
+<p>I first found the solution for this in an answer on Stack Overflow, <a href="https://stackoverflow.com/a/40821931/930546">How to change line-ending settings</a>.</p>
+
+<h2 id="alternative">Alternative</h2>
+<p>It’s also possible to avoid this by changing the git setting <code class="highlighter-rouge">core.autocrlf</code> to either <code class="highlighter-rouge">input</code> or <code class="highlighter-rouge">false</code>, but this will change the behaviour for all files.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Using Visual Studio diff and merge tool with Git</title>
+	  <link>//using-visual-studio-diff-and-merge-tool-with-git</link>
+	  <author></author>
+	  <pubDate>2017-07-20T10:00:00+00:00</pubDate>
+	  <guid>//using-visual-studio-diff-and-merge-tool-with-git</guid>
+	  <description><![CDATA[
+	     <p>On Windows I prefer to use Visual Studio’s diff and merge tools. And since I use git I decided to change the default diff and merge tools to Visual Studio 2017 (VS2017).</p>
+
+<h2 id="sourcetree-app">SourceTree App</h2>
+<p>I first changed the diff and merge tools in SourceTree App, just to test the settings. I found a nice blog post <a href="http://blog.dudak.me/2016/using-visual-studio-as-diffmerge-tool-in-sourcetree/">Using Visual Studio as diff/merge tool in Git and SourceTree</a> by Michał Dudak explaining how to do this for VS 2015. Since Visual Studio 2017 have a different folder structure I had to look for <code class="highlighter-rouge">vsdiffmerge.exe</code> and with the help of the <a href="https://gist.github.com/DamianReeves/35adf89992f8d871afe6#gistcomment-2024718">comments for a Gist</a> I found the correct location.</p>
+
+<p>In the <em>Diff Options</em> you choose to use <em>Custom tools</em> and use the following settings:</p>
+
+<p><strong>Command:</strong> (same for both diff and merge)</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\M</span>icrosoft Visual Studio<span class="se">\2</span>017<span class="se">\E</span>nterprise<span class="se">\C</span>ommon7<span class="se">\I</span>DE<span class="se">\C</span>ommonExtensions<span class="se">\M</span>icrosoft<span class="se">\T</span>eamFoundation<span class="se">\T</span>eam Explorer<span class="se">\v</span>sDiffMerge.exe
+</code></pre></div></div>
+
+<p><strong>Diff arguments:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"</span><span class="nv">$LOCAL</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$REMOTE</span><span class="s2">"</span> <span class="s2">"Source"</span> <span class="s2">"Target"</span> //t
+</code></pre></div></div>
+
+<p><strong>Merge arguments:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"</span><span class="nv">$LOCAL</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$REMOTE</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$BASE</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$MERGED</span><span class="s2">"</span> //m
+</code></pre></div></div>
+
+<h2 id="git-defaults-using-git-bash">Git defaults using Git Bash</h2>
+
+<p>To change the git defaults using <code class="highlighter-rouge">Git Bash</code> you can do the following:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> difftool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="se">\$</span><span class="s2">LOCAL </span><span class="se">\$</span><span class="s2">REMOTE Source Target //ignorespace //t"</span>
+
+git config <span class="nt">--global</span> mergetool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="se">\$</span><span class="s2">LOCAL </span><span class="se">\$</span><span class="s2">REMOTE </span><span class="se">\$</span><span class="s2">BASE </span><span class="se">\$</span><span class="s2">MERGED //ignorespace //m"</span>
+git config <span class="nt">--global</span> mergetool.visualstudio.trustExitCode <span class="nb">true
+
+</span>git config <span class="nt">--global</span> diff.tool visualstudio
+git config <span class="nt">--global</span> merge.tool visualstudio
+</code></pre></div></div>
+
+<h2 id="git-defaults-using-cmdexe">Git defaults using cmd.exe</h2>
+
+<p>To change the git defaults using <code class="highlighter-rouge">cmd.exe</code> you can do the following:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> difftool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="nv">$LOCAL</span><span class="s2"> </span><span class="nv">$REMOTE</span><span class="s2"> Source Target //ignorespace //t"</span>
+
+git config <span class="nt">--global</span> mergetool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="nv">$LOCAL</span><span class="s2"> </span><span class="nv">$REMOTE</span><span class="s2"> </span><span class="nv">$BASE</span><span class="s2"> </span><span class="nv">$MERGED</span><span class="s2"> //ignorespace //m"</span>
+git config <span class="nt">--global</span> mergetool.visualstudio.trustExitCode <span class="nb">true
+
+</span>git config <span class="nt">--global</span> diff.tool visualstudio
+git config <span class="nt">--global</span> merge.tool visualstudio
+</code></pre></div></div>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Using nested AD groups to filter access to Gitlab</title>
+	  <link>//using-nested-ad-groups-to-filter-access-to-gitlab</link>
+	  <author></author>
+	  <pubDate>2017-07-15T18:30:00+00:00</pubDate>
+	  <guid>//using-nested-ad-groups-to-filter-access-to-gitlab</guid>
+	  <description><![CDATA[
+	     <p>I struggled while trying to limit access to our internal omnibus Gitlab instance using the LDAP-setting <code class="highlighter-rouge">user_filter:</code>. We use nested groups in Microsoft AD to handle users and access rights, which works with Gitlab, when you know about the secret sauce.</p>
+
+<h2 id="licensing---you-need-an-enterprise-license">Licensing - you need an enterprise license</h2>
+<p>First I tried getting it to work with our Gitlab instance which is running the free community edition. I read through the docs about <a href="https://docs.gitlab.com/ce/administration/auth/ldap.html">LDAP</a>, added <code class="highlighter-rouge">user_filter:</code> to our settings file and it didn’t work. Users that were added directly to the AD group that was used as a filter got access, but not users in groups in the “main” group, e.g. the group <em>Gitlab-access</em> contains <em>User1</em> and <em>User2</em> and <em>Engineering-group</em>, and <em>Enginerring-group</em> contains <em>User3</em>. Using the following filter:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ss">user_filter: </span><span class="s1">'(&amp;(objectClass=person)(memberOf=cn=Gitlab-access,dc=domain,dc=com)'</span>
+</code></pre></div></div>
+
+<p>will only grant access to <em>User1</em> and <em>User2</em>, not <em>User3</em>.</p>
+
+<p>This was’t a trivial discovery, since the Gitlab <a href="https://docs.gitlab.com/ce/administration/auth/ldap.html#using-an-ldap-filter-to-limit-access-to-your-gitlab-server">CE documentation</a> seems to indicate that nested AD groups work. It’s only once you see that the <a href="https://docs.gitlab.com/ee/administration/auth/ldap-ee.html#supported-ldap-group-types-attributes">LDAP Additions to Gitlab EE documentation</a> also mention nested AD groups that you realise this might be an EE feature.</p>
+
+<p>I went along and asked for an EE trial license to see if I could get it to work.</p>
+
+<p><em><strong>Edit 2017-07-18:</strong> It turns out that it is possible to use nested AD groups with <code class="highlighter-rouge">user_filter:</code> in Gitlab CE. After I contacted Gitlab about the confusion the documentation has been <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/12871">updated</a>.</em></p>
+
+<h2 id="special-ad-ldap-query-rules">Special AD LDAP query rules</h2>
+<p>The second hurdle was to realise that the <em>plain</em> LDAP query I show higher up wont work because of Microsoft AD. You need to add a special rule object identifier (OID) to get a <em>recursive</em> version of <code class="highlighter-rouge">memberOf</code> called <code class="highlighter-rouge">LDAP_MATCHING_RULE_IN_CHAIN</code>. More information over at <a href="https://msdn.microsoft.com/en-us/library/aa746475(v=vs.85).aspx">MDSN</a>:</p>
+
+<blockquote>
+  <p>This rule is limited to filters that apply to the DN. This is a special “extended” match operator that walks the chain of ancestry in objects all the way to the root until it finds a match.</p>
+</blockquote>
+
+<p>The resources that helped me understand this were mainly the Stackoverflow questions <a href="https://stackoverflow.com/questions/6195812/ldap-nested-group-membership">ldap nested group membership</a> and <a href="https://stackoverflow.com/questions/9945518/can-ldap-matching-rule-in-chain-return-subtree-search-results-with-attributes">Can LDAP_MATCHING_RULE_IN_CHAIN return ‘subtree search results’ with attributes (specifically “memberOf”)?</a>. I also found some information over at Atlassians help page <a href="https://confluence.atlassian.com/crowdkb/active-directory-user-filter-does-not-search-nested-groups-715130424.html">Active Directory user filter does not search nested groups</a></p>
+
+<p>The <code class="highlighter-rouge">user_filter:</code> setting that finally worked was the following:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ss">user_filter: </span><span class="s1">'(&amp;(objectClass=person)(memberOf:1.2.840.113556.1.4.1941:=cn=Gitlab-access,dc=domain,dc=com)'</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>Cover photo <a href="https://unsplash.com/photos/9Eheu3sIgrM">Simple Circles</a> by <a href="https://unsplash.com/@lastly">Tyler Lastovich</a> from <a href="https://unsplash.com/">Unsplash</a></p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Windows 7 can't install from Kingston USB stick</title>
+	  <link>//windows-7-cant-install-from-kingston-usb-stick</link>
+	  <author></author>
+	  <pubDate>2017-05-04T19:41:26+00:00</pubDate>
+	  <guid>//windows-7-cant-install-from-kingston-usb-stick</guid>
+	  <description><![CDATA[
+	     <p>I recently discovered that it’s impossible to install Windows 7 from a Kingston USB stick. It turns out this is a known problem with <a href="https://blogs.technet.microsoft.com/asiasupp/2012/03/06/error-we-couldnt-create-a-new-partition-or-locate-an-existing-one-for-more-information-see-the-setup-log-files-when-you-try-to-install-windows-8-cp/">Kingston</a> <a href="https://superuser.com/a/789435/117037">DataTravel</a> sticks. I had this problem while installing Windows 7 Pro on an old Panasonic Toughbook CF-31.</p>
+
+<p>It’s not obvious that you can’t install from these USB sticks, since you can boot into the Windows 7 installer. Everything works up until you’re partitioning your harddrive. There, you’ll get an error message saying:</p>
+
+<blockquote>
+  <p>Setup was unable to create a new system partition or locate an existing system partition. For more information, see the Setup log files.</p>
+</blockquote>
+
+<p><img src="/assets/images/2017/05/Windows-7-Install-error---Setup-was-unable-to-create-a-new-system-partition-or-locate-an-existing-system-partition.-For-more-information--see-the-Setup-log-files.-1.jpg" alt="Screen shot showing the error message while installing Windows 7 from a Kingston DataTraveler USB stick." /></p>
+
+<h2 id="solution">Solution?</h2>
+<p>Use a different USB stick. I had a SanDisk stick that worked as expected.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Picture orientation bug in iOS and macOS</title>
+	  <link>//picture-orientation-bug-in-ios-and-macos</link>
+	  <author></author>
+	  <pubDate>2017-03-08T20:51:40+00:00</pubDate>
+	  <guid>//picture-orientation-bug-in-ios-and-macos</guid>
+	  <description><![CDATA[
+	     <p>A friend showed me a problem she had with one of the pictures on her webpage, http://lenefredriksen.com/. In Safari, Chrome and Vivaldi on macOS Sierra and Chrome and Vivaldi on Windows 7, all the pictures had the correct orientation. As in the following screen capture of Safari on macOS below.</p>
+
+<p><img src="/assets/images/2017/03/Safari.png" alt="Screen capture of lenefredriksen.com in Safari on macOS Sierra" /></p>
+
+<p>In Safari on iOS, one of the pictures on the front page was rotated 90 degrees clockwise, as seen in the screen capture from my iPad below. I checked the source in both macOS and on my phone, but it was the same on both platforms and it looked fine.</p>
+
+<p><img src="/assets/images/2017/03/iPad.PNG" alt="Screen capture of lenefredriksen.com in Safari on iOS" /></p>
+
+<p>My next step was to download the picture that was rotated and one of the other pictures to compare them. When opening both pictures in QuickLook on my Mac, one was rotated and one was not. This sort of made sense, since that’s how they appeared on the webpage in iOS.</p>
+
+<p><img src="/assets/images/2017/03/MacOS-Sierra-QuickLook.png" alt="Screen capture of the rotated image in QuickLook on macOS Sierra" /></p>
+
+<p>What didn’t make sense was why both were the right way up on almost all platforms and browsers. Looking at the EXIF data I found that the orientation was set to <code class="highlighter-rouge">1 (Normal)</code> for the one that was right way up, and <code class="highlighter-rouge">6 (Rotated 90 degrees counter clockwise)</code> for the picture that looked rotated.</p>
+
+<p><img src="/assets/images/2017/03/Orientations.png" alt="Showing the EXIF information for the two images in Previews Inspector" /></p>
+
+<p><strong>It turns out that the problem is that QuickLook and Preview on macOS, and Safari on iOS don’t rotate the picture according to the EXIF data.</strong></p>
+
+<p>The solution was simple: open the rotated picture in Preview and rotate it so it’s correct, and then save it. I assume the same can be done using Windows Photo Viewer if you’re using Windows. If it looks the right way up when you open it, try rotating back and forth and save the changes.</p>
+
+<p>A last hint at the end, you’ll find the Inspector for Preview under <code class="highlighter-rouge">Tool</code>and <code class="highlighter-rouge">Show Inspector</code>.</p>
+
+<p><img src="/assets/images/2017/03/Preview-Show-Inspector.png" alt="Screen capture that show where the Inspector can be found in the Preview menus" /></p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Trouble With Scrivener On Windows 7</title>
+	  <link>//trouble-with-scrivener-on-windows-7</link>
+	  <author></author>
+	  <pubDate>2016-06-30T09:40:50+00:00</pubDate>
+	  <guid>//trouble-with-scrivener-on-windows-7</guid>
+	  <description><![CDATA[
+	     <p>I’ve had a problem running <a href="https://www.literatureandlatte.com/scrivener.php">Scrivener</a> on my work computer with Windows 7 since I got the computer last year. Today I finally decided to see if I could fix it.</p>
+
+<p>The fix was easier than I thought. Over at the Knowledge Base for Scrivener I found the post <a href="https://scrivener.tenderapp.com/help/kb/windows-troubleshooting/fixing-not-responding-with-compatibility-settings">Fixing “Not Responding” with Compatibility Settings</a> which solved my problem.</p>
+
+<p>I’m running Windows 7, but by choosing to run <em>Scrivener.exe in compatibility mode for Windows 7</em> it now works.</p>
+
+<p>Easy!</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Resetting corrupt "always available offline" database</title>
+	  <link>//resetting-corrupt-always-available-offline-database-2</link>
+	  <author></author>
+	  <pubDate>2015-12-03T13:01:05+00:00</pubDate>
+	  <guid>//resetting-corrupt-always-available-offline-database-2</guid>
+	  <description><![CDATA[
+	     <p>For my work computer I keep a Outlook Data File (.pst), as a place to backup email. I keep the pst-file on my network share, which ensure that it’s backed up. Recently I’ve experienced trouble with this solution when I’ve disconnected from the network while Outlook is running. I end up with a corrupt Offline Files Database which fail when syncing the pst-file. I can access the file while I’m not connected to a network, but as soon as I connect the file size appear to be 0 kB.</p>
+
+<p>The only solution I’ve found to this problem is to reset the Offline Files Database, via <a href="http://www.technlg.net/windows/delete-offline-files-cache-windows-7/">Delete Offline Files Cache Windows 7</a> and <a href="https://support.microsoft.com/en-us/kb/942974">this from Microsoft</a>.</p>
+
+<p>You can do this by setting a flag in the registry.</p>
+
+<ol>
+  <li>Open regedit</li>
+  <li>Go to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\CSC\Parameters</li>
+  <li>Create a new REG_DWORD named FormatDatabase with a value of 1</li>
+  <li>Restart computer</li>
+  <li>Add folders to the Offline Files Database</li>
+</ol>
+
+<p>It’s important to remember to re-add the folders to make them available offline again after the restart.</p>
+
+<p>To reapply group policies use the command (<a href="https://support.microsoft.com/en-us/kb/942974">from this page</a>):</p>
+
+<blockquote>
+  <p>gpupdate /force</p>
+</blockquote>
 
 	  ]]></description>
 	</item>

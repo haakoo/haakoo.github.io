@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Oppgradere ID Lock 150</title>
+	  <link>//oppgradere-id-lock-150</link>
+	  <author></author>
+	  <pubDate>2019-03-10T17:01:50+00:00</pubDate>
+	  <guid>//oppgradere-id-lock-150</guid>
+	  <description><![CDATA[
+	     <p>Problemer med å oppgradere ID Lock 150? Her er et tips.</p>
+
+<p>Jeg hadde store problemer med å få oppgradert programvaren (firmware) på ID Lock 150, den feilet gang på gang. Det som til slutt fungerte var å skru av blåtann (BT) på låsen og så skru den på igjen rett før oppgradering. I bruksanvisningen til låsen står det ikke hvordan du skrur av BT, kun på, men med litt prøving fant jeg ut at styrig av blåtann er som følger:</p>
+
+<p>Dette gjøres med åpen dør.</p>
+
+<p>Skru av BT:</p>
+<ol>
+  <li>Hold inn låseknappen på innsiden i 3 sekunder</li>
+  <li>Trykk inn hovedkoden og trykk <code class="highlighter-rouge">*</code></li>
+  <li>Trykk <code class="highlighter-rouge">3</code> + <code class="highlighter-rouge">*</code> + <code class="highlighter-rouge">0</code></li>
+</ol>
+
+<p>Skru på BT:</p>
+<ol>
+  <li>Hold inn låseknappen på innsiden i 3 sekunder</li>
+  <li>Trykk inn hovedkoden og trykk <code class="highlighter-rouge">*</code></li>
+  <li>Trykk <code class="highlighter-rouge">3</code> + <code class="highlighter-rouge">*</code> + <code class="highlighter-rouge">1</code></li>
+</ol>
+
+<p>Dette gjorde at jeg fikk oppgradert låsen første gang. Gang nummer to fungerte det på første forsøk. Blåtann vil trekke litt strøm, så det kan være en ide og skru det av etter oppgradering så batteriene holder litt lenger.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

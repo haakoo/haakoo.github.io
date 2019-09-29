@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Happy with Ghost as my blogging platform</title>
+	  <link>//happy-with-ghost-as-my-blogging-platform</link>
+	  <author></author>
+	  <pubDate>2015-07-30T20:09:00+00:00</pubDate>
+	  <guid>//happy-with-ghost-as-my-blogging-platform</guid>
+	  <description><![CDATA[
+	     <p>Today I finally found the time to go back to my blog, it’s been a busy week and a half. One of the first things I usually do is to log on to <a href="http://ghost.slack.com">Ghost’s Slack</a> to see if there has been any activity. Today was no different and I was again happily surprised when browsing through the backlog in the channels.</p>
+
+<p>The <a href="https://ghost.slack.com/messages/help/team/">Ghost team</a> isn’t large, but they are very active on their Slack and questions often get a reply within minutes. There are a lot of questions about Ghost, and almost every single one seems to have a simple solution. I’m getting a very good vibe about Ghost and the work that’s gone into it so far.</p>
+
+<p>The team also answers a lot of non-Ghost questions, about anything from hosting (including <a href="https://www.digitalocean.com/">Digital Ocean</a> and other places) to configuring your webserver. It’s very reassuring to see such a competent team working on Ghost. I’m really looking forward to modifying <a href="https://github.com/haakoo/Findlay">my theme</a> and adding functionality in the coming months.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

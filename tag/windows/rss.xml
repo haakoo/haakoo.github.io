@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>case sensitive git branch names</title>
+	  <link>//case-sensitive-git-branch-names</link>
+	  <author></author>
+	  <pubDate>2019-09-03T07:17:31+00:00</pubDate>
+	  <guid>//case-sensitive-git-branch-names</guid>
+	  <description><![CDATA[
+	     <p>I’ve had some fun with <code class="highlighter-rouge">git</code> again… I was checking out a remote branch with <code class="highlighter-rouge">git</code> on the command line and couldn’t pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.</p>
+
+<p>I used <code class="highlighter-rouge">git checkout branch-name</code> to get a local copy of the remote branch. When I tried to use <code class="highlighter-rouge">git pull</code> in that branch I got the following error message:</p>
+
+<pre><code class="language-git">Your configuration specifies to merge with the ref 'refs/heads/branch-name' from the remote, but no such ref was fetched.
+</code></pre>
+
+<p>I tried to search for an fix, but couldn’t find anything that worked. The most common explaination for this error message is that the remote branch is missing.</p>
+
+<p>Eventually I remembered that I had used a capital letter in the branch name when creating it. The actuall branch name was something like <code class="highlighter-rouge">branch-Name</code>, notice the capital <strong><em>N</em></strong>. By having the correct capitalising of the branch name during checkout, <code class="highlighter-rouge">git pull</code> works.</p>
+
+<p>This was checking out from Gitlab on a Linux server and to a Windows 10 machine.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Windows 7 can't install from Kingston USB stick</title>
+	  <link>//windows-7-cant-install-from-kingston-usb-stick</link>
+	  <author></author>
+	  <pubDate>2017-05-04T19:41:26+00:00</pubDate>
+	  <guid>//windows-7-cant-install-from-kingston-usb-stick</guid>
+	  <description><![CDATA[
+	     <p>I recently discovered that it’s impossible to install Windows 7 from a Kingston USB stick. It turns out this is a known problem with <a href="https://blogs.technet.microsoft.com/asiasupp/2012/03/06/error-we-couldnt-create-a-new-partition-or-locate-an-existing-one-for-more-information-see-the-setup-log-files-when-you-try-to-install-windows-8-cp/">Kingston</a> <a href="https://superuser.com/a/789435/117037">DataTravel</a> sticks. I had this problem while installing Windows 7 Pro on an old Panasonic Toughbook CF-31.</p>
+
+<p>It’s not obvious that you can’t install from these USB sticks, since you can boot into the Windows 7 installer. Everything works up until you’re partitioning your harddrive. There, you’ll get an error message saying:</p>
+
+<blockquote>
+  <p>Setup was unable to create a new system partition or locate an existing system partition. For more information, see the Setup log files.</p>
+</blockquote>
+
+<p><img src="/assets/images/2017/05/Windows-7-Install-error---Setup-was-unable-to-create-a-new-system-partition-or-locate-an-existing-system-partition.-For-more-information--see-the-Setup-log-files.-1.jpg" alt="Screen shot showing the error message while installing Windows 7 from a Kingston DataTraveler USB stick." /></p>
+
+<h2 id="solution">Solution?</h2>
+<p>Use a different USB stick. I had a SanDisk stick that worked as expected.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Picture orientation bug in iOS and macOS</title>
+	  <link>//picture-orientation-bug-in-ios-and-macos</link>
+	  <author></author>
+	  <pubDate>2017-03-08T20:51:40+00:00</pubDate>
+	  <guid>//picture-orientation-bug-in-ios-and-macos</guid>
+	  <description><![CDATA[
+	     <p>A friend showed me a problem she had with one of the pictures on her webpage, http://lenefredriksen.com/. In Safari, Chrome and Vivaldi on macOS Sierra and Chrome and Vivaldi on Windows 7, all the pictures had the correct orientation. As in the following screen capture of Safari on macOS below.</p>
+
+<p><img src="/assets/images/2017/03/Safari.png" alt="Screen capture of lenefredriksen.com in Safari on macOS Sierra" /></p>
+
+<p>In Safari on iOS, one of the pictures on the front page was rotated 90 degrees clockwise, as seen in the screen capture from my iPad below. I checked the source in both macOS and on my phone, but it was the same on both platforms and it looked fine.</p>
+
+<p><img src="/assets/images/2017/03/iPad.PNG" alt="Screen capture of lenefredriksen.com in Safari on iOS" /></p>
+
+<p>My next step was to download the picture that was rotated and one of the other pictures to compare them. When opening both pictures in QuickLook on my Mac, one was rotated and one was not. This sort of made sense, since that’s how they appeared on the webpage in iOS.</p>
+
+<p><img src="/assets/images/2017/03/MacOS-Sierra-QuickLook.png" alt="Screen capture of the rotated image in QuickLook on macOS Sierra" /></p>
+
+<p>What didn’t make sense was why both were the right way up on almost all platforms and browsers. Looking at the EXIF data I found that the orientation was set to <code class="highlighter-rouge">1 (Normal)</code> for the one that was right way up, and <code class="highlighter-rouge">6 (Rotated 90 degrees counter clockwise)</code> for the picture that looked rotated.</p>
+
+<p><img src="/assets/images/2017/03/Orientations.png" alt="Showing the EXIF information for the two images in Previews Inspector" /></p>
+
+<p><strong>It turns out that the problem is that QuickLook and Preview on macOS, and Safari on iOS don’t rotate the picture according to the EXIF data.</strong></p>
+
+<p>The solution was simple: open the rotated picture in Preview and rotate it so it’s correct, and then save it. I assume the same can be done using Windows Photo Viewer if you’re using Windows. If it looks the right way up when you open it, try rotating back and forth and save the changes.</p>
+
+<p>A last hint at the end, you’ll find the Inspector for Preview under <code class="highlighter-rouge">Tool</code>and <code class="highlighter-rouge">Show Inspector</code>.</p>
+
+<p><img src="/assets/images/2017/03/Preview-Show-Inspector.png" alt="Screen capture that show where the Inspector can be found in the Preview menus" /></p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Trouble With Scrivener On Windows 7</title>
+	  <link>//trouble-with-scrivener-on-windows-7</link>
+	  <author></author>
+	  <pubDate>2016-06-30T09:40:50+00:00</pubDate>
+	  <guid>//trouble-with-scrivener-on-windows-7</guid>
+	  <description><![CDATA[
+	     <p>I’ve had a problem running <a href="https://www.literatureandlatte.com/scrivener.php">Scrivener</a> on my work computer with Windows 7 since I got the computer last year. Today I finally decided to see if I could fix it.</p>
+
+<p>The fix was easier than I thought. Over at the Knowledge Base for Scrivener I found the post <a href="https://scrivener.tenderapp.com/help/kb/windows-troubleshooting/fixing-not-responding-with-compatibility-settings">Fixing “Not Responding” with Compatibility Settings</a> which solved my problem.</p>
+
+<p>I’m running Windows 7, but by choosing to run <em>Scrivener.exe in compatibility mode for Windows 7</em> it now works.</p>
+
+<p>Easy!</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Resetting corrupt "always available offline" database</title>
+	  <link>//resetting-corrupt-always-available-offline-database-2</link>
+	  <author></author>
+	  <pubDate>2015-12-03T13:01:05+00:00</pubDate>
+	  <guid>//resetting-corrupt-always-available-offline-database-2</guid>
+	  <description><![CDATA[
+	     <p>For my work computer I keep a Outlook Data File (.pst), as a place to backup email. I keep the pst-file on my network share, which ensure that it’s backed up. Recently I’ve experienced trouble with this solution when I’ve disconnected from the network while Outlook is running. I end up with a corrupt Offline Files Database which fail when syncing the pst-file. I can access the file while I’m not connected to a network, but as soon as I connect the file size appear to be 0 kB.</p>
+
+<p>The only solution I’ve found to this problem is to reset the Offline Files Database, via <a href="http://www.technlg.net/windows/delete-offline-files-cache-windows-7/">Delete Offline Files Cache Windows 7</a> and <a href="https://support.microsoft.com/en-us/kb/942974">this from Microsoft</a>.</p>
+
+<p>You can do this by setting a flag in the registry.</p>
+
+<ol>
+  <li>Open regedit</li>
+  <li>Go to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\CSC\Parameters</li>
+  <li>Create a new REG_DWORD named FormatDatabase with a value of 1</li>
+  <li>Restart computer</li>
+  <li>Add folders to the Offline Files Database</li>
+</ol>
+
+<p>It’s important to remember to re-add the folders to make them available offline again after the restart.</p>
+
+<p>To reapply group policies use the command (<a href="https://support.microsoft.com/en-us/kb/942974">from this page</a>):</p>
+
+<blockquote>
+  <p>gpupdate /force</p>
+</blockquote>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Batch add prefix to filenames windows 7</title>
+	  <link>//batch-add-prefix-to-filenames-windows-7</link>
+	  <author></author>
+	  <pubDate>2012-08-10T14:09:07+00:00</pubDate>
+	  <guid>//batch-add-prefix-to-filenames-windows-7</guid>
+	  <description><![CDATA[
+	     <p>I had a bit of a challenge wading through heaps of blogs and pages trying to find the easiest way to batch add a prefix to filenames. I wanted to add a prefix to all files in a folder, preferably using a vanilla windows command line prompt. The rename (ren) command was a good candidate, but I had some trouble with wild cards. To get it right I had to loop through the files.</p>
+
+<p>The command I ended up using was:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for %f in (*.*) do rename "%f" "prefix-%f"
+</code></pre></div></div>
+
+<p>This will add <code class="highlighter-rouge">prefix-</code> to all files in that folder.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

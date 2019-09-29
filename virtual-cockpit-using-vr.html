@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Page Meta -->
+    <title>Virtual Cockpit Using Vr</title>
+    <meta name="description" content="my ramblings about *" />
+
+    <!-- Mobile Meta -->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Brand icon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" >
+
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!-- Ghost outputs important style and meta data with this tag -->
+        <link rel="canonical" href="//virtual-cockpit-using-vr" />
+    <meta name="referrer" content="origin" />
+    <link rel="next" href="/page2/" />
+
+    <meta property="og:site_name" content="nothing gold can stay" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Virtual Cockpit Using Vr" />
+    <meta property="og:description" content="my ramblings about *" />
+    <meta property="og:url" content="//virtual-cockpit-using-vr" />
+    <meta property="og:image" content="/assets/images/2015/08/Full_Flight_Simulator_-5573438825--cropped.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Virtual Cockpit Using Vr" />
+    <meta name="twitter:description" content="my ramblings about *" />
+    <meta name="twitter:url" content="//virtual-cockpit-using-vr" />
+    <meta name="twitter:image:src" content="/assets/images/2015/08/Full_Flight_Simulator_-5573438825--cropped.jpg" />
+
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Website",
+    "publisher": "nothing gold can stay",
+    "name": "Virtual Cockpit Using Vr",
+    "url": "//virtual-cockpit-using-vr",
+    "image": "/assets/images/2015/08/Full_Flight_Simulator_-5573438825--cropped.jpg",
+    "description": "my ramblings about *"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.0.0" />
+    <link rel="alternate" type="application/rss+xml" title="nothing gold can stay" href="/feed.xml" />
+
+
+</head>
+<body class="home-template nav-closed">
+
+    <!-- The blog navigation links -->
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        <li class="nav-home " role="presentation"><a href="/">Home</a></li>
+        <li class="nav-about " role="presentation"><a href="/about">About</a></li>
+        <li class="nav-twitter role="presentation"><a href="https://twitter.com/haakoo">@haakoo</a></li>
+        <li class="nav-email role="presentation"><a href="mailto:haakoo@ifi.uio.no">email</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The comment above "< default" means - insert everything in this file into -->
+    <!-- the [body] of the default.hbs template, which contains our header/footer. -->
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<header class="main-header post-head " style="background-image: url(/assets/images/2015/08/Full_Flight_Simulator_-5573438825--cropped.jpg) ">
+    <nav class="main-nav  overlay  clearfix">
+        
+        <a class="blog-logo text-logo" href="/">nothing gold can stay</a>
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Virtual Cockpit Using Vr</h1>
+            <section class="post-meta">
+            <!-- <a href='/'></a> -->
+
+            
+                
+                    <a href='/author/haakoo'>Håkon K. Olafsen</a>
+                
+            
+            <time class="post-date" datetime="2015-08-12">12 Aug 2015</time>
+                <!-- [[tags prefix=" on "]] -->
+                
+                on
+                
+                    
+                       <a href='/tag/oculus-rift'>Oculus-rift</a>,
+                    
+                
+                    
+                       <a href='/tag/vr'>Vr</a>,
+                    
+                
+                    
+                       <a href='/tag/virtual-reality'>Virtual-reality</a>,
+                    
+                
+                    
+                       <a href='/tag/situational-awareness'>Situational-awareness</a>,
+                    
+                
+                    
+                       <a href='/tag/unmanned-vehicles'>Unmanned-vehicles</a>,
+                    
+                
+                    
+                       <a href='/tag/command-and-control'>Command-and-control</a>
+                    
+                
+                
+            </section>
+        </header>
+
+        <section class="post-content">
+
+            <p>On Friday I had the pleasure of trying Oculus Rift in a setting where it finally <em>made sense</em> to me. I’ve been disappointed when trying Oculus Rift on previous occasions and had the same feeling as Jeff Atwood (Codinghorror):</p>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">VR, in its current form, might be a tad overhyped. <a href="http://t.co/M9uU3F4W8e">http://t.co/M9uU3F4W8e</a> <a href="http://t.co/TaZkzSHHVp">pic.twitter.com/TaZkzSHHVp</a></p>&mdash; Jeff Atwood (@codinghorror) <a href="https://twitter.com/codinghorror/status/629390603957088256">August 6, 2015</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>I’ve leaned a bit more towards <em>“meh”</em> than <em>OK</em>, but my general feeling has been that <dfn><abbr title="Virtual reality">VR</abbr></dfn> is over-hyped. Jeff comes at it from a different angle than me though, him being a gamer and general <em>consumer</em> of VR. My perspective is through my work with unmanned vehicles and situational awareness. Reading his <a href="http://blog.codinghorror.com/i-tried-vr-and-it-was-just-ok/">blog post</a> the same day I experienced VR that <em>just works</em>, I realised I should write down my thoughts about VR for situational awareness in unmanned systems or other remote operated systems.</p>
+
+<h2 id="why-situational-awareness-and-not-automation">Why situational awareness and not automation?</h2>
+<p>For unmanned vehicles the goal is to make them autonomous enough so that we don’t need a human to control each individual vehicle. I think this is still several years into the future for larger more complex systems, especially if you want to benefit from data gathered in (close to) real time.</p>
+
+<p>Therefore I believe that there is a need for an interim solution for <dfn><abbr title="Unmanned x (aerial / ground / surface / under water) vehicle">UxV</abbr></dfn> control systems that help the operator obtain and maintain situational awareness.</p>
+
+<h2 id="situational-awareness-for-unmanned-vehicles">Situational awareness for unmanned vehicles</h2>
+<p>One of the main challenges when controlling a remote operated vehicle is local situational awareness. You basically want to know what’s going on around your vehicle and if it will limit your freedom of movement. I’ve seen several solutions trying to solve this problem, from cramming all the information into a couple of vertically stacked displays to using large, curved, multi-display set-ups that surround the operator. These solutions require fairly large rooms, lots of expensive screens and then they end up not working all that well.</p>
+
+<p>This is where my experience from Friday changed my view on virtual reality. When I put on the Oculus Rift (I think it was the DK2 model) I could turn my head to look around the small unmanned ground vehicle (<dfn><abbr title="Unmanned ground vehicle">UGV</abbr></dfn>) I controlled. What made this implementation different from other earlier solutions I’ve seen, was that there were no moving parts that twisted a camera around, but ten fixed cameras. All the cameras streamed video to a computer which then created a virtual <em>cinema</em> / <em>control room</em> / <em>cockpit</em> with a screen for each video feed. The cameras and screens were rotated 90 degrees, into portrait format, to give a better vertical field of view (<dfn><abbr title="Field of view">FOV</abbr></dfn>). The user was then placed inside this virtual cockpit where she could look around the circle of screens surrounding her.</p>
+
+<p>This solved one of the main problems I’ve seen with earlier demonstrations. There was no head tracking jitter / lag! The virtual cockpit ran with ~75 Hz refresh rate, so my head movement felt natural and jitter free. This means that even though the video feeds were only 30 fps, placing them on virtual screens made this a very comfortable user experience.</p>
+
+<p>When driving the vehicle around, there was a small but noticeable delay in the video feed. This made it slightly awkward driving close to other objects, but had no effect on me and how I felt when wearing VR-goggles. This is the same problem all remote controlled systems have when there is a delay between user input and feedback and usually results in small, jerky movements with short pauses between.</p>
+
+<h2 id="problems-and-possible-improvements">Problems and possible improvements</h2>
+<p>This was a very rough first implementation with lots of problems. One of the first issues I noticed was that the cameras had different exposures. The cameras were left on auto exposure so two adjoining cameras could have quite different colour and brightness. This should be easy to fix by taking control over the cameras’ exposures.</p>
+
+<p>The next problem I noticed was with the FOV. The ten cameras were not perfectly aligned and thus had varying degrees of overlap. Combine that with no correction for lens distortion and the edge between cameras didn’t match very well.</p>
+
+<p>Another problem with this technology demonstrator was that they streamed all ten video feeds through wifi to a computer. That was a whopping ~240 Mbit/s of data just for the camera feeds! This and the previous issue can be corrected by preprocessing the images before they are sent from the vehicle. By adjusting the camera exposure and stitching the videos together before transmitting only the <em>needed</em> video, the amount of data to transfer is reduced and the video will look better. This might introduce some latency, but only to the picture displayed on the virtual screens, and it shouldn’t affect how the user experiences head movement. One challenge with this approach is to figure out what part of the stitched video is <em>needed</em>. Ideally the system will transfer the main FOV in high resolution and the rest of the FOV with lower resolution to allow the user rapid head movement without seeing blank virtual screens. When the user moves her head the system should automatically increase the resolution for the new FOV, while reducing it for the now out of view video.</p>
+
+<p>I also had a bit of trouble figuring out my viewpoint in relation to the vehicle. There was a compass rose that went around me in the virtual cockpit, but it was fixed related to the vehicle rather than giving an actual bearing. When I turned the vehicle around while holding my head still the compass direction in my view did not change. This was a bit confusing at first, but when I figured out that north-east (NE) on the compass was straight forward relative to the UGV it worked OK. It would have been better having two different graphical elements, one for actual compass direction and one for vehicle orientation.</p>
+
+<p>Being used to having a map as one of the main views during operations, I realised that the virtual cockpit could easily contain that and more. It has always felt natural to look down at a map for me, so placing a map view in my virtual lap seems like a brilliant idea. I would still have an unobstructed view of the surroundings and quick access to a map with the overview of the situation.</p>
+
+<h2 id="last-thoughts">Last thoughts</h2>
+<p>This post ended up a bit longer than I first intended, but I think it turned out well. It’s in no way a comprehensive discussion of VR and unmanned systems, but it summarises most of my (present) thoughts around VR and its usage regarding remote operated vehicles and systems. I didn’t touch on the subject of immersion here, and I plan to write more about that in a future post.</p>
+
+<p>I’m pretty sure the market for VR-glasses by professionals, where they control remote systems and need to look around, ends up being larger than that for private entertainment.</p>
+
+<hr />
+
+<p>Cover photo “<a href="https://www.flickr.com/photos/superjetinternational/5573438825/">Full Flight Simulator</a>” by <a href="https://www.flickr.com/photos/superjetinternational/">SuperJet International
+</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA-2.0</a></p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+            <!-- Everything inside the #author tags pulls data from the author -->
+            <!-- #author-->
+            
+                
+                    
+                        <figure class="author-image">
+                            <a class="img" href="/author/haakoo" style="background-image: url(/assets/images/haakoo.jpg)"><span class="hidden">haakoo's Picture</span></a>
+                        </figure>
+                    
+
+                    <section class="author">
+                        <h4><a href="/author/haakoo">Håkon K. Olafsen</a></h4>
+
+                        
+                            <p> Awesome Norwegian guy</p>
+                        
+                        <div class="author-meta">
+                            <span class="author-location icon-location"> Oslo, Norway</span>
+                            <span class="author-link icon-link"><a href="https://blog.hakonkolafsen.no/"> blog.hakonkolafsen.no</a></span>
+                        </div>
+                    </section>
+
+                    <!-- /author  -->
+
+                    <section class="share">
+                        <h4>Share this post</h4>
+                        <a class="icon-twitter" href="http://twitter.com/share?text=Virtual Cockpit Using Vr&amp;url=virtual-cockpit-using-vr"
+                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                            <span class="hidden">Twitter</span>
+                        </a>
+                        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=virtual-cockpit-using-vr"
+                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                            <span class="hidden">Facebook</span>
+                        </a>
+                    </section>
+                
+            
+
+            <!-- Add Disqus Comments -->
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+<aside class="read-next">
+
+    <!-- [[! next_post ]] -->
+    
+        <a class="read-next-story " style="background-image: url(/assets/images/tents-in-the-night.jpg)" href="/resetting-corrupt-always-available-offline-database-2">
+            <section class="post">
+                <h2>Resetting corrupt "always available offline" database</h2>
+                <p>For my work computer I keep a Outlook Data File (.pst), as a place to...</p>
+            </section>
+        </a>
+    
+    <!-- [[! /next_post ]] -->
+    <!-- [[! prev_post ]] -->
+    
+        <a class="read-next-story prev " style="background-image: url(/assets/images/tents-in-the-night.jpg)" href="/happy-with-ghost-as-my-blogging-platform">
+            <section class="post">
+                <h2>Happy with Ghost as my blogging platform</h2>
+                <p>Today I finally found the time to go back to my blog, it’s been a...</p>
+            </section>
+        </a>
+    
+    <!-- [[! /prev_post ]] -->
+</aside>
+
+<!-- /post -->
+
+
+        <!-- The tiny footer at the very bottom -->
+        <footer class="site-footer clearfix">
+          <!-- <section class="copyright"><a href="/">nothing gold can stay</a> &copy; 2019</section> -->
+          <section class="copyright">The content on this website, of which Håkon K. Olafsen is the author, is licensed under<br /> Creative Commons <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</a></section>
+          <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/jekyller/jasper">Jasper</a></section>
+        </footer>
+    </div>
+    <!-- highlight.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- jQuery needs to come before `` so that jQuery can be used in code injection -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Ghost outputs important scripts and data with this tag -->
+    <!--  -->
+    <!-- Add Google Analytics  -->
+        <!-- Google Analytics Tracking code -->
+     <script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	    ga('create', '', 'auto');
+	    ga('send', 'pageview');
+
+     </script>
+    <!-- Fitvids makes video embeds responsive and awesome -->
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <!-- The main JavaScript file for Casper -->
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

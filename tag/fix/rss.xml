@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Git end-of-line conversion can create bugs in your software</title>
+	  <link>//git-end-of-line-conversion-can-create-bugs-in-your-software</link>
+	  <author></author>
+	  <pubDate>2018-05-05T06:25:10+00:00</pubDate>
+	  <guid>//git-end-of-line-conversion-can-create-bugs-in-your-software</guid>
+	  <description><![CDATA[
+	     <p>We were experiencing a strange bug with a C# library with an embedded binary file. It worked on the developers machine, but not after it was released after being built on a build server.</p>
+
+<p>It turns out that the developer had <em>git checkout end-of-line</em> settings that preserved the <code class="highlighter-rouge">LF</code> character, while the build server converted from <code class="highlighter-rouge">LF</code> to <code class="highlighter-rouge">CR LF</code> upon checkout. This corrupted the binary file that was embedded into the library as an <em>embedded resource</em>. Git didn’t recognise the file type and interpreted it as a (partial) text file.</p>
+
+<h2 id="the-fix">The fix</h2>
+<p>I think the preferred way to avoid this is to include a <code class="highlighter-rouge">.gitattributes</code> file in the root-folder of your repo. In the <code class="highlighter-rouge">.gitattributes</code> file you specify how <a href="https://git-scm.com/docs/gitattributes">git should handle different file types</a>. For us the solution was to add the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.pgm binary
+</code></pre></div></div>
+
+<p>I first found the solution for this in an answer on Stack Overflow, <a href="https://stackoverflow.com/a/40821931/930546">How to change line-ending settings</a>.</p>
+
+<h2 id="alternative">Alternative</h2>
+<p>It’s also possible to avoid this by changing the git setting <code class="highlighter-rouge">core.autocrlf</code> to either <code class="highlighter-rouge">input</code> or <code class="highlighter-rouge">false</code>, but this will change the behaviour for all files.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Trouble with touchpad in Ubuntu 14.04 on Toughbook CF-31</title>
+	  <link>//trouble-with-touchpad-in-ubuntu-14-04-on-toughbook</link>
+	  <author></author>
+	  <pubDate>2015-07-14T07:20:59+00:00</pubDate>
+	  <guid>//trouble-with-touchpad-in-ubuntu-14-04-on-toughbook</guid>
+	  <description><![CDATA[
+	     <p>After I installed Ubuntu 14.04 LTS on a Toughbook CF-31 the touchpad wasn’t working. The touch screen was working, and I could connect a USB mouse and use that. I tried to find a solution to the problem and searched and tried several things before I found the answer.</p>
+
+<p>The solution is fairly simple, you need to edit <code class="highlighter-rouge">/etc/default/grub</code><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> (<code class="highlighter-rouge">sudo nano /etc/default/grub</code> - <code class="highlighter-rouge">Ctrl + X</code> to exit) and add <code class="highlighter-rouge">i8042.nomux i8042.noloop</code><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> to the line <code class="highlighter-rouge">GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</code>. The resulting line should look like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i8042.nomux i8042.noloop"
+</code></pre></div></div>
+
+<p>Then you need to update grub by running <code class="highlighter-rouge">sudo update-grub</code>.<sup id="fnref:1:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+
+<p>The important next step is to <strong>power cycle</strong> your machine. A normal <strong>reboot will not work</strong> (not sure why). This caused me an hour’s worth of grief yesterday, before I finally gave up and turned off the computer. When I started it this morning the touchpad worked.</p>
+
+<h2 id="other-diagnostics">Other diagnostics</h2>
+
+<p>There is something you can do to figure out if you have the same problem that I did. You should check if the problem relates to the Linux kernel or driver. Run the command:<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat /proc/bus/input/devices
+</code></pre></div></div>
+
+<p>and if you can’t see an entry with “Touchpad” the kernel hasn’t found the hardware, and my fix might work. If you do see an entry with “Touchpad” then the problem is probably related to the driver, and this fix will not work.</p>
+
+<h3 id="footnotes">Footnotes</h3>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>http://www.howtogeek.com/196655/how-to-configure-the-grub2-boot-loaders-settings/ <a href="#fnref:1" class="reversefootnote">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:2">
+      <p>http://ubuntuforums.org/showthread.php?t=844968&amp;p=5290024#post5290024 <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>http://askubuntu.com/questions/483229/dell-5537-touchpad-not-working-ubuntu-14-04 <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

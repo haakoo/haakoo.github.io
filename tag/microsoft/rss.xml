@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Using Visual Studio diff and merge tool with Git</title>
+	  <link>//using-visual-studio-diff-and-merge-tool-with-git</link>
+	  <author></author>
+	  <pubDate>2017-07-20T10:00:00+00:00</pubDate>
+	  <guid>//using-visual-studio-diff-and-merge-tool-with-git</guid>
+	  <description><![CDATA[
+	     <p>On Windows I prefer to use Visual Studio’s diff and merge tools. And since I use git I decided to change the default diff and merge tools to Visual Studio 2017 (VS2017).</p>
+
+<h2 id="sourcetree-app">SourceTree App</h2>
+<p>I first changed the diff and merge tools in SourceTree App, just to test the settings. I found a nice blog post <a href="http://blog.dudak.me/2016/using-visual-studio-as-diffmerge-tool-in-sourcetree/">Using Visual Studio as diff/merge tool in Git and SourceTree</a> by Michał Dudak explaining how to do this for VS 2015. Since Visual Studio 2017 have a different folder structure I had to look for <code class="highlighter-rouge">vsdiffmerge.exe</code> and with the help of the <a href="https://gist.github.com/DamianReeves/35adf89992f8d871afe6#gistcomment-2024718">comments for a Gist</a> I found the correct location.</p>
+
+<p>In the <em>Diff Options</em> you choose to use <em>Custom tools</em> and use the following settings:</p>
+
+<p><strong>Command:</strong> (same for both diff and merge)</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\M</span>icrosoft Visual Studio<span class="se">\2</span>017<span class="se">\E</span>nterprise<span class="se">\C</span>ommon7<span class="se">\I</span>DE<span class="se">\C</span>ommonExtensions<span class="se">\M</span>icrosoft<span class="se">\T</span>eamFoundation<span class="se">\T</span>eam Explorer<span class="se">\v</span>sDiffMerge.exe
+</code></pre></div></div>
+
+<p><strong>Diff arguments:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"</span><span class="nv">$LOCAL</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$REMOTE</span><span class="s2">"</span> <span class="s2">"Source"</span> <span class="s2">"Target"</span> //t
+</code></pre></div></div>
+
+<p><strong>Merge arguments:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"</span><span class="nv">$LOCAL</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$REMOTE</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$BASE</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$MERGED</span><span class="s2">"</span> //m
+</code></pre></div></div>
+
+<h2 id="git-defaults-using-git-bash">Git defaults using Git Bash</h2>
+
+<p>To change the git defaults using <code class="highlighter-rouge">Git Bash</code> you can do the following:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> difftool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="se">\$</span><span class="s2">LOCAL </span><span class="se">\$</span><span class="s2">REMOTE Source Target //ignorespace //t"</span>
+
+git config <span class="nt">--global</span> mergetool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="se">\$</span><span class="s2">LOCAL </span><span class="se">\$</span><span class="s2">REMOTE </span><span class="se">\$</span><span class="s2">BASE </span><span class="se">\$</span><span class="s2">MERGED //ignorespace //m"</span>
+git config <span class="nt">--global</span> mergetool.visualstudio.trustExitCode <span class="nb">true
+
+</span>git config <span class="nt">--global</span> diff.tool visualstudio
+git config <span class="nt">--global</span> merge.tool visualstudio
+</code></pre></div></div>
+
+<h2 id="git-defaults-using-cmdexe">Git defaults using cmd.exe</h2>
+
+<p>To change the git defaults using <code class="highlighter-rouge">cmd.exe</code> you can do the following:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> difftool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="nv">$LOCAL</span><span class="s2"> </span><span class="nv">$REMOTE</span><span class="s2"> Source Target //ignorespace //t"</span>
+
+git config <span class="nt">--global</span> mergetool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="nv">$LOCAL</span><span class="s2"> </span><span class="nv">$REMOTE</span><span class="s2"> </span><span class="nv">$BASE</span><span class="s2"> </span><span class="nv">$MERGED</span><span class="s2"> //ignorespace //m"</span>
+git config <span class="nt">--global</span> mergetool.visualstudio.trustExitCode <span class="nb">true
+
+</span>git config <span class="nt">--global</span> diff.tool visualstudio
+git config <span class="nt">--global</span> merge.tool visualstudio
+</code></pre></div></div>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Resetting corrupt "always available offline" database</title>
+	  <link>//resetting-corrupt-always-available-offline-database-2</link>
+	  <author></author>
+	  <pubDate>2015-12-03T13:01:05+00:00</pubDate>
+	  <guid>//resetting-corrupt-always-available-offline-database-2</guid>
+	  <description><![CDATA[
+	     <p>For my work computer I keep a Outlook Data File (.pst), as a place to backup email. I keep the pst-file on my network share, which ensure that it’s backed up. Recently I’ve experienced trouble with this solution when I’ve disconnected from the network while Outlook is running. I end up with a corrupt Offline Files Database which fail when syncing the pst-file. I can access the file while I’m not connected to a network, but as soon as I connect the file size appear to be 0 kB.</p>
+
+<p>The only solution I’ve found to this problem is to reset the Offline Files Database, via <a href="http://www.technlg.net/windows/delete-offline-files-cache-windows-7/">Delete Offline Files Cache Windows 7</a> and <a href="https://support.microsoft.com/en-us/kb/942974">this from Microsoft</a>.</p>
+
+<p>You can do this by setting a flag in the registry.</p>
+
+<ol>
+  <li>Open regedit</li>
+  <li>Go to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\CSC\Parameters</li>
+  <li>Create a new REG_DWORD named FormatDatabase with a value of 1</li>
+  <li>Restart computer</li>
+  <li>Add folders to the Offline Files Database</li>
+</ol>
+
+<p>It’s important to remember to re-add the folders to make them available offline again after the restart.</p>
+
+<p>To reapply group policies use the command (<a href="https://support.microsoft.com/en-us/kb/942974">from this page</a>):</p>
+
+<blockquote>
+  <p>gpupdate /force</p>
+</blockquote>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

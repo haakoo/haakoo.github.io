@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Personal names in applications</title>
+	  <link>//personal-names-in-applications</link>
+	  <author></author>
+	  <pubDate>2011-08-23T19:58:19+00:00</pubDate>
+	  <guid>//personal-names-in-applications</guid>
+	  <description><![CDATA[
+	     <p>Yet another interesting find on the interweb: <a href="http://lostechies.com/derekgreer/2011/07/19/effective-tests-avoiding-context-obscurity/">Personal names around the world</a> over at <a href="http://www.w3.org/">W3</a>. It was a bit of a eye opener to me, even though I do have a name that get me in trouble several times each year. There are more variation to personal names than I thought, and I’ll try to keep that in mind in the future.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

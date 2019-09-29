@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Batch add prefix to filenames windows 7</title>
+	  <link>//batch-add-prefix-to-filenames-windows-7</link>
+	  <author></author>
+	  <pubDate>2012-08-10T14:09:07+00:00</pubDate>
+	  <guid>//batch-add-prefix-to-filenames-windows-7</guid>
+	  <description><![CDATA[
+	     <p>I had a bit of a challenge wading through heaps of blogs and pages trying to find the easiest way to batch add a prefix to filenames. I wanted to add a prefix to all files in a folder, preferably using a vanilla windows command line prompt. The rename (ren) command was a good candidate, but I had some trouble with wild cards. To get it right I had to loop through the files.</p>
+
+<p>The command I ended up using was:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for %f in (*.*) do rename "%f" "prefix-%f"
+</code></pre></div></div>
+
+<p>This will add <code class="highlighter-rouge">prefix-</code> to all files in that folder.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

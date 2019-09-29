@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>.Net Core and consuming WCF services</title>
+	  <link>//dotnet-core-and-consuming-wcf-services</link>
+	  <author></author>
+	  <pubDate>2018-07-11T14:01:21+00:00</pubDate>
+	  <guid>//dotnet-core-and-consuming-wcf-services</guid>
+	  <description><![CDATA[
+	     <p>I got stuck trying to figure out where the Visual Studio plugin <em>Visual Studio WCF Connected Service</em> had gone today. It turns out it’s no longer a plugin, but part of Visual Studio since version <a href="https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools">15.5</a>.</p>
+
+<p>I’m converting an old .Net 4.0 project to .Net Core, and it is consuming a WCF-service. Everywhere i looked I found references to a Visual Studio plugin called <em>Visual Studio WCF Connected Service</em>, but it wasn’t on the <a href="https://marketplace.visualstudio.com/">Visual Studio Marketplace</a> anymore. After wasting about 30 minutes trying to figure out where to get the plugin I just tried to right click my .Net Core project, and lo and behold there I found <em>Add Connected Service</em> and I could add my WCF-reference.</p>
+
+<p>If only Microsoft could have left the plugin on the Marketplace and told us it was now part of Visual Studio…</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

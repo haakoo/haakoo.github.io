@@ -10,7 +10,7 @@
       <item>
         <title>Move to Jekyll</title>
         
-          <description>&lt;p&gt;This is a post!&lt;/p&gt;
+          <description>&lt;p&gt;So I’ve moved to jekyll, if you couldn’t guess.&lt;/p&gt;
 
 </description>
         
@@ -18,6 +18,482 @@
         <link>
         /Move-to-Jekyll</link>
         <guid isPermaLink="true">/Move-to-Jekyll</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>case sensitive git branch names</title>
+        
+          <description>&lt;p&gt;I’ve had some fun with &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; again… I was checking out a remote branch with &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; on the command line and couldn’t pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 03 Sep 2019 07:17:31 +0000</pubDate>
+        <link>
+        /case-sensitive-git-branch-names</link>
+        <guid isPermaLink="true">/case-sensitive-git-branch-names</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Oppgradere ID Lock 150</title>
+        
+          <description>&lt;p&gt;Problemer med å oppgradere ID Lock 150? Her er et tips.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 10 Mar 2019 17:01:50 +0000</pubDate>
+        <link>
+        /oppgradere-id-lock-150</link>
+        <guid isPermaLink="true">/oppgradere-id-lock-150</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>.Net Core and consuming WCF services</title>
+        
+          <description>&lt;p&gt;I got stuck trying to figure out where the Visual Studio plugin &lt;em&gt;Visual Studio WCF Connected Service&lt;/em&gt; had gone today. It turns out it’s no longer a plugin, but part of Visual Studio since version &lt;a href=&quot;https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools&quot;&gt;15.5&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 11 Jul 2018 14:01:21 +0000</pubDate>
+        <link>
+        /dotnet-core-and-consuming-wcf-services</link>
+        <guid isPermaLink="true">/dotnet-core-and-consuming-wcf-services</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Git end-of-line conversion can create bugs in your software</title>
+        
+          <description>&lt;p&gt;We were experiencing a strange bug with a C# library with an embedded binary file. It worked on the developers machine, but not after it was released after being built on a build server.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 05 May 2018 06:25:10 +0000</pubDate>
+        <link>
+        /git-end-of-line-conversion-can-create-bugs-in-your-software</link>
+        <guid isPermaLink="true">/git-end-of-line-conversion-can-create-bugs-in-your-software</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Using Visual Studio diff and merge tool with Git</title>
+        
+          <description>&lt;p&gt;On Windows I prefer to use Visual Studio’s diff and merge tools. And since I use git I decided to change the default diff and merge tools to Visual Studio 2017 (VS2017).&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 20 Jul 2017 10:00:00 +0000</pubDate>
+        <link>
+        /using-visual-studio-diff-and-merge-tool-with-git</link>
+        <guid isPermaLink="true">/using-visual-studio-diff-and-merge-tool-with-git</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Using nested AD groups to filter access to Gitlab</title>
+        
+          <description>&lt;p&gt;I struggled while trying to limit access to our internal omnibus Gitlab instance using the LDAP-setting &lt;code class=&quot;highlighter-rouge&quot;&gt;user_filter:&lt;/code&gt;. We use nested groups in Microsoft AD to handle users and access rights, which works with Gitlab, when you know about the secret sauce.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 15 Jul 2017 18:30:00 +0000</pubDate>
+        <link>
+        /using-nested-ad-groups-to-filter-access-to-gitlab</link>
+        <guid isPermaLink="true">/using-nested-ad-groups-to-filter-access-to-gitlab</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Windows 7 can't install from Kingston USB stick</title>
+        
+          <description>&lt;p&gt;I recently discovered that it’s impossible to install Windows 7 from a Kingston USB stick. It turns out this is a known problem with &lt;a href=&quot;https://blogs.technet.microsoft.com/asiasupp/2012/03/06/error-we-couldnt-create-a-new-partition-or-locate-an-existing-one-for-more-information-see-the-setup-log-files-when-you-try-to-install-windows-8-cp/&quot;&gt;Kingston&lt;/a&gt; &lt;a href=&quot;https://superuser.com/a/789435/117037&quot;&gt;DataTravel&lt;/a&gt; sticks. I had this problem while installing Windows 7 Pro on an old Panasonic Toughbook CF-31.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 04 May 2017 19:41:26 +0000</pubDate>
+        <link>
+        /windows-7-cant-install-from-kingston-usb-stick</link>
+        <guid isPermaLink="true">/windows-7-cant-install-from-kingston-usb-stick</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Droner i terrorisme</title>
+        
+          <description>&lt;p&gt;De siste årene har vi sett en enorm økning i bruk av droner. Du kan nå gå på Elkjøp og kjøpe et fiks ferdig multikopter. Når du kommer hjem tar det deg kun minutter før du har det i lufta. Timer senere tar du flotte videoopptak fra fugleperspektiv. Men – hva om målet ditt ikke var fine bilder, men noe helt annet?&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 10 Mar 2017 15:00:00 +0000</pubDate>
+        <link>
+        /droner-i-terrorisme</link>
+        <guid isPermaLink="true">/droner-i-terrorisme</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Picture orientation bug in iOS and macOS</title>
+        
+          <description>&lt;p&gt;A friend showed me a problem she had with one of the pictures on her webpage, http://lenefredriksen.com/. In Safari, Chrome and Vivaldi on macOS Sierra and Chrome and Vivaldi on Windows 7, all the pictures had the correct orientation. As in the following screen capture of Safari on macOS below.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 08 Mar 2017 20:51:40 +0000</pubDate>
+        <link>
+        /picture-orientation-bug-in-ios-and-macos</link>
+        <guid isPermaLink="true">/picture-orientation-bug-in-ios-and-macos</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Trouble With Scrivener On Windows 7</title>
+        
+          <description>&lt;p&gt;I’ve had a problem running &lt;a href=&quot;https://www.literatureandlatte.com/scrivener.php&quot;&gt;Scrivener&lt;/a&gt; on my work computer with Windows 7 since I got the computer last year. Today I finally decided to see if I could fix it.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 30 Jun 2016 09:40:50 +0000</pubDate>
+        <link>
+        /trouble-with-scrivener-on-windows-7</link>
+        <guid isPermaLink="true">/trouble-with-scrivener-on-windows-7</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Delingsøkonomi og profesjonelle aktører</title>
+        
+          <description>&lt;p&gt;Hvorfor omtales Uber som en del av “delingsøkonomien”? Det samme lurer jeg på for profesjonelle utleiere som benytter AirBnb.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 06 Jan 2016 13:40:35 +0000</pubDate>
+        <link>
+        /delingsokonomi-og-profesjonelle-aktorer</link>
+        <guid isPermaLink="true">/delingsokonomi-og-profesjonelle-aktorer</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Resetting corrupt &quot;always available offline&quot; database</title>
+        
+          <description>&lt;p&gt;For my work computer I keep a Outlook Data File (.pst), as a place to backup email. I keep the pst-file on my network share, which ensure that it’s backed up. Recently I’ve experienced trouble with this solution when I’ve disconnected from the network while Outlook is running. I end up with a corrupt Offline Files Database which fail when syncing the pst-file. I can access the file while I’m not connected to a network, but as soon as I connect the file size appear to be 0 kB.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 03 Dec 2015 13:01:05 +0000</pubDate>
+        <link>
+        /resetting-corrupt-always-available-offline-database-2</link>
+        <guid isPermaLink="true">/resetting-corrupt-always-available-offline-database-2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Virtual Cockpit Using Vr</title>
+        
+          <description>&lt;p&gt;On Friday I had the pleasure of trying Oculus Rift in a setting where it finally &lt;em&gt;made sense&lt;/em&gt; to me. I’ve been disappointed when trying Oculus Rift on previous occasions and had the same feeling as Jeff Atwood (Codinghorror):&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 12 Aug 2015 07:30:00 +0000</pubDate>
+        <link>
+        /virtual-cockpit-using-vr</link>
+        <guid isPermaLink="true">/virtual-cockpit-using-vr</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Happy with Ghost as my blogging platform</title>
+        
+          <description>&lt;p&gt;Today I finally found the time to go back to my blog, it’s been a busy week and a half. One of the first things I usually do is to log on to &lt;a href=&quot;http://ghost.slack.com&quot;&gt;Ghost’s Slack&lt;/a&gt; to see if there has been any activity. Today was no different and I was again happily surprised when browsing through the backlog in the channels.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 30 Jul 2015 20:09:00 +0000</pubDate>
+        <link>
+        /happy-with-ghost-as-my-blogging-platform</link>
+        <guid isPermaLink="true">/happy-with-ghost-as-my-blogging-platform</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>speil</title>
+        
+          <description>&lt;p&gt;Tilbake i førsteklasse på videregående skrev jeg dette diktet som en norsk oppgave. Jeg skrev det på en PC, men som følge av at en harddisk døde trodde jeg det var borte. Etter at foreldrene mine nå ryddet i kjelleren fant de igjen en bunke med mine papirer fra VGS. Jeg gikk igjennom papirene og fant igjen dette diktet. Jeg var godt fornøyd med det da og jeg er fortsatt fornøyd med det nå.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 19 Jul 2015 07:25:00 +0000</pubDate>
+        <link>
+        /speil</link>
+        <guid isPermaLink="true">/speil</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Getting Ghost up and running on Mac OS X</title>
+        
+          <description>&lt;p&gt;I figured it would be nice to have Ghost up and running locally on my machine if I’m to mess around with themes. So today I installed &lt;a href=&quot;https://nodejs.org/&quot;&gt;Node.js&lt;/a&gt;, cloned Ghost from &lt;a href=&quot;https://github.com/TryGhost/Ghost&quot;&gt;GitHub&lt;/a&gt; and got it all working.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 18 Jul 2015 21:51:50 +0000</pubDate>
+        <link>
+        /getting-ghost-up-and-running-on-mac-os-x</link>
+        <guid isPermaLink="true">/getting-ghost-up-and-running-on-mac-os-x</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>I'm not using Discourse for blog comments</title>
+        
+          <description>&lt;p&gt;After reading more about using Discourse for comments I’ve realised that it’s not a good fit for me. There is a solution for Discourse where you can get X number of the best replies shown under a blog post or article. But you will not have a “leave a comment” area under the blog post, the reader will have to go to the Discourse forum, sign in and then leave a comment.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 17 Jul 2015 10:48:09 +0000</pubDate>
+        <link>
+        /discourse-not-an-option-for-comments</link>
+        <guid isPermaLink="true">/discourse-not-an-option-for-comments</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Disqus inserting ads in your comments?</title>
+        
+          <description>&lt;p&gt;As I continued looking into which system to use for comments I came across a &lt;a href=&quot;http://john.do/discourse-comments/&quot;&gt;blog post&lt;/a&gt; by John Saddington about using Discourse for comments. What I found most interesting though, was this comment about Disqus.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 16 Jul 2015 07:23:06 +0000</pubDate>
+        <link>
+        /disqus-inserting-ads-in-your-comments</link>
+        <guid isPermaLink="true">/disqus-inserting-ads-in-your-comments</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Trouble with touchpad in Ubuntu 14.04 on Toughbook CF-31</title>
+        
+          <description>&lt;p&gt;After I installed Ubuntu 14.04 LTS on a Toughbook CF-31 the touchpad wasn’t working. The touch screen was working, and I could connect a USB mouse and use that. I tried to find a solution to the problem and searched and tried several things before I found the answer.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 14 Jul 2015 07:20:59 +0000</pubDate>
+        <link>
+        /trouble-with-touchpad-in-ubuntu-14-04-on-toughbook</link>
+        <guid isPermaLink="true">/trouble-with-touchpad-in-ubuntu-14-04-on-toughbook</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Choosing a comment system / platform</title>
+        
+          <description>&lt;p&gt;After playing with &lt;a href=&quot;http://www.ghost.org&quot;&gt;Ghost&lt;/a&gt; for a couple of days I still haven’t figured out what to do with comments. Ideally I want something like Wordpress’ built in system, where you can post “anonymously” without registering and still get updates by email.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 13 Jul 2015 20:09:22 +0000</pubDate>
+        <link>
+        /choosing-a-comment-system-plattform</link>
+        <guid isPermaLink="true">/choosing-a-comment-system-plattform</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>How to program the &quot;TV-part&quot; of a Yamaha V465 receiver remote</title>
+        
+          <description>&lt;p&gt;When I got my brothers old TV a little while back we were using the remote for the TV-decoder to turn the TV on and off. Since we now longer have a TV-decoder I need to program the AV-receiver remote instead. The Yamaha RX-V465 AV-receiver have buttons to control the TV at the bottom, but no information about how to program them in the manual. After a bit of googling I found the answer on &lt;a href=&quot;http://www.avsforum.com/t/1152126/yamaha-rx-v465-remote-question&quot;&gt;avsforum.com&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 10 Sep 2013 13:27:15 +0000</pubDate>
+        <link>
+        /how-to-program-a-yamaha-v465-receiver-remote</link>
+        <guid isPermaLink="true">/how-to-program-a-yamaha-v465-receiver-remote</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Keyboard trouble in Ubuntu</title>
+        
+          <description>&lt;p&gt;I’ve recently installed Ubuntu on my old MacBook Pro (2006), with Norwegian keyboard layout. I couldn’t write $ | and other much needed characters for a programmer / LaTeX enthusiast. I dug around in the &lt;em&gt;System Settings&lt;/em&gt; | &lt;em&gt;Keyboard Layout&lt;/em&gt; | &lt;em&gt;Options&lt;/em&gt; and found &lt;em&gt;Key to choose 3rd level&lt;/em&gt;. I ticked off for &lt;em&gt;Left Alt&lt;/em&gt; and my keyboard behaved as expected again!&lt;/p&gt;
+</description>
+        
+        <pubDate>Sun, 26 Aug 2012 17:14:03 +0000</pubDate>
+        <link>
+        /keyboard-trouble-in-ubuntu</link>
+        <guid isPermaLink="true">/keyboard-trouble-in-ubuntu</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Batch add prefix to filenames windows 7</title>
+        
+          <description>&lt;p&gt;I had a bit of a challenge wading through heaps of blogs and pages trying to find the easiest way to batch add a prefix to filenames. I wanted to add a prefix to all files in a folder, preferably using a vanilla windows command line prompt. The rename (ren) command was a good candidate, but I had some trouble with wild cards. To get it right I had to loop through the files.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 10 Aug 2012 14:09:07 +0000</pubDate>
+        <link>
+        /batch-add-prefix-to-filenames-windows-7</link>
+        <guid isPermaLink="true">/batch-add-prefix-to-filenames-windows-7</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>The Simple Life</title>
+        
+          <description>&lt;p&gt;When I travelled Australia as a backpacker back in 2007-2008 I did quite a few different organised tours. Most where through tour companies for backpackers, but a few where a a bit more luxurious. In my experience I now remember the tours with the more “basic” groups better than the more posh ones. I think the reason for this is the shared mindset in the group, where people are after the experience and not ticking of places they’ve been. And it’s also a lot more social sitting around a camp fire eating dinner, than at separate tables in a restaurant-like set-up.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 03 Sep 2011 11:18:44 +0000</pubDate>
+        <link>
+        /the-simple-life</link>
+        <guid isPermaLink="true">/the-simple-life</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Responsible Timing</title>
+        
+          <description>&lt;p&gt;A week and a half ago now, I came across a blog post I knew I had to comment on, &lt;a href=&quot;http://theitriskmanager.wordpress.com/2011/08/25/the-last-irresponsible-moment/&quot;&gt;The Last IRRESPONSIBLE Moment&lt;/a&gt;. I’ve never really thought about being irresponsible by leaving tasks to what seems to be the last responsible opportunity. It really is irresponsible to use the last opportunity to do something, what if something interferes?&lt;/p&gt;
+</description>
+        
+        <pubDate>Sat, 03 Sep 2011 10:56:45 +0000</pubDate>
+        <link>
+        /responsible-timing</link>
+        <guid isPermaLink="true">/responsible-timing</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Slutt på kommentarfeltene?</title>
+        
+          <description>&lt;p&gt;Jeg fikk endelig tid til å lese Eirik Newths innlegg, &lt;a href=&quot;http://newth.net/eirik/2011/08/09/a-faen/&quot;&gt;Å faen. Eller: Derfor bør avisene droppe kommentarfeltet&lt;/a&gt;, om kommentarfeltene hos nettavisene i kveld. Jeg må si meg enig med han, kommentarfeltene hos de store avisene bør fjernes.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 23 Aug 2011 20:10:24 +0000</pubDate>
+        <link>
+        /slutt-pa-kommentarfeltene</link>
+        <guid isPermaLink="true">/slutt-pa-kommentarfeltene</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Personal names in applications</title>
+        
+          <description>&lt;p&gt;Yet another interesting find on the interweb: &lt;a href=&quot;http://lostechies.com/derekgreer/2011/07/19/effective-tests-avoiding-context-obscurity/&quot;&gt;Personal names around the world&lt;/a&gt; over at &lt;a href=&quot;http://www.w3.org/&quot;&gt;W3&lt;/a&gt;. It was a bit of a eye opener to me, even though I do have a name that get me in trouble several times each year. There are more variation to personal names than I thought, and I’ll try to keep that in mind in the future.&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 23 Aug 2011 19:58:19 +0000</pubDate>
+        <link>
+        /personal-names-in-applications</link>
+        <guid isPermaLink="true">/personal-names-in-applications</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Wrong or right? When do you learn?</title>
+        
+          <description>&lt;p&gt;I read an blog post over at The IT Risk Manager blog titled &lt;a href=&quot;http://theitriskmanager.wordpress.com/2011/08/11/id-rather-be-wrong-than-be-right/&quot;&gt;I’d rather be wrong than be right&lt;/a&gt; tonight. The main idea is that you will not learn (much) from a discussion if you are right. But if you are proven wrong, you have learned something new.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 14 Aug 2011 20:45:59 +0000</pubDate>
+        <link>
+        /wrong-or-right-when-do-you-learn</link>
+        <guid isPermaLink="true">/wrong-or-right-when-do-you-learn</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Language and colours</title>
+        
+          <description>&lt;p&gt;Through Twitter I cam across a video about &lt;a href=&quot;http://boingboing.net/2011/08/12/how-language-affects-color-perception.html&quot;&gt;How language affects colour perception&lt;/a&gt;. It’s very interesting how differently we perceive colour! It’s well worth the 15 minutes!&lt;/p&gt;
+</description>
+        
+        <pubDate>Sun, 14 Aug 2011 19:45:22 +0000</pubDate>
+        <link>
+        /language-and-colours</link>
+        <guid isPermaLink="true">/language-and-colours</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Telex - Anticensorship in the Network infrastructur</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;https://telex.cc/&quot;&gt;Telex.cc&lt;/a&gt; is a response to on-line censorship, that relies on cooperation from &lt;a href=&quot;http://en.wikipedia.org/wiki/Internet_Service_Provider&quot;&gt;ISPs&lt;/a&gt;. I see the benefits and the need for services like this and &lt;a href=&quot;https://www.torproject.org/&quot;&gt;Tor&lt;/a&gt;, but will it become mainstream? People that live in areas with strong censorship or other treats might use these services.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 07 Aug 2011 15:43:55 +0000</pubDate>
+        <link>
+        /telex</link>
+        <guid isPermaLink="true">/telex</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Thought Questions - questions worth asking</title>
+        
+          <description>&lt;p&gt;One of the pages I follow using RSS is &lt;a href=&quot;http://codebetter.com/&quot;&gt;Codebetter&lt;/a&gt;, and today there was a &lt;a href=&quot;http://codebetter.com/drusellers/2011/08/06/thought-questions/&quot;&gt;blog post&lt;/a&gt; about questions that make you think by Dru Sellers. If could almost be considered a personal &lt;a href=&quot;http://en.wikipedia.org/wiki/Retrospective#Software_development&quot;&gt;retrospective&lt;/a&gt;. It linked to a &lt;a href=&quot;http://wakeuptiger.blogspot.com/2011/08/questions-worth-asking.html&quot;&gt;blog post&lt;/a&gt; on the Wake Up Tiger blog, and a web page called &lt;a href=&quot;http://thoughtquestions.com/&quot;&gt;Thought Questions&lt;/a&gt; where there are lots of questions that will make you think. They got me thinking.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 07 Aug 2011 11:29:48 +0000</pubDate>
+        <link>
+        /thought-questions</link>
+        <guid isPermaLink="true">/thought-questions</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Wordpress.com blog names realisation</title>
+        
+          <description>&lt;p&gt;Since I decided to start keeping a blog / diary again, I went to wordpress.com and intended to reactivate my blog. Several years ago I created a blog at wordpress.com to test it out, but I decided not to keep it. I deleted the blog, and thought I could reactivate it when I decided to start blogging again.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 06 Aug 2011 22:53:06 +0000</pubDate>
+        <link>
+        /wordpress-com-blog-names-realisation</link>
+        <guid isPermaLink="true">/wordpress-com-blog-names-realisation</guid>
       </item>
       
     

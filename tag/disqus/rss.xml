@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Disqus inserting ads in your comments?</title>
+	  <link>//disqus-inserting-ads-in-your-comments</link>
+	  <author></author>
+	  <pubDate>2015-07-16T07:23:06+00:00</pubDate>
+	  <guid>//disqus-inserting-ads-in-your-comments</guid>
+	  <description><![CDATA[
+	     <p>As I continued looking into which system to use for comments I came across a <a href="http://john.do/discourse-comments/">blog post</a> by John Saddington about using Discourse for comments. What I found most interesting though, was this comment about Disqus.</p>
+
+<blockquote>
+  <p>Things are changing though and Disqus is moving to capitalize on commenters and even going as far as inserting advertisements in the comment stream layer that look like legitimate comments from real users.</p>
+</blockquote>
+
+<p>If this is true, I will not be using Disqus.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Choosing a comment system / platform</title>
+	  <link>//choosing-a-comment-system-plattform</link>
+	  <author></author>
+	  <pubDate>2015-07-13T20:09:22+00:00</pubDate>
+	  <guid>//choosing-a-comment-system-plattform</guid>
+	  <description><![CDATA[
+	     <p>After playing with <a href="http://www.ghost.org">Ghost</a> for a couple of days I still haven’t figured out what to do with comments. Ideally I want something like Wordpress’ built in system, where you can post “anonymously” without registering and still get updates by email.</p>
+
+<p>I have read a few blog posts recently that made me look at using Twitter for comments. That might work out for me, since I use Twitter so much, but not if I’m to use Ghost for other people’s blogs.</p>
+
+<p>After I realised that <a href="https://disqus.com/websites/">Disqus</a> allows commenting without signing up I thought that might be a good fit. But they do not support notifications without signing up, and I do not want my readers to have to sign up to Disqus, so it’s not a perfect fit for me.</p>
+
+<p>I looked at <a href="https://muut.com/">Muut</a> but it seems to be overkill for what I want (a simple comment system). The same goes for <a href="http://web.livefyre.com/">Livefyre</a>.</p>
+
+<p>Since I want readers to post without signing up Facebook and Google+ comments are out of the question. It doesn’t help that I rarely use the services myself.</p>
+
+<p>Then we have <a href="http://www.discourse.org/">Discourse</a>, but last time I looked it looked too focused on creating a “forum”, and not a comments system. I’ll have a new look at Discourse tomorrow.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

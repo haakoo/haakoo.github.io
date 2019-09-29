@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>case sensitive git branch names</title>
+	  <link>//case-sensitive-git-branch-names</link>
+	  <author></author>
+	  <pubDate>2019-09-03T07:17:31+00:00</pubDate>
+	  <guid>//case-sensitive-git-branch-names</guid>
+	  <description><![CDATA[
+	     <p>I’ve had some fun with <code class="highlighter-rouge">git</code> again… I was checking out a remote branch with <code class="highlighter-rouge">git</code> on the command line and couldn’t pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.</p>
+
+<p>I used <code class="highlighter-rouge">git checkout branch-name</code> to get a local copy of the remote branch. When I tried to use <code class="highlighter-rouge">git pull</code> in that branch I got the following error message:</p>
+
+<pre><code class="language-git">Your configuration specifies to merge with the ref 'refs/heads/branch-name' from the remote, but no such ref was fetched.
+</code></pre>
+
+<p>I tried to search for an fix, but couldn’t find anything that worked. The most common explaination for this error message is that the remote branch is missing.</p>
+
+<p>Eventually I remembered that I had used a capital letter in the branch name when creating it. The actuall branch name was something like <code class="highlighter-rouge">branch-Name</code>, notice the capital <strong><em>N</em></strong>. By having the correct capitalising of the branch name during checkout, <code class="highlighter-rouge">git pull</code> works.</p>
+
+<p>This was checking out from Gitlab on a Linux server and to a Windows 10 machine.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Git end-of-line conversion can create bugs in your software</title>
+	  <link>//git-end-of-line-conversion-can-create-bugs-in-your-software</link>
+	  <author></author>
+	  <pubDate>2018-05-05T06:25:10+00:00</pubDate>
+	  <guid>//git-end-of-line-conversion-can-create-bugs-in-your-software</guid>
+	  <description><![CDATA[
+	     <p>We were experiencing a strange bug with a C# library with an embedded binary file. It worked on the developers machine, but not after it was released after being built on a build server.</p>
+
+<p>It turns out that the developer had <em>git checkout end-of-line</em> settings that preserved the <code class="highlighter-rouge">LF</code> character, while the build server converted from <code class="highlighter-rouge">LF</code> to <code class="highlighter-rouge">CR LF</code> upon checkout. This corrupted the binary file that was embedded into the library as an <em>embedded resource</em>. Git didn’t recognise the file type and interpreted it as a (partial) text file.</p>
+
+<h2 id="the-fix">The fix</h2>
+<p>I think the preferred way to avoid this is to include a <code class="highlighter-rouge">.gitattributes</code> file in the root-folder of your repo. In the <code class="highlighter-rouge">.gitattributes</code> file you specify how <a href="https://git-scm.com/docs/gitattributes">git should handle different file types</a>. For us the solution was to add the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.pgm binary
+</code></pre></div></div>
+
+<p>I first found the solution for this in an answer on Stack Overflow, <a href="https://stackoverflow.com/a/40821931/930546">How to change line-ending settings</a>.</p>
+
+<h2 id="alternative">Alternative</h2>
+<p>It’s also possible to avoid this by changing the git setting <code class="highlighter-rouge">core.autocrlf</code> to either <code class="highlighter-rouge">input</code> or <code class="highlighter-rouge">false</code>, but this will change the behaviour for all files.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Using Visual Studio diff and merge tool with Git</title>
+	  <link>//using-visual-studio-diff-and-merge-tool-with-git</link>
+	  <author></author>
+	  <pubDate>2017-07-20T10:00:00+00:00</pubDate>
+	  <guid>//using-visual-studio-diff-and-merge-tool-with-git</guid>
+	  <description><![CDATA[
+	     <p>On Windows I prefer to use Visual Studio’s diff and merge tools. And since I use git I decided to change the default diff and merge tools to Visual Studio 2017 (VS2017).</p>
+
+<h2 id="sourcetree-app">SourceTree App</h2>
+<p>I first changed the diff and merge tools in SourceTree App, just to test the settings. I found a nice blog post <a href="http://blog.dudak.me/2016/using-visual-studio-as-diffmerge-tool-in-sourcetree/">Using Visual Studio as diff/merge tool in Git and SourceTree</a> by Michał Dudak explaining how to do this for VS 2015. Since Visual Studio 2017 have a different folder structure I had to look for <code class="highlighter-rouge">vsdiffmerge.exe</code> and with the help of the <a href="https://gist.github.com/DamianReeves/35adf89992f8d871afe6#gistcomment-2024718">comments for a Gist</a> I found the correct location.</p>
+
+<p>In the <em>Diff Options</em> you choose to use <em>Custom tools</em> and use the following settings:</p>
+
+<p><strong>Command:</strong> (same for both diff and merge)</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\M</span>icrosoft Visual Studio<span class="se">\2</span>017<span class="se">\E</span>nterprise<span class="se">\C</span>ommon7<span class="se">\I</span>DE<span class="se">\C</span>ommonExtensions<span class="se">\M</span>icrosoft<span class="se">\T</span>eamFoundation<span class="se">\T</span>eam Explorer<span class="se">\v</span>sDiffMerge.exe
+</code></pre></div></div>
+
+<p><strong>Diff arguments:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"</span><span class="nv">$LOCAL</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$REMOTE</span><span class="s2">"</span> <span class="s2">"Source"</span> <span class="s2">"Target"</span> //t
+</code></pre></div></div>
+
+<p><strong>Merge arguments:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"</span><span class="nv">$LOCAL</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$REMOTE</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$BASE</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$MERGED</span><span class="s2">"</span> //m
+</code></pre></div></div>
+
+<h2 id="git-defaults-using-git-bash">Git defaults using Git Bash</h2>
+
+<p>To change the git defaults using <code class="highlighter-rouge">Git Bash</code> you can do the following:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> difftool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="se">\$</span><span class="s2">LOCAL </span><span class="se">\$</span><span class="s2">REMOTE Source Target //ignorespace //t"</span>
+
+git config <span class="nt">--global</span> mergetool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="se">\$</span><span class="s2">LOCAL </span><span class="se">\$</span><span class="s2">REMOTE </span><span class="se">\$</span><span class="s2">BASE </span><span class="se">\$</span><span class="s2">MERGED //ignorespace //m"</span>
+git config <span class="nt">--global</span> mergetool.visualstudio.trustExitCode <span class="nb">true
+
+</span>git config <span class="nt">--global</span> diff.tool visualstudio
+git config <span class="nt">--global</span> merge.tool visualstudio
+</code></pre></div></div>
+
+<h2 id="git-defaults-using-cmdexe">Git defaults using cmd.exe</h2>
+
+<p>To change the git defaults using <code class="highlighter-rouge">cmd.exe</code> you can do the following:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> difftool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="nv">$LOCAL</span><span class="s2"> </span><span class="nv">$REMOTE</span><span class="s2"> Source Target //ignorespace //t"</span>
+
+git config <span class="nt">--global</span> mergetool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="nv">$LOCAL</span><span class="s2"> </span><span class="nv">$REMOTE</span><span class="s2"> </span><span class="nv">$BASE</span><span class="s2"> </span><span class="nv">$MERGED</span><span class="s2"> //ignorespace //m"</span>
+git config <span class="nt">--global</span> mergetool.visualstudio.trustExitCode <span class="nb">true
+
+</span>git config <span class="nt">--global</span> diff.tool visualstudio
+git config <span class="nt">--global</span> merge.tool visualstudio
+</code></pre></div></div>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>How to program the "TV-part" of a Yamaha V465 receiver remote</title>
+	  <link>//how-to-program-a-yamaha-v465-receiver-remote</link>
+	  <author></author>
+	  <pubDate>2013-09-10T13:27:15+00:00</pubDate>
+	  <guid>//how-to-program-a-yamaha-v465-receiver-remote</guid>
+	  <description><![CDATA[
+	     <p>When I got my brothers old TV a little while back we were using the remote for the TV-decoder to turn the TV on and off. Since we now longer have a TV-decoder I need to program the AV-receiver remote instead. The Yamaha RX-V465 AV-receiver have buttons to control the TV at the bottom, but no information about how to program them in the manual. After a bit of googling I found the answer on <a href="http://www.avsforum.com/t/1152126/yamaha-rx-v465-remote-question">avsforum.com</a>.</p>
+
+<ol>
+  <li>Press the CODE SET</li>
+  <li>Then choose <strong>[A]</strong> or <strong>[b]</strong> from the <em>Input selection keys</em></li>
+  <li>Enter the code for your TV</li>
+</ol>
+
+<p>If everything worked out the <em>Transmit</em> light should blink twice.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

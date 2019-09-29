@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Oppgradere ID Lock 150</title>
+	  <link>//oppgradere-id-lock-150</link>
+	  <author></author>
+	  <pubDate>2019-03-10T17:01:50+00:00</pubDate>
+	  <guid>//oppgradere-id-lock-150</guid>
+	  <description><![CDATA[
+	     <p>Problemer med å oppgradere ID Lock 150? Her er et tips.</p>
+
+<p>Jeg hadde store problemer med å få oppgradert programvaren (firmware) på ID Lock 150, den feilet gang på gang. Det som til slutt fungerte var å skru av blåtann (BT) på låsen og så skru den på igjen rett før oppgradering. I bruksanvisningen til låsen står det ikke hvordan du skrur av BT, kun på, men med litt prøving fant jeg ut at styrig av blåtann er som følger:</p>
+
+<p>Dette gjøres med åpen dør.</p>
+
+<p>Skru av BT:</p>
+<ol>
+  <li>Hold inn låseknappen på innsiden i 3 sekunder</li>
+  <li>Trykk inn hovedkoden og trykk <code class="highlighter-rouge">*</code></li>
+  <li>Trykk <code class="highlighter-rouge">3</code> + <code class="highlighter-rouge">*</code> + <code class="highlighter-rouge">0</code></li>
+</ol>
+
+<p>Skru på BT:</p>
+<ol>
+  <li>Hold inn låseknappen på innsiden i 3 sekunder</li>
+  <li>Trykk inn hovedkoden og trykk <code class="highlighter-rouge">*</code></li>
+  <li>Trykk <code class="highlighter-rouge">3</code> + <code class="highlighter-rouge">*</code> + <code class="highlighter-rouge">1</code></li>
+</ol>
+
+<p>Dette gjorde at jeg fikk oppgradert låsen første gang. Gang nummer to fungerte det på første forsøk. Blåtann vil trekke litt strøm, så det kan være en ide og skru det av etter oppgradering så batteriene holder litt lenger.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>speil</title>
+	  <link>//speil</link>
+	  <author></author>
+	  <pubDate>2015-07-19T07:25:00+00:00</pubDate>
+	  <guid>//speil</guid>
+	  <description><![CDATA[
+	     <p>Tilbake i førsteklasse på videregående skrev jeg dette diktet som en norsk oppgave. Jeg skrev det på en PC, men som følge av at en harddisk døde trodde jeg det var borte. Etter at foreldrene mine nå ryddet i kjelleren fant de igjen en bunke med mine papirer fra VGS. Jeg gikk igjennom papirene og fant igjen dette diktet. Jeg var godt fornøyd med det da og jeg er fortsatt fornøyd med det nå.</p>
+
+<blockquote>
+  <p>speil</p>
+
+  <p>tenk så trist å være speil<br />
+ikke ha eget utseende<br />
+kan se ut som alt<br />
+tenk så trist å være speil<br /></p>
+
+  <p>tenk så fint å være speil<br />
+ikke ha eget utseende<br />
+kan se ut som alt<br />
+tenk så fint å være speil<br /></p>
+
+  <p>tenk så kjedelig å være speil<br />
+ikke ha eget utseende<br />
+kan se ut som alt<br />
+tenk så kjedelig å være speil<br /></p>
+
+  <p>tenk så morsomt å være speil<br />
+ikke ha eget utseende<br />
+kan se ut som alt<br />
+tenk så morsomt å være speil<br /></p>
+</blockquote>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Slutt på kommentarfeltene?</title>
+	  <link>//slutt-pa-kommentarfeltene</link>
+	  <author></author>
+	  <pubDate>2011-08-23T20:10:24+00:00</pubDate>
+	  <guid>//slutt-pa-kommentarfeltene</guid>
+	  <description><![CDATA[
+	     <p>Jeg fikk endelig tid til å lese Eirik Newths innlegg, <a href="http://newth.net/eirik/2011/08/09/a-faen/">Å faen. Eller: Derfor bør avisene droppe kommentarfeltet</a>, om kommentarfeltene hos nettavisene i kveld. Jeg må si meg enig med han, kommentarfeltene hos de store avisene bør fjernes.</p>
+
+<p>Det finnes, som Newth nevner, steder på nettet hvor kommentarfeltet fungerer utmerket, men det finnes alt for mange steder hvor de gjør vondt verre. Det er på tide å fjerne de.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

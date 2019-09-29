@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Keyboard trouble in Ubuntu</title>
+	  <link>//keyboard-trouble-in-ubuntu</link>
+	  <author></author>
+	  <pubDate>2012-08-26T17:14:03+00:00</pubDate>
+	  <guid>//keyboard-trouble-in-ubuntu</guid>
+	  <description><![CDATA[
+	     <p>I’ve recently installed Ubuntu on my old MacBook Pro (2006), with Norwegian keyboard layout. I couldn’t write $ | and other much needed characters for a programmer / LaTeX enthusiast. I dug around in the <em>System Settings</em> | <em>Keyboard Layout</em> | <em>Options</em> and found <em>Key to choose 3rd level</em>. I ticked off for <em>Left Alt</em> and my keyboard behaved as expected again!</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

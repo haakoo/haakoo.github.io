@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>case sensitive git branch names</title>
+	  <link>//case-sensitive-git-branch-names</link>
+	  <author></author>
+	  <pubDate>2019-09-03T07:17:31+00:00</pubDate>
+	  <guid>//case-sensitive-git-branch-names</guid>
+	  <description><![CDATA[
+	     <p>I’ve had some fun with <code class="highlighter-rouge">git</code> again… I was checking out a remote branch with <code class="highlighter-rouge">git</code> on the command line and couldn’t pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.</p>
+
+<p>I used <code class="highlighter-rouge">git checkout branch-name</code> to get a local copy of the remote branch. When I tried to use <code class="highlighter-rouge">git pull</code> in that branch I got the following error message:</p>
+
+<pre><code class="language-git">Your configuration specifies to merge with the ref 'refs/heads/branch-name' from the remote, but no such ref was fetched.
+</code></pre>
+
+<p>I tried to search for an fix, but couldn’t find anything that worked. The most common explaination for this error message is that the remote branch is missing.</p>
+
+<p>Eventually I remembered that I had used a capital letter in the branch name when creating it. The actuall branch name was something like <code class="highlighter-rouge">branch-Name</code>, notice the capital <strong><em>N</em></strong>. By having the correct capitalising of the branch name during checkout, <code class="highlighter-rouge">git pull</code> works.</p>
+
+<p>This was checking out from Gitlab on a Linux server and to a Windows 10 machine.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Using nested AD groups to filter access to Gitlab</title>
+	  <link>//using-nested-ad-groups-to-filter-access-to-gitlab</link>
+	  <author></author>
+	  <pubDate>2017-07-15T18:30:00+00:00</pubDate>
+	  <guid>//using-nested-ad-groups-to-filter-access-to-gitlab</guid>
+	  <description><![CDATA[
+	     <p>I struggled while trying to limit access to our internal omnibus Gitlab instance using the LDAP-setting <code class="highlighter-rouge">user_filter:</code>. We use nested groups in Microsoft AD to handle users and access rights, which works with Gitlab, when you know about the secret sauce.</p>
+
+<h2 id="licensing---you-need-an-enterprise-license">Licensing - you need an enterprise license</h2>
+<p>First I tried getting it to work with our Gitlab instance which is running the free community edition. I read through the docs about <a href="https://docs.gitlab.com/ce/administration/auth/ldap.html">LDAP</a>, added <code class="highlighter-rouge">user_filter:</code> to our settings file and it didn’t work. Users that were added directly to the AD group that was used as a filter got access, but not users in groups in the “main” group, e.g. the group <em>Gitlab-access</em> contains <em>User1</em> and <em>User2</em> and <em>Engineering-group</em>, and <em>Enginerring-group</em> contains <em>User3</em>. Using the following filter:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ss">user_filter: </span><span class="s1">'(&amp;(objectClass=person)(memberOf=cn=Gitlab-access,dc=domain,dc=com)'</span>
+</code></pre></div></div>
+
+<p>will only grant access to <em>User1</em> and <em>User2</em>, not <em>User3</em>.</p>
+
+<p>This was’t a trivial discovery, since the Gitlab <a href="https://docs.gitlab.com/ce/administration/auth/ldap.html#using-an-ldap-filter-to-limit-access-to-your-gitlab-server">CE documentation</a> seems to indicate that nested AD groups work. It’s only once you see that the <a href="https://docs.gitlab.com/ee/administration/auth/ldap-ee.html#supported-ldap-group-types-attributes">LDAP Additions to Gitlab EE documentation</a> also mention nested AD groups that you realise this might be an EE feature.</p>
+
+<p>I went along and asked for an EE trial license to see if I could get it to work.</p>
+
+<p><em><strong>Edit 2017-07-18:</strong> It turns out that it is possible to use nested AD groups with <code class="highlighter-rouge">user_filter:</code> in Gitlab CE. After I contacted Gitlab about the confusion the documentation has been <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/12871">updated</a>.</em></p>
+
+<h2 id="special-ad-ldap-query-rules">Special AD LDAP query rules</h2>
+<p>The second hurdle was to realise that the <em>plain</em> LDAP query I show higher up wont work because of Microsoft AD. You need to add a special rule object identifier (OID) to get a <em>recursive</em> version of <code class="highlighter-rouge">memberOf</code> called <code class="highlighter-rouge">LDAP_MATCHING_RULE_IN_CHAIN</code>. More information over at <a href="https://msdn.microsoft.com/en-us/library/aa746475(v=vs.85).aspx">MDSN</a>:</p>
+
+<blockquote>
+  <p>This rule is limited to filters that apply to the DN. This is a special “extended” match operator that walks the chain of ancestry in objects all the way to the root until it finds a match.</p>
+</blockquote>
+
+<p>The resources that helped me understand this were mainly the Stackoverflow questions <a href="https://stackoverflow.com/questions/6195812/ldap-nested-group-membership">ldap nested group membership</a> and <a href="https://stackoverflow.com/questions/9945518/can-ldap-matching-rule-in-chain-return-subtree-search-results-with-attributes">Can LDAP_MATCHING_RULE_IN_CHAIN return ‘subtree search results’ with attributes (specifically “memberOf”)?</a>. I also found some information over at Atlassians help page <a href="https://confluence.atlassian.com/crowdkb/active-directory-user-filter-does-not-search-nested-groups-715130424.html">Active Directory user filter does not search nested groups</a></p>
+
+<p>The <code class="highlighter-rouge">user_filter:</code> setting that finally worked was the following:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ss">user_filter: </span><span class="s1">'(&amp;(objectClass=person)(memberOf:1.2.840.113556.1.4.1941:=cn=Gitlab-access,dc=domain,dc=com)'</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>Cover photo <a href="https://unsplash.com/photos/9Eheu3sIgrM">Simple Circles</a> by <a href="https://unsplash.com/@lastly">Tyler Lastovich</a> from <a href="https://unsplash.com/">Unsplash</a></p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Thought Questions - questions worth asking</title>
+	  <link>//thought-questions</link>
+	  <author></author>
+	  <pubDate>2011-08-07T11:29:48+00:00</pubDate>
+	  <guid>//thought-questions</guid>
+	  <description><![CDATA[
+	     <p>One of the pages I follow using RSS is <a href="http://codebetter.com/">Codebetter</a>, and today there was a <a href="http://codebetter.com/drusellers/2011/08/06/thought-questions/">blog post</a> about questions that make you think by Dru Sellers. If could almost be considered a personal <a href="http://en.wikipedia.org/wiki/Retrospective#Software_development">retrospective</a>. It linked to a <a href="http://wakeuptiger.blogspot.com/2011/08/questions-worth-asking.html">blog post</a> on the Wake Up Tiger blog, and a web page called <a href="http://thoughtquestions.com/">Thought Questions</a> where there are lots of questions that will make you think. They got me thinking.</p>
+
+<p>The page is now added to my RSS feed and I’ll give each new question a few minutes of thought. As the Wake Up Tiger blog post say:</p>
+
+<blockquote>
+  <p>“If life begins at the end of your comfort zone — as indeed it does …”</p>
+</blockquote>
+
+<p>it’s not a bad idea to ask yourself some hard questions that will get you out of your comfort zone.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

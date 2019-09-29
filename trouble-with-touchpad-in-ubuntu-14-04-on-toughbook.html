@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Page Meta -->
+    <title>Trouble with touchpad in Ubuntu 14.04 on Toughbook CF-31</title>
+    <meta name="description" content="my ramblings about *" />
+
+    <!-- Mobile Meta -->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Brand icon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" >
+
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!-- Ghost outputs important style and meta data with this tag -->
+        <link rel="canonical" href="//trouble-with-touchpad-in-ubuntu-14-04-on-toughbook" />
+    <meta name="referrer" content="origin" />
+    <link rel="next" href="/page2/" />
+
+    <meta property="og:site_name" content="nothing gold can stay" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Trouble with touchpad in Ubuntu 14.04 on Toughbook CF-31" />
+    <meta property="og:description" content="my ramblings about *" />
+    <meta property="og:url" content="//trouble-with-touchpad-in-ubuntu-14-04-on-toughbook" />
+    <meta property="og:image" content="/assets/images/tents-in-the-night.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Trouble with touchpad in Ubuntu 14.04 on Toughbook CF-31" />
+    <meta name="twitter:description" content="my ramblings about *" />
+    <meta name="twitter:url" content="//trouble-with-touchpad-in-ubuntu-14-04-on-toughbook" />
+    <meta name="twitter:image:src" content="/assets/images/tents-in-the-night.jpg" />
+
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Website",
+    "publisher": "nothing gold can stay",
+    "name": "Trouble with touchpad in Ubuntu 14.04 on Toughbook CF-31",
+    "url": "//trouble-with-touchpad-in-ubuntu-14-04-on-toughbook",
+    "image": "/assets/images/tents-in-the-night.jpg",
+    "description": "my ramblings about *"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.0.0" />
+    <link rel="alternate" type="application/rss+xml" title="nothing gold can stay" href="/feed.xml" />
+
+
+</head>
+<body class="home-template nav-closed">
+
+    <!-- The blog navigation links -->
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        <li class="nav-home " role="presentation"><a href="/">Home</a></li>
+        <li class="nav-about " role="presentation"><a href="/about">About</a></li>
+        <li class="nav-twitter role="presentation"><a href="https://twitter.com/haakoo">@haakoo</a></li>
+        <li class="nav-email role="presentation"><a href="mailto:haakoo@ifi.uio.no">email</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The comment above "< default" means - insert everything in this file into -->
+    <!-- the [body] of the default.hbs template, which contains our header/footer. -->
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<header class="main-header post-head " style="background-image: url(/assets/images/tents-in-the-night.jpg) ">
+    <nav class="main-nav  overlay  clearfix">
+        
+        <a class="blog-logo text-logo" href="/">nothing gold can stay</a>
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Trouble with touchpad in Ubuntu 14.04 on Toughbook CF-31</h1>
+            <section class="post-meta">
+            <!-- <a href='/'></a> -->
+
+            
+                
+                    <a href='/author/haakoo'>Håkon K. Olafsen</a>
+                
+            
+            <time class="post-date" datetime="2015-07-14">14 Jul 2015</time>
+                <!-- [[tags prefix=" on "]] -->
+                
+                on
+                
+                    
+                       <a href='/tag/english'>English</a>,
+                    
+                
+                    
+                       <a href='/tag/ubuntu'>Ubuntu</a>,
+                    
+                
+                    
+                       <a href='/tag/toughbook'>Toughbook</a>,
+                    
+                
+                    
+                       <a href='/tag/touchpad'>Touchpad</a>,
+                    
+                
+                    
+                       <a href='/tag/fix'>Fix</a>
+                    
+                
+                
+            </section>
+        </header>
+
+        <section class="post-content">
+
+            <p>After I installed Ubuntu 14.04 LTS on a Toughbook CF-31 the touchpad wasn’t working. The touch screen was working, and I could connect a USB mouse and use that. I tried to find a solution to the problem and searched and tried several things before I found the answer.</p>
+
+<p>The solution is fairly simple, you need to edit <code class="highlighter-rouge">/etc/default/grub</code><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> (<code class="highlighter-rouge">sudo nano /etc/default/grub</code> - <code class="highlighter-rouge">Ctrl + X</code> to exit) and add <code class="highlighter-rouge">i8042.nomux i8042.noloop</code><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> to the line <code class="highlighter-rouge">GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</code>. The resulting line should look like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i8042.nomux i8042.noloop"
+</code></pre></div></div>
+
+<p>Then you need to update grub by running <code class="highlighter-rouge">sudo update-grub</code>.<sup id="fnref:1:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+
+<p>The important next step is to <strong>power cycle</strong> your machine. A normal <strong>reboot will not work</strong> (not sure why). This caused me an hour’s worth of grief yesterday, before I finally gave up and turned off the computer. When I started it this morning the touchpad worked.</p>
+
+<h2 id="other-diagnostics">Other diagnostics</h2>
+
+<p>There is something you can do to figure out if you have the same problem that I did. You should check if the problem relates to the Linux kernel or driver. Run the command:<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat /proc/bus/input/devices
+</code></pre></div></div>
+
+<p>and if you can’t see an entry with “Touchpad” the kernel hasn’t found the hardware, and my fix might work. If you do see an entry with “Touchpad” then the problem is probably related to the driver, and this fix will not work.</p>
+
+<h3 id="footnotes">Footnotes</h3>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>http://www.howtogeek.com/196655/how-to-configure-the-grub2-boot-loaders-settings/ <a href="#fnref:1" class="reversefootnote">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:2">
+      <p>http://ubuntuforums.org/showthread.php?t=844968&amp;p=5290024#post5290024 <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>http://askubuntu.com/questions/483229/dell-5537-touchpad-not-working-ubuntu-14-04 <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+            <!-- Everything inside the #author tags pulls data from the author -->
+            <!-- #author-->
+            
+                
+                    
+                        <figure class="author-image">
+                            <a class="img" href="/author/haakoo" style="background-image: url(/assets/images/haakoo.jpg)"><span class="hidden">haakoo's Picture</span></a>
+                        </figure>
+                    
+
+                    <section class="author">
+                        <h4><a href="/author/haakoo">Håkon K. Olafsen</a></h4>
+
+                        
+                            <p> Awesome Norwegian guy</p>
+                        
+                        <div class="author-meta">
+                            <span class="author-location icon-location"> Oslo, Norway</span>
+                            <span class="author-link icon-link"><a href="https://blog.hakonkolafsen.no/"> blog.hakonkolafsen.no</a></span>
+                        </div>
+                    </section>
+
+                    <!-- /author  -->
+
+                    <section class="share">
+                        <h4>Share this post</h4>
+                        <a class="icon-twitter" href="http://twitter.com/share?text=Trouble with touchpad in Ubuntu 14.04 on Toughbook CF-31&amp;url=trouble-with-touchpad-in-ubuntu-14-04-on-toughbook"
+                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                            <span class="hidden">Twitter</span>
+                        </a>
+                        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=trouble-with-touchpad-in-ubuntu-14-04-on-toughbook"
+                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                            <span class="hidden">Facebook</span>
+                        </a>
+                    </section>
+                
+            
+
+            <!-- Add Disqus Comments -->
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+<aside class="read-next">
+
+    <!-- [[! next_post ]] -->
+    
+        <a class="read-next-story " style="background-image: url(/assets/images/tents-in-the-night.jpg)" href="/disqus-inserting-ads-in-your-comments">
+            <section class="post">
+                <h2>Disqus inserting ads in your comments?</h2>
+                <p>As I continued looking into which system to use for comments I came across a...</p>
+            </section>
+        </a>
+    
+    <!-- [[! /next_post ]] -->
+    <!-- [[! prev_post ]] -->
+    
+        <a class="read-next-story prev " style="background-image: url(/assets/images/tents-in-the-night.jpg)" href="/choosing-a-comment-system-plattform">
+            <section class="post">
+                <h2>Choosing a comment system / platform</h2>
+                <p>After playing with Ghost for a couple of days I still haven’t figured out what...</p>
+            </section>
+        </a>
+    
+    <!-- [[! /prev_post ]] -->
+</aside>
+
+<!-- /post -->
+
+
+        <!-- The tiny footer at the very bottom -->
+        <footer class="site-footer clearfix">
+          <!-- <section class="copyright"><a href="/">nothing gold can stay</a> &copy; 2019</section> -->
+          <section class="copyright">The content on this website, of which Håkon K. Olafsen is the author, is licensed under<br /> Creative Commons <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</a></section>
+          <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/jekyller/jasper">Jasper</a></section>
+        </footer>
+    </div>
+    <!-- highlight.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- jQuery needs to come before `` so that jQuery can be used in code injection -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Ghost outputs important scripts and data with this tag -->
+    <!--  -->
+    <!-- Add Google Analytics  -->
+        <!-- Google Analytics Tracking code -->
+     <script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	    ga('create', '', 'auto');
+	    ga('send', 'pageview');
+
+     </script>
+    <!-- Fitvids makes video embeds responsive and awesome -->
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <!-- The main JavaScript file for Casper -->
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

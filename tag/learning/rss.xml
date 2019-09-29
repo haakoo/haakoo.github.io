@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Wrong or right? When do you learn?</title>
+	  <link>//wrong-or-right-when-do-you-learn</link>
+	  <author></author>
+	  <pubDate>2011-08-14T20:45:59+00:00</pubDate>
+	  <guid>//wrong-or-right-when-do-you-learn</guid>
+	  <description><![CDATA[
+	     <p>I read an blog post over at The IT Risk Manager blog titled <a href="http://theitriskmanager.wordpress.com/2011/08/11/id-rather-be-wrong-than-be-right/">I’d rather be wrong than be right</a> tonight. The main idea is that you will not learn (much) from a discussion if you are right. But if you are proven wrong, you have learned something new.</p>
+
+<p>I think I could learn something from it. I always try to highlight all angles when I’m in a discussion, and I try to understand and tolerate other views than my own. It might be that I’m a bit to close to “Strong opinion, strongly held”, so I’m planing on keeping this blog post in the back of my mind in the future.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

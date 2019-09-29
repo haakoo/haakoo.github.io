@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Telex - Anticensorship in the Network infrastructur</title>
+	  <link>//telex</link>
+	  <author></author>
+	  <pubDate>2011-08-07T15:43:55+00:00</pubDate>
+	  <guid>//telex</guid>
+	  <description><![CDATA[
+	     <p><a href="https://telex.cc/">Telex.cc</a> is a response to on-line censorship, that relies on cooperation from <a href="http://en.wikipedia.org/wiki/Internet_Service_Provider">ISPs</a>. I see the benefits and the need for services like this and <a href="https://www.torproject.org/">Tor</a>, but will it become mainstream? People that live in areas with strong censorship or other treats might use these services.</p>
+
+<p>Telex will work without relying on to many “normal” users, but the help of one or a few ISPs. Will the ISPs be willing to help? Tor on the other hand relies on widespread use. There are some legal and ethical problems with Tor, you never now where the traffic leaving the network from your node will end up.</p>
+
+<p>I don’t see a personal use for these technologies now, but I’m glad people are working on them. Who knows when we’ll need them?</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>
