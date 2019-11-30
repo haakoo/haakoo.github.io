@@ -22,3 +22,9 @@ When I got my brothers old TV a little while back we were using the remote for t
 3. Enter the code for your TV
 
 If everything worked out the *Transmit* light should blink twice.
+
+<hr />
+
+_Update 2019-11-30:_
+
+I've recently had to redo this after we changed the TV. And again I had to find the manual for the receiver, and for future reference here is the [Yamaha V465 receiver manual](https://usa.yamaha.com/files/download/other_assets/9/334049/RX-V465_U.pdf).
