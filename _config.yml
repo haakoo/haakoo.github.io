@@ -71,3 +71,4 @@ exclude:
 include:
   - .nojekyll
   - .well-known
+  - CNAME
