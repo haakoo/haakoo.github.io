@@ -27,20 +27,6 @@
 	  ]]></description>
 	</item>
 
-	<item>
-	  <title>Move to Jekyll</title>
-	  <link>//Move-to-Jekyll</link>
-	  <author></author>
-	  <pubDate>2019-09-15T21:00:00+00:00</pubDate>
-	  <guid>//Move-to-Jekyll</guid>
-	  <description><![CDATA[
-	     <p>So I’ve moved to jekyll, if you couldn’t guess.</p>
-
-<p>I’ll write up why and how I migrated when I have a bit more time.</p>
-
-	  ]]></description>
-	</item>
-
 
 </channel>
 </rss>

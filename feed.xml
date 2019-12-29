@@ -8,6 +8,36 @@
     
       
       <item>
+        <title>Trouble with Travis</title>
+        
+          <description>&lt;p&gt;Today I learnt that Travis don’t like &lt;em&gt;tags&lt;/em&gt; with spaces in them. It took me over an hour to figure out, but there it is.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 29 Dec 2019 14:54:40 +0000</pubDate>
+        <link>
+        /trouble-with-travis</link>
+        <guid isPermaLink="true">/trouble-with-travis</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Recover lost images from SDcard</title>
+        
+          <description>&lt;p&gt;We had a scare when all the photos from 24th and 25th of December disappeard from our memory card. Lukily I managed to recover them using &lt;a href=&quot;https://www.cgsecurity.org/wiki/PhotoRec&quot;&gt;PhotoRec&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 29 Dec 2019 14:29:43 +0000</pubDate>
+        <link>
+        /recover-lost-images-from-sdcard</link>
+        <guid isPermaLink="true">/recover-lost-images-from-sdcard</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Move to Jekyll</title>
         
           <description>&lt;p&gt;So I’ve moved to jekyll, if you couldn’t guess.&lt;/p&gt;

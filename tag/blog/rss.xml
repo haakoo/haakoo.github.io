@@ -12,6 +12,22 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
+	  <title>Trouble with Travis</title>
+	  <link>//trouble-with-travis</link>
+	  <author></author>
+	  <pubDate>2019-12-29T14:54:40+00:00</pubDate>
+	  <guid>//trouble-with-travis</guid>
+	  <description><![CDATA[
+	     <p>Today I learnt that Travis don’t like <em>tags</em> with spaces in them. It took me over an hour to figure out, but there it is.</p>
+
+<p>If you’re using <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://pages.github.com">Github Pages</a> and are building your blog using <a href="https://travis-ci.org/">Travis</a> do not use tags with spaces in them. It doesn’t help putting the tag into <em>apostrophe</em> either.</p>
+
+<p>It worked when I tried locally on my computer (Ubuntu in <a href="https://docs.microsoft.com/en-us/windows/wsl/about">WSL</a> in Windows 10), but it fails silently when run using Travis.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
 	  <title>Move to Jekyll</title>
 	  <link>//Move-to-Jekyll</link>
 	  <author></author>

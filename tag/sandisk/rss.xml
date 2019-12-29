@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Recover lost images from SDcard</title>
+	  <link>//recover-lost-images-from-sdcard</link>
+	  <author></author>
+	  <pubDate>2019-12-29T14:29:43+00:00</pubDate>
+	  <guid>//recover-lost-images-from-sdcard</guid>
+	  <description><![CDATA[
+	     <p>We had a scare when all the photos from 24th and 25th of December disappeard from our memory card. Lukily I managed to recover them using <a href="https://www.cgsecurity.org/wiki/PhotoRec">PhotoRec</a>.</p>
+
+<p>We have a well used Canon 60D and apparently a dying <a href="https://shop.westerndigital.com/products/memory-cards/sandisk-extreme-pro-uhs-ii-sd#SDSDXPK-032G-ANCIN">SanDisk Extreme PRO 32GB</a> memory card. The card isn’t new, and thinking back I’m not sure this is the first time it’s behaved like this. When we were going to copy the pictures from the memorycard they disappeared. The pictures had been visible on the camera, but when we opened the card in Windows only images about a month old was visible. No photos from the last two days. Something had happend to the memorycard and it had lost part of the File Allocation Table (FAT), so the new image files where <em>“gone”</em>. I have no idea how this happened, but I no longer trust that memory card.</p>
+
+<p>Hoping to recover the files I went looking for a solution online. I spent quite a while trying tools, like <em>SanDisk RescuePRO Deluxe</em> and <em>Lexar Recovery Tool for Windows</em>. Lexar Recovery tool didn’t find anything on the card, not sure if that’s because it is a SanDisk card or not. <em>SanDisk RescuePro</em> did find the missing photos, and gave me a preview of them. If I wanted to restore the photos, I had to buy the software for $60 USD, which felt a bit expensive.</p>
+
+<p>After I knew the photos were on the card I decided to search for another solution that didn’t cost $60. Eventually I came across this <a href="https://askubuntu.com/questions/330568/how-to-restore-photos-on-sd-card">question over at ask Ubuntu</a>. That led me to the PhotoRec homepage and to the <a href="https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step">Step by step guide</a>.</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>I downloaded <a href="https://www.cgsecurity.org/wiki/TestDisk_Download">TestDisk Zip-archive</a> and extracted it to a temp folder. After that it’s fairly straight forward, my choices in paranteses:</p>
+
+<ol>
+  <li>Activate write lock on your memory card and put it in your computer</li>
+  <li>Run ‘photorec_win.exe’ as an administrator</li>
+  <li>Select which media to recover from (‘Generic SDXC’)</li>
+  <li>Select which partition on the media (‘EOS DIGITAL’)</li>
+  <li>Select what filesystem the partition have (‘FAT/NTFS/HFS+/ReiserFS/…’)</li>
+  <li>Select what space to be analysed (‘free’ or ‘whole’)</li>
+  <li>Select where to store the recovered files (‘C:\Temp\photorec’)</li>
+  <li>Choose ‘C’ to confirm location</li>
+  <li>Wait</li>
+  <li>Quit ‘photorec’</li>
+</ol>
+
+<h3 id="screenshots-of-the-steps">Screenshots of the steps</h3>
+
+<h4 id="step-1">Step 1</h4>
+
+<p><img src="/assets/images/2019/12/Run-PhotoRec-as-Administrator.png" alt="Run PhotoRec as Administrator" /></p>
+
+<h4 id="step-2">Step 2</h4>
+
+<p><img src="/assets/images/2019/12/PhotoRec-02-select-media.png" alt="PhotoRec command line window - Select media" /></p>
+
+<h4 id="step-3">Step 3</h4>
+
+<p><img src="/assets/images/2019/12/PhotoRec-03-select-partition.png" alt="PhotoRec command line window - Select partition" /></p>
+
+<h4 id="step-4">Step 4</h4>
+
+<p><img src="/assets/images/2019/12/PhotoRec-04-select-filesystem.png" alt="PhotoRec command line window - Select filessytem" /></p>
+
+<h4 id="step-5">Step 5</h4>
+
+<p><img src="/assets/images/2019/12/PhotoRec-05-select-space-to-be-analysed.png" alt="PhotoRec command line window - Select space to be analysed" /></p>
+
+<h4 id="step-6">Step 6</h4>
+
+<p><img src="/assets/images/2019/12/PhotoRec-06-select-where-to-store-recovered-files.png" alt="PhotoRec command line window - Select where to store recovered files" /></p>
+
+<h4 id="step-7">Step 7</h4>
+
+<p><img src="/assets/images/2019/12/PhotoRec-07-recovering-files.png" alt="PhotoRec command line window - Progress - Recovering files" /></p>
+
+<h4 id="step-8">Step 8</h4>
+
+<p><img src="/assets/images/2019/12/PhotoRec-08-finished-recovering-files.png" alt="PhotoRec command line window - Progress - Finished" /></p>
+
+<h2 id="summary">Summary</h2>
+
+<p>I successfully recovered the missing photos from the memorycard using <a href="https://www.cgsecurity.org/wiki/PhotoRec">PhotoRec</a> and are going to replace the aging / faulty memory card.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

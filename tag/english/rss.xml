@@ -12,6 +12,95 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
+	  <title>Trouble with Travis</title>
+	  <link>//trouble-with-travis</link>
+	  <author></author>
+	  <pubDate>2019-12-29T14:54:40+00:00</pubDate>
+	  <guid>//trouble-with-travis</guid>
+	  <description><![CDATA[
+	     <p>Today I learnt that Travis don’t like <em>tags</em> with spaces in them. It took me over an hour to figure out, but there it is.</p>
+
+<p>If you’re using <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://pages.github.com">Github Pages</a> and are building your blog using <a href="https://travis-ci.org/">Travis</a> do not use tags with spaces in them. It doesn’t help putting the tag into <em>apostrophe</em> either.</p>
+
+<p>It worked when I tried locally on my computer (Ubuntu in <a href="https://docs.microsoft.com/en-us/windows/wsl/about">WSL</a> in Windows 10), but it fails silently when run using Travis.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Recover lost images from SDcard</title>
+	  <link>//recover-lost-images-from-sdcard</link>
+	  <author></author>
+	  <pubDate>2019-12-29T14:29:43+00:00</pubDate>
+	  <guid>//recover-lost-images-from-sdcard</guid>
+	  <description><![CDATA[
+	     <p>We had a scare when all the photos from 24th and 25th of December disappeard from our memory card. Lukily I managed to recover them using <a href="https://www.cgsecurity.org/wiki/PhotoRec">PhotoRec</a>.</p>
+
+<p>We have a well used Canon 60D and apparently a dying <a href="https://shop.westerndigital.com/products/memory-cards/sandisk-extreme-pro-uhs-ii-sd#SDSDXPK-032G-ANCIN">SanDisk Extreme PRO 32GB</a> memory card. The card isn’t new, and thinking back I’m not sure this is the first time it’s behaved like this. When we were going to copy the pictures from the memorycard they disappeared. The pictures had been visible on the camera, but when we opened the card in Windows only images about a month old was visible. No photos from the last two days. Something had happend to the memorycard and it had lost part of the File Allocation Table (FAT), so the new image files where <em>“gone”</em>. I have no idea how this happened, but I no longer trust that memory card.</p>
+
+<p>Hoping to recover the files I went looking for a solution online. I spent quite a while trying tools, like <em>SanDisk RescuePRO Deluxe</em> and <em>Lexar Recovery Tool for Windows</em>. Lexar Recovery tool didn’t find anything on the card, not sure if that’s because it is a SanDisk card or not. <em>SanDisk RescuePro</em> did find the missing photos, and gave me a preview of them. If I wanted to restore the photos, I had to buy the software for $60 USD, which felt a bit expensive.</p>
+
+<p>After I knew the photos were on the card I decided to search for another solution that didn’t cost $60. Eventually I came across this <a href="https://askubuntu.com/questions/330568/how-to-restore-photos-on-sd-card">question over at ask Ubuntu</a>. That led me to the PhotoRec homepage and to the <a href="https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step">Step by step guide</a>.</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>I downloaded <a href="https://www.cgsecurity.org/wiki/TestDisk_Download">TestDisk Zip-archive</a> and extracted it to a temp folder. After that it’s fairly straight forward, my choices in paranteses:</p>
+
+<ol>
+  <li>Activate write lock on your memory card and put it in your computer</li>
+  <li>Run ‘photorec_win.exe’ as an administrator</li>
+  <li>Select which media to recover from (‘Generic SDXC’)</li>
+  <li>Select which partition on the media (‘EOS DIGITAL’)</li>
+  <li>Select what filesystem the partition have (‘FAT/NTFS/HFS+/ReiserFS/…’)</li>
+  <li>Select what space to be analysed (‘free’ or ‘whole’)</li>
+  <li>Select where to store the recovered files (‘C:\Temp\photorec’)</li>
+  <li>Choose ‘C’ to confirm location</li>
+  <li>Wait</li>
+  <li>Quit ‘photorec’</li>
+</ol>
+
+<h3 id="screenshots-of-the-steps">Screenshots of the steps</h3>
+
+<h4 id="step-1">Step 1</h4>
+
+<p><img src="/assets/images/2019/12/Run-PhotoRec-as-Administrator.png" alt="Run PhotoRec as Administrator" /></p>
+
+<h4 id="step-2">Step 2</h4>
+
+<p><img src="/assets/images/2019/12/PhotoRec-02-select-media.png" alt="PhotoRec command line window - Select media" /></p>
+
+<h4 id="step-3">Step 3</h4>
+
+<p><img src="/assets/images/2019/12/PhotoRec-03-select-partition.png" alt="PhotoRec command line window - Select partition" /></p>
+
+<h4 id="step-4">Step 4</h4>
+
+<p><img src="/assets/images/2019/12/PhotoRec-04-select-filesystem.png" alt="PhotoRec command line window - Select filessytem" /></p>
+
+<h4 id="step-5">Step 5</h4>
+
+<p><img src="/assets/images/2019/12/PhotoRec-05-select-space-to-be-analysed.png" alt="PhotoRec command line window - Select space to be analysed" /></p>
+
+<h4 id="step-6">Step 6</h4>
+
+<p><img src="/assets/images/2019/12/PhotoRec-06-select-where-to-store-recovered-files.png" alt="PhotoRec command line window - Select where to store recovered files" /></p>
+
+<h4 id="step-7">Step 7</h4>
+
+<p><img src="/assets/images/2019/12/PhotoRec-07-recovering-files.png" alt="PhotoRec command line window - Progress - Recovering files" /></p>
+
+<h4 id="step-8">Step 8</h4>
+
+<p><img src="/assets/images/2019/12/PhotoRec-08-finished-recovering-files.png" alt="PhotoRec command line window - Progress - Finished" /></p>
+
+<h2 id="summary">Summary</h2>
+
+<p>I successfully recovered the missing photos from the memorycard using <a href="https://www.cgsecurity.org/wiki/PhotoRec">PhotoRec</a> and are going to replace the aging / faulty memory card.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
 	  <title>Move to Jekyll</title>
 	  <link>//Move-to-Jekyll</link>
 	  <author></author>
@@ -241,56 +330,6 @@ git config <span class="nt">--global</span> merge.tool visualstudio
 <p>A last hint at the end, you’ll find the Inspector for Preview under <code class="highlighter-rouge">Tool</code>and <code class="highlighter-rouge">Show Inspector</code>.</p>
 
 <p><img src="/assets/images/2017/03/Preview-Show-Inspector.png" alt="Screen capture that show where the Inspector can be found in the Preview menus" /></p>
-
-	  ]]></description>
-	</item>
-
-	<item>
-	  <title>Trouble With Scrivener On Windows 7</title>
-	  <link>//trouble-with-scrivener-on-windows-7</link>
-	  <author></author>
-	  <pubDate>2016-06-30T09:40:50+00:00</pubDate>
-	  <guid>//trouble-with-scrivener-on-windows-7</guid>
-	  <description><![CDATA[
-	     <p>I’ve had a problem running <a href="https://www.literatureandlatte.com/scrivener.php">Scrivener</a> on my work computer with Windows 7 since I got the computer last year. Today I finally decided to see if I could fix it.</p>
-
-<p>The fix was easier than I thought. Over at the Knowledge Base for Scrivener I found the post <a href="https://scrivener.tenderapp.com/help/kb/windows-troubleshooting/fixing-not-responding-with-compatibility-settings">Fixing “Not Responding” with Compatibility Settings</a> which solved my problem.</p>
-
-<p>I’m running Windows 7, but by choosing to run <em>Scrivener.exe in compatibility mode for Windows 7</em> it now works.</p>
-
-<p>Easy!</p>
-
-	  ]]></description>
-	</item>
-
-	<item>
-	  <title>Resetting corrupt "always available offline" database</title>
-	  <link>//resetting-corrupt-always-available-offline-database-2</link>
-	  <author></author>
-	  <pubDate>2015-12-03T13:01:05+00:00</pubDate>
-	  <guid>//resetting-corrupt-always-available-offline-database-2</guid>
-	  <description><![CDATA[
-	     <p>For my work computer I keep a Outlook Data File (.pst), as a place to backup email. I keep the pst-file on my network share, which ensure that it’s backed up. Recently I’ve experienced trouble with this solution when I’ve disconnected from the network while Outlook is running. I end up with a corrupt Offline Files Database which fail when syncing the pst-file. I can access the file while I’m not connected to a network, but as soon as I connect the file size appear to be 0 kB.</p>
-
-<p>The only solution I’ve found to this problem is to reset the Offline Files Database, via <a href="http://www.technlg.net/windows/delete-offline-files-cache-windows-7/">Delete Offline Files Cache Windows 7</a> and <a href="https://support.microsoft.com/en-us/kb/942974">this from Microsoft</a>.</p>
-
-<p>You can do this by setting a flag in the registry.</p>
-
-<ol>
-  <li>Open regedit</li>
-  <li>Go to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\CSC\Parameters</li>
-  <li>Create a new REG_DWORD named FormatDatabase with a value of 1</li>
-  <li>Restart computer</li>
-  <li>Add folders to the Offline Files Database</li>
-</ol>
-
-<p>It’s important to remember to re-add the folders to make them available offline again after the restart.</p>
-
-<p>To reapply group policies use the command (<a href="https://support.microsoft.com/en-us/kb/942974">from this page</a>):</p>
-
-<blockquote>
-  <p>gpupdate /force</p>
-</blockquote>
 
 	  ]]></description>
 	</item>
