@@ -2,7 +2,7 @@
 layout: post
 cover: 'assets/images/tents-in-the-night.jpg'
 navigation: True
-itle: Trouble with Scrivener on Windows 7
+title: Trouble with Scrivener on Windows 7
 date: '2016-06-30 09:40:50'
 tags:
 - windows

@@ -2,7 +2,7 @@
 layout: post
 cover: 'assets/images/tents-in-the-night.jpg'
 navigation: True
-itle: The simple life
+title: The simple life
 date: '2011-09-03 11:18:44'
 tags:
 - english
