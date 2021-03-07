@@ -121,16 +121,16 @@
 	  <pubDate>2019-09-03T07:17:31+00:00</pubDate>
 	  <guid>//case-sensitive-git-branch-names</guid>
 	  <description><![CDATA[
-	     <p>I’ve had some fun with <code class="highlighter-rouge">git</code> again… I was checking out a remote branch with <code class="highlighter-rouge">git</code> on the command line and couldn’t pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.</p>
+	     <p>I’ve had some fun with <code class="language-plaintext highlighter-rouge">git</code> again… I was checking out a remote branch with <code class="language-plaintext highlighter-rouge">git</code> on the command line and couldn’t pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.</p>
 
-<p>I used <code class="highlighter-rouge">git checkout branch-name</code> to get a local copy of the remote branch. When I tried to use <code class="highlighter-rouge">git pull</code> in that branch I got the following error message:</p>
+<p>I used <code class="language-plaintext highlighter-rouge">git checkout branch-name</code> to get a local copy of the remote branch. When I tried to use <code class="language-plaintext highlighter-rouge">git pull</code> in that branch I got the following error message:</p>
 
 <pre><code class="language-git">Your configuration specifies to merge with the ref 'refs/heads/branch-name' from the remote, but no such ref was fetched.
 </code></pre>
 
 <p>I tried to search for an fix, but couldn’t find anything that worked. The most common explaination for this error message is that the remote branch is missing.</p>
 
-<p>Eventually I remembered that I had used a capital letter in the branch name when creating it. The actuall branch name was something like <code class="highlighter-rouge">branch-Name</code>, notice the capital <strong><em>N</em></strong>. By having the correct capitalising of the branch name during checkout, <code class="highlighter-rouge">git pull</code> works.</p>
+<p>Eventually I remembered that I had used a capital letter in the branch name when creating it. The actuall branch name was something like <code class="language-plaintext highlighter-rouge">branch-Name</code>, notice the capital <strong><em>N</em></strong>. By having the correct capitalising of the branch name during checkout, <code class="language-plaintext highlighter-rouge">git pull</code> works.</p>
 
 <p>This was checking out from Gitlab on a Linux server and to a Windows 10 machine.</p>
 
@@ -153,15 +153,15 @@
 <p>Skru av BT:</p>
 <ol>
   <li>Hold inn låseknappen på innsiden i 3 sekunder</li>
-  <li>Trykk inn hovedkoden og trykk <code class="highlighter-rouge">*</code></li>
-  <li>Trykk <code class="highlighter-rouge">3</code> + <code class="highlighter-rouge">*</code> + <code class="highlighter-rouge">0</code></li>
+  <li>Trykk inn hovedkoden og trykk <code class="language-plaintext highlighter-rouge">*</code></li>
+  <li>Trykk <code class="language-plaintext highlighter-rouge">3</code> + <code class="language-plaintext highlighter-rouge">*</code> + <code class="language-plaintext highlighter-rouge">0</code></li>
 </ol>
 
 <p>Skru på BT:</p>
 <ol>
   <li>Hold inn låseknappen på innsiden i 3 sekunder</li>
-  <li>Trykk inn hovedkoden og trykk <code class="highlighter-rouge">*</code></li>
-  <li>Trykk <code class="highlighter-rouge">3</code> + <code class="highlighter-rouge">*</code> + <code class="highlighter-rouge">1</code></li>
+  <li>Trykk inn hovedkoden og trykk <code class="language-plaintext highlighter-rouge">*</code></li>
+  <li>Trykk <code class="language-plaintext highlighter-rouge">3</code> + <code class="language-plaintext highlighter-rouge">*</code> + <code class="language-plaintext highlighter-rouge">1</code></li>
 </ol>
 
 <p>Dette gjorde at jeg fikk oppgradert låsen første gang. Gang nummer to fungerte det på første forsøk. Blåtann vil trekke litt strøm, så det kan være en ide og skru det av etter oppgradering så batteriene holder litt lenger.</p>
@@ -194,18 +194,18 @@
 	  <description><![CDATA[
 	     <p>We were experiencing a strange bug with a C# library with an embedded binary file. It worked on the developers machine, but not after it was released after being built on a build server.</p>
 
-<p>It turns out that the developer had <em>git checkout end-of-line</em> settings that preserved the <code class="highlighter-rouge">LF</code> character, while the build server converted from <code class="highlighter-rouge">LF</code> to <code class="highlighter-rouge">CR LF</code> upon checkout. This corrupted the binary file that was embedded into the library as an <em>embedded resource</em>. Git didn’t recognise the file type and interpreted it as a (partial) text file.</p>
+<p>It turns out that the developer had <em>git checkout end-of-line</em> settings that preserved the <code class="language-plaintext highlighter-rouge">LF</code> character, while the build server converted from <code class="language-plaintext highlighter-rouge">LF</code> to <code class="language-plaintext highlighter-rouge">CR LF</code> upon checkout. This corrupted the binary file that was embedded into the library as an <em>embedded resource</em>. Git didn’t recognise the file type and interpreted it as a (partial) text file.</p>
 
 <h2 id="the-fix">The fix</h2>
-<p>I think the preferred way to avoid this is to include a <code class="highlighter-rouge">.gitattributes</code> file in the root-folder of your repo. In the <code class="highlighter-rouge">.gitattributes</code> file you specify how <a href="https://git-scm.com/docs/gitattributes">git should handle different file types</a>. For us the solution was to add the following:</p>
+<p>I think the preferred way to avoid this is to include a <code class="language-plaintext highlighter-rouge">.gitattributes</code> file in the root-folder of your repo. In the <code class="language-plaintext highlighter-rouge">.gitattributes</code> file you specify how <a href="https://git-scm.com/docs/gitattributes">git should handle different file types</a>. For us the solution was to add the following:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.pgm binary
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.pgm binary
 </code></pre></div></div>
 
 <p>I first found the solution for this in an answer on Stack Overflow, <a href="https://stackoverflow.com/a/40821931/930546">How to change line-ending settings</a>.</p>
 
 <h2 id="alternative">Alternative</h2>
-<p>It’s also possible to avoid this by changing the git setting <code class="highlighter-rouge">core.autocrlf</code> to either <code class="highlighter-rouge">input</code> or <code class="highlighter-rouge">false</code>, but this will change the behaviour for all files.</p>
+<p>It’s also possible to avoid this by changing the git setting <code class="language-plaintext highlighter-rouge">core.autocrlf</code> to either <code class="language-plaintext highlighter-rouge">input</code> or <code class="language-plaintext highlighter-rouge">false</code>, but this will change the behaviour for all files.</p>
 
 	  ]]></description>
 	</item>
@@ -220,7 +220,7 @@
 	     <p>On Windows I prefer to use Visual Studio’s diff and merge tools. And since I use git I decided to change the default diff and merge tools to Visual Studio 2017 (VS2017).</p>
 
 <h2 id="sourcetree-app">SourceTree App</h2>
-<p>I first changed the diff and merge tools in SourceTree App, just to test the settings. I found a nice blog post <a href="http://blog.dudak.me/2016/using-visual-studio-as-diffmerge-tool-in-sourcetree/">Using Visual Studio as diff/merge tool in Git and SourceTree</a> by Michał Dudak explaining how to do this for VS 2015. Since Visual Studio 2017 have a different folder structure I had to look for <code class="highlighter-rouge">vsdiffmerge.exe</code> and with the help of the <a href="https://gist.github.com/DamianReeves/35adf89992f8d871afe6#gistcomment-2024718">comments for a Gist</a> I found the correct location.</p>
+<p>I first changed the diff and merge tools in SourceTree App, just to test the settings. I found a nice blog post <a href="http://blog.dudak.me/2016/using-visual-studio-as-diffmerge-tool-in-sourcetree/">Using Visual Studio as diff/merge tool in Git and SourceTree</a> by Michał Dudak explaining how to do this for VS 2015. Since Visual Studio 2017 have a different folder structure I had to look for <code class="language-plaintext highlighter-rouge">vsdiffmerge.exe</code> and with the help of the <a href="https://gist.github.com/DamianReeves/35adf89992f8d871afe6#gistcomment-2024718">comments for a Gist</a> I found the correct location.</p>
 
 <p>In the <em>Diff Options</em> you choose to use <em>Custom tools</em> and use the following settings:</p>
 
@@ -238,7 +238,7 @@
 
 <h2 id="git-defaults-using-git-bash">Git defaults using Git Bash</h2>
 
-<p>To change the git defaults using <code class="highlighter-rouge">Git Bash</code> you can do the following:</p>
+<p>To change the git defaults using <code class="language-plaintext highlighter-rouge">Git Bash</code> you can do the following:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> difftool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="se">\$</span><span class="s2">LOCAL </span><span class="se">\$</span><span class="s2">REMOTE Source Target //ignorespace //t"</span>
 
@@ -251,7 +251,7 @@ git config <span class="nt">--global</span> merge.tool visualstudio
 
 <h2 id="git-defaults-using-cmdexe">Git defaults using cmd.exe</h2>
 
-<p>To change the git defaults using <code class="highlighter-rouge">cmd.exe</code> you can do the following:</p>
+<p>To change the git defaults using <code class="language-plaintext highlighter-rouge">cmd.exe</code> you can do the following:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> difftool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="nv">$LOCAL</span><span class="s2"> </span><span class="nv">$REMOTE</span><span class="s2"> Source Target //ignorespace //t"</span>
 
@@ -272,10 +272,10 @@ git config <span class="nt">--global</span> merge.tool visualstudio
 	  <pubDate>2017-07-15T18:30:00+00:00</pubDate>
 	  <guid>//using-nested-ad-groups-to-filter-access-to-gitlab</guid>
 	  <description><![CDATA[
-	     <p>I struggled while trying to limit access to our internal omnibus Gitlab instance using the LDAP-setting <code class="highlighter-rouge">user_filter:</code>. We use nested groups in Microsoft AD to handle users and access rights, which works with Gitlab, when you know about the secret sauce.</p>
+	     <p>I struggled while trying to limit access to our internal omnibus Gitlab instance using the LDAP-setting <code class="language-plaintext highlighter-rouge">user_filter:</code>. We use nested groups in Microsoft AD to handle users and access rights, which works with Gitlab, when you know about the secret sauce.</p>
 
 <h2 id="licensing---you-need-an-enterprise-license">Licensing - you need an enterprise license</h2>
-<p>First I tried getting it to work with our Gitlab instance which is running the free community edition. I read through the docs about <a href="https://docs.gitlab.com/ce/administration/auth/ldap.html">LDAP</a>, added <code class="highlighter-rouge">user_filter:</code> to our settings file and it didn’t work. Users that were added directly to the AD group that was used as a filter got access, but not users in groups in the “main” group, e.g. the group <em>Gitlab-access</em> contains <em>User1</em> and <em>User2</em> and <em>Engineering-group</em>, and <em>Enginerring-group</em> contains <em>User3</em>. Using the following filter:</p>
+<p>First I tried getting it to work with our Gitlab instance which is running the free community edition. I read through the docs about <a href="https://docs.gitlab.com/ce/administration/auth/ldap.html">LDAP</a>, added <code class="language-plaintext highlighter-rouge">user_filter:</code> to our settings file and it didn’t work. Users that were added directly to the AD group that was used as a filter got access, but not users in groups in the “main” group, e.g. the group <em>Gitlab-access</em> contains <em>User1</em> and <em>User2</em> and <em>Engineering-group</em>, and <em>Enginerring-group</em> contains <em>User3</em>. Using the following filter:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ss">user_filter: </span><span class="s1">'(&amp;(objectClass=person)(memberOf=cn=Gitlab-access,dc=domain,dc=com)'</span>
 </code></pre></div></div>
@@ -286,10 +286,10 @@ git config <span class="nt">--global</span> merge.tool visualstudio
 
 <p>I went along and asked for an EE trial license to see if I could get it to work.</p>
 
-<p><em><strong>Edit 2017-07-18:</strong> It turns out that it is possible to use nested AD groups with <code class="highlighter-rouge">user_filter:</code> in Gitlab CE. After I contacted Gitlab about the confusion the documentation has been <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/12871">updated</a>.</em></p>
+<p><em><strong>Edit 2017-07-18:</strong> It turns out that it is possible to use nested AD groups with <code class="language-plaintext highlighter-rouge">user_filter:</code> in Gitlab CE. After I contacted Gitlab about the confusion the documentation has been <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/12871">updated</a>.</em></p>
 
 <h2 id="special-ad-ldap-query-rules">Special AD LDAP query rules</h2>
-<p>The second hurdle was to realise that the <em>plain</em> LDAP query I show higher up wont work because of Microsoft AD. You need to add a special rule object identifier (OID) to get a <em>recursive</em> version of <code class="highlighter-rouge">memberOf</code> called <code class="highlighter-rouge">LDAP_MATCHING_RULE_IN_CHAIN</code>. More information over at <a href="https://msdn.microsoft.com/en-us/library/aa746475(v=vs.85).aspx">MDSN</a>:</p>
+<p>The second hurdle was to realise that the <em>plain</em> LDAP query I show higher up wont work because of Microsoft AD. You need to add a special rule object identifier (OID) to get a <em>recursive</em> version of <code class="language-plaintext highlighter-rouge">memberOf</code> called <code class="language-plaintext highlighter-rouge">LDAP_MATCHING_RULE_IN_CHAIN</code>. More information over at <a href="https://msdn.microsoft.com/en-us/library/aa746475(v=vs.85).aspx">MDSN</a>:</p>
 
 <blockquote>
   <p>This rule is limited to filters that apply to the DN. This is a special “extended” match operator that walks the chain of ancestry in objects all the way to the root until it finds a match.</p>
@@ -297,7 +297,7 @@ git config <span class="nt">--global</span> merge.tool visualstudio
 
 <p>The resources that helped me understand this were mainly the Stackoverflow questions <a href="https://stackoverflow.com/questions/6195812/ldap-nested-group-membership">ldap nested group membership</a> and <a href="https://stackoverflow.com/questions/9945518/can-ldap-matching-rule-in-chain-return-subtree-search-results-with-attributes">Can LDAP_MATCHING_RULE_IN_CHAIN return ‘subtree search results’ with attributes (specifically “memberOf”)?</a>. I also found some information over at Atlassians help page <a href="https://confluence.atlassian.com/crowdkb/active-directory-user-filter-does-not-search-nested-groups-715130424.html">Active Directory user filter does not search nested groups</a></p>
 
-<p>The <code class="highlighter-rouge">user_filter:</code> setting that finally worked was the following:</p>
+<p>The <code class="language-plaintext highlighter-rouge">user_filter:</code> setting that finally worked was the following:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ss">user_filter: </span><span class="s1">'(&amp;(objectClass=person)(memberOf:1.2.840.113556.1.4.1941:=cn=Gitlab-access,dc=domain,dc=com)'</span>
 </code></pre></div></div>

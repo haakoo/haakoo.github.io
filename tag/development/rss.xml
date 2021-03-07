@@ -20,18 +20,18 @@
 	  <description><![CDATA[
 	     <p>We were experiencing a strange bug with a C# library with an embedded binary file. It worked on the developers machine, but not after it was released after being built on a build server.</p>
 
-<p>It turns out that the developer had <em>git checkout end-of-line</em> settings that preserved the <code class="highlighter-rouge">LF</code> character, while the build server converted from <code class="highlighter-rouge">LF</code> to <code class="highlighter-rouge">CR LF</code> upon checkout. This corrupted the binary file that was embedded into the library as an <em>embedded resource</em>. Git didn’t recognise the file type and interpreted it as a (partial) text file.</p>
+<p>It turns out that the developer had <em>git checkout end-of-line</em> settings that preserved the <code class="language-plaintext highlighter-rouge">LF</code> character, while the build server converted from <code class="language-plaintext highlighter-rouge">LF</code> to <code class="language-plaintext highlighter-rouge">CR LF</code> upon checkout. This corrupted the binary file that was embedded into the library as an <em>embedded resource</em>. Git didn’t recognise the file type and interpreted it as a (partial) text file.</p>
 
 <h2 id="the-fix">The fix</h2>
-<p>I think the preferred way to avoid this is to include a <code class="highlighter-rouge">.gitattributes</code> file in the root-folder of your repo. In the <code class="highlighter-rouge">.gitattributes</code> file you specify how <a href="https://git-scm.com/docs/gitattributes">git should handle different file types</a>. For us the solution was to add the following:</p>
+<p>I think the preferred way to avoid this is to include a <code class="language-plaintext highlighter-rouge">.gitattributes</code> file in the root-folder of your repo. In the <code class="language-plaintext highlighter-rouge">.gitattributes</code> file you specify how <a href="https://git-scm.com/docs/gitattributes">git should handle different file types</a>. For us the solution was to add the following:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.pgm binary
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.pgm binary
 </code></pre></div></div>
 
 <p>I first found the solution for this in an answer on Stack Overflow, <a href="https://stackoverflow.com/a/40821931/930546">How to change line-ending settings</a>.</p>
 
 <h2 id="alternative">Alternative</h2>
-<p>It’s also possible to avoid this by changing the git setting <code class="highlighter-rouge">core.autocrlf</code> to either <code class="highlighter-rouge">input</code> or <code class="highlighter-rouge">false</code>, but this will change the behaviour for all files.</p>
+<p>It’s also possible to avoid this by changing the git setting <code class="language-plaintext highlighter-rouge">core.autocrlf</code> to either <code class="language-plaintext highlighter-rouge">input</code> or <code class="language-plaintext highlighter-rouge">false</code>, but this will change the behaviour for all files.</p>
 
 	  ]]></description>
 	</item>
@@ -45,11 +45,11 @@
 	  <description><![CDATA[
 	     <p>I figured it would be nice to have Ghost up and running locally on my machine if I’m to mess around with themes. So today I installed <a href="https://nodejs.org/">Node.js</a>, cloned Ghost from <a href="https://github.com/TryGhost/Ghost">GitHub</a> and got it all working.</p>
 
-<p>I followed the instructions from https://github.com/TryGhost/Ghost#developer-install-from-git with a few tweaks. You need to run the <code class="highlighter-rouge">npm install</code> commands using sudo (they will fail and then tell you to rerun as root). I also downloaded and installed Node.js v0.10.40 from <a href="http://blog.nodejs.org/release/">install package</a>. Node.js v0.10.40 has several security fixes and is probably a better choice than v0.10.36 I saw recommended somewhere.</p>
+<p>I followed the instructions from https://github.com/TryGhost/Ghost#developer-install-from-git with a few tweaks. You need to run the <code class="language-plaintext highlighter-rouge">npm install</code> commands using sudo (they will fail and then tell you to rerun as root). I also downloaded and installed Node.js v0.10.40 from <a href="http://blog.nodejs.org/release/">install package</a>. Node.js v0.10.40 has several security fixes and is probably a better choice than v0.10.36 I saw recommended somewhere.</p>
 
-<p>Surprisingly easy to get it all running when I figured out that <code class="highlighter-rouge">npm install</code> needs root permissions and <code class="highlighter-rouge">grunt</code>does not after a tip from <a href="https://ghost.slack.com/archives/ghost/p1437257215000010">@acburdine in #ghost on Ghost Slack</a>.</p>
+<p>Surprisingly easy to get it all running when I figured out that <code class="language-plaintext highlighter-rouge">npm install</code> needs root permissions and <code class="language-plaintext highlighter-rouge">grunt</code>does not after a tip from <a href="https://ghost.slack.com/archives/ghost/p1437257215000010">@acburdine in #ghost on Ghost Slack</a>.</p>
 
-<p><em>Edit 2015-07-19:</em> It should be possible to run <code class="highlighter-rouge">npm install</code> without <code class="highlighter-rouge">sudo</code>, according to <a href="https://ghost.slack.com/archives/ghost/p1437262059000023">@fabian over at Ghost Slack</a>. I’ll see if I can reproduce my troubles from yesterday and figure out what was wrong.</p>
+<p><em>Edit 2015-07-19:</em> It should be possible to run <code class="language-plaintext highlighter-rouge">npm install</code> without <code class="language-plaintext highlighter-rouge">sudo</code>, according to <a href="https://ghost.slack.com/archives/ghost/p1437262059000023">@fabian over at Ghost Slack</a>. I’ll see if I can reproduce my troubles from yesterday and figure out what was wrong.</p>
 
 	  ]]></description>
 	</item>

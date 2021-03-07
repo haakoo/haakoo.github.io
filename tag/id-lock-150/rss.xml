@@ -27,15 +27,15 @@
 <p>Skru av BT:</p>
 <ol>
   <li>Hold inn låseknappen på innsiden i 3 sekunder</li>
-  <li>Trykk inn hovedkoden og trykk <code class="highlighter-rouge">*</code></li>
-  <li>Trykk <code class="highlighter-rouge">3</code> + <code class="highlighter-rouge">*</code> + <code class="highlighter-rouge">0</code></li>
+  <li>Trykk inn hovedkoden og trykk <code class="language-plaintext highlighter-rouge">*</code></li>
+  <li>Trykk <code class="language-plaintext highlighter-rouge">3</code> + <code class="language-plaintext highlighter-rouge">*</code> + <code class="language-plaintext highlighter-rouge">0</code></li>
 </ol>
 
 <p>Skru på BT:</p>
 <ol>
   <li>Hold inn låseknappen på innsiden i 3 sekunder</li>
-  <li>Trykk inn hovedkoden og trykk <code class="highlighter-rouge">*</code></li>
-  <li>Trykk <code class="highlighter-rouge">3</code> + <code class="highlighter-rouge">*</code> + <code class="highlighter-rouge">1</code></li>
+  <li>Trykk inn hovedkoden og trykk <code class="language-plaintext highlighter-rouge">*</code></li>
+  <li>Trykk <code class="language-plaintext highlighter-rouge">3</code> + <code class="language-plaintext highlighter-rouge">*</code> + <code class="language-plaintext highlighter-rouge">1</code></li>
 </ol>
 
 <p>Dette gjorde at jeg fikk oppgradert låsen første gang. Gang nummer to fungerte det på første forsøk. Blåtann vil trekke litt strøm, så det kan være en ide og skru det av etter oppgradering så batteriene holder litt lenger.</p>

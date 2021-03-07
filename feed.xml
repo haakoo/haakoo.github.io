@@ -55,7 +55,7 @@
       <item>
         <title>case sensitive git branch names</title>
         
-          <description>&lt;p&gt;I’ve had some fun with &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; again… I was checking out a remote branch with &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; on the command line and couldn’t pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.&lt;/p&gt;
+          <description>&lt;p&gt;I’ve had some fun with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt; again… I was checking out a remote branch with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt; on the command line and couldn’t pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.&lt;/p&gt;
 
 </description>
         
@@ -130,7 +130,7 @@
       <item>
         <title>Using nested AD groups to filter access to Gitlab</title>
         
-          <description>&lt;p&gt;I struggled while trying to limit access to our internal omnibus Gitlab instance using the LDAP-setting &lt;code class=&quot;highlighter-rouge&quot;&gt;user_filter:&lt;/code&gt;. We use nested groups in Microsoft AD to handle users and access rights, which works with Gitlab, when you know about the secret sauce.&lt;/p&gt;
+          <description>&lt;p&gt;I struggled while trying to limit access to our internal omnibus Gitlab instance using the LDAP-setting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user_filter:&lt;/code&gt;. We use nested groups in Microsoft AD to handle users and access rights, which works with Gitlab, when you know about the secret sauce.&lt;/p&gt;
 
 </description>
         

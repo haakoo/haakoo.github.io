@@ -18,16 +18,16 @@
 	  <pubDate>2019-09-03T07:17:31+00:00</pubDate>
 	  <guid>//case-sensitive-git-branch-names</guid>
 	  <description><![CDATA[
-	     <p>I’ve had some fun with <code class="highlighter-rouge">git</code> again… I was checking out a remote branch with <code class="highlighter-rouge">git</code> on the command line and couldn’t pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.</p>
+	     <p>I’ve had some fun with <code class="language-plaintext highlighter-rouge">git</code> again… I was checking out a remote branch with <code class="language-plaintext highlighter-rouge">git</code> on the command line and couldn’t pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.</p>
 
-<p>I used <code class="highlighter-rouge">git checkout branch-name</code> to get a local copy of the remote branch. When I tried to use <code class="highlighter-rouge">git pull</code> in that branch I got the following error message:</p>
+<p>I used <code class="language-plaintext highlighter-rouge">git checkout branch-name</code> to get a local copy of the remote branch. When I tried to use <code class="language-plaintext highlighter-rouge">git pull</code> in that branch I got the following error message:</p>
 
 <pre><code class="language-git">Your configuration specifies to merge with the ref 'refs/heads/branch-name' from the remote, but no such ref was fetched.
 </code></pre>
 
 <p>I tried to search for an fix, but couldn’t find anything that worked. The most common explaination for this error message is that the remote branch is missing.</p>
 
-<p>Eventually I remembered that I had used a capital letter in the branch name when creating it. The actuall branch name was something like <code class="highlighter-rouge">branch-Name</code>, notice the capital <strong><em>N</em></strong>. By having the correct capitalising of the branch name during checkout, <code class="highlighter-rouge">git pull</code> works.</p>
+<p>Eventually I remembered that I had used a capital letter in the branch name when creating it. The actuall branch name was something like <code class="language-plaintext highlighter-rouge">branch-Name</code>, notice the capital <strong><em>N</em></strong>. By having the correct capitalising of the branch name during checkout, <code class="language-plaintext highlighter-rouge">git pull</code> works.</p>
 
 <p>This was checking out from Gitlab on a Linux server and to a Windows 10 machine.</p>
 
@@ -76,7 +76,7 @@
 
 <p><img src="/assets/images/2017/03/MacOS-Sierra-QuickLook.png" alt="Screen capture of the rotated image in QuickLook on macOS Sierra" /></p>
 
-<p>What didn’t make sense was why both were the right way up on almost all platforms and browsers. Looking at the EXIF data I found that the orientation was set to <code class="highlighter-rouge">1 (Normal)</code> for the one that was right way up, and <code class="highlighter-rouge">6 (Rotated 90 degrees counter clockwise)</code> for the picture that looked rotated.</p>
+<p>What didn’t make sense was why both were the right way up on almost all platforms and browsers. Looking at the EXIF data I found that the orientation was set to <code class="language-plaintext highlighter-rouge">1 (Normal)</code> for the one that was right way up, and <code class="language-plaintext highlighter-rouge">6 (Rotated 90 degrees counter clockwise)</code> for the picture that looked rotated.</p>
 
 <p><img src="/assets/images/2017/03/Orientations.png" alt="Showing the EXIF information for the two images in Previews Inspector" /></p>
 
@@ -84,7 +84,7 @@
 
 <p>The solution was simple: open the rotated picture in Preview and rotate it so it’s correct, and then save it. I assume the same can be done using Windows Photo Viewer if you’re using Windows. If it looks the right way up when you open it, try rotating back and forth and save the changes.</p>
 
-<p>A last hint at the end, you’ll find the Inspector for Preview under <code class="highlighter-rouge">Tool</code>and <code class="highlighter-rouge">Show Inspector</code>.</p>
+<p>A last hint at the end, you’ll find the Inspector for Preview under <code class="language-plaintext highlighter-rouge">Tool</code>and <code class="language-plaintext highlighter-rouge">Show Inspector</code>.</p>
 
 <p><img src="/assets/images/2017/03/Preview-Show-Inspector.png" alt="Screen capture that show where the Inspector can be found in the Preview menus" /></p>
 
@@ -152,10 +152,10 @@
 
 <p>The command I ended up using was:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for %f in (*.*) do rename "%f" "prefix-%f"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for %f in (*.*) do rename "%f" "prefix-%f"
 </code></pre></div></div>
 
-<p>This will add <code class="highlighter-rouge">prefix-</code> to all files in that folder.</p>
+<p>This will add <code class="language-plaintext highlighter-rouge">prefix-</code> to all files in that folder.</p>
 
 	  ]]></description>
 	</item>

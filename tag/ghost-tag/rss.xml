@@ -36,11 +36,11 @@
 	  <description><![CDATA[
 	     <p>I figured it would be nice to have Ghost up and running locally on my machine if I’m to mess around with themes. So today I installed <a href="https://nodejs.org/">Node.js</a>, cloned Ghost from <a href="https://github.com/TryGhost/Ghost">GitHub</a> and got it all working.</p>
 
-<p>I followed the instructions from https://github.com/TryGhost/Ghost#developer-install-from-git with a few tweaks. You need to run the <code class="highlighter-rouge">npm install</code> commands using sudo (they will fail and then tell you to rerun as root). I also downloaded and installed Node.js v0.10.40 from <a href="http://blog.nodejs.org/release/">install package</a>. Node.js v0.10.40 has several security fixes and is probably a better choice than v0.10.36 I saw recommended somewhere.</p>
+<p>I followed the instructions from https://github.com/TryGhost/Ghost#developer-install-from-git with a few tweaks. You need to run the <code class="language-plaintext highlighter-rouge">npm install</code> commands using sudo (they will fail and then tell you to rerun as root). I also downloaded and installed Node.js v0.10.40 from <a href="http://blog.nodejs.org/release/">install package</a>. Node.js v0.10.40 has several security fixes and is probably a better choice than v0.10.36 I saw recommended somewhere.</p>
 
-<p>Surprisingly easy to get it all running when I figured out that <code class="highlighter-rouge">npm install</code> needs root permissions and <code class="highlighter-rouge">grunt</code>does not after a tip from <a href="https://ghost.slack.com/archives/ghost/p1437257215000010">@acburdine in #ghost on Ghost Slack</a>.</p>
+<p>Surprisingly easy to get it all running when I figured out that <code class="language-plaintext highlighter-rouge">npm install</code> needs root permissions and <code class="language-plaintext highlighter-rouge">grunt</code>does not after a tip from <a href="https://ghost.slack.com/archives/ghost/p1437257215000010">@acburdine in #ghost on Ghost Slack</a>.</p>
 
-<p><em>Edit 2015-07-19:</em> It should be possible to run <code class="highlighter-rouge">npm install</code> without <code class="highlighter-rouge">sudo</code>, according to <a href="https://ghost.slack.com/archives/ghost/p1437262059000023">@fabian over at Ghost Slack</a>. I’ll see if I can reproduce my troubles from yesterday and figure out what was wrong.</p>
+<p><em>Edit 2015-07-19:</em> It should be possible to run <code class="language-plaintext highlighter-rouge">npm install</code> without <code class="language-plaintext highlighter-rouge">sudo</code>, according to <a href="https://ghost.slack.com/archives/ghost/p1437262059000023">@fabian over at Ghost Slack</a>. I’ll see if I can reproduce my troubles from yesterday and figure out what was wrong.</p>
 
 	  ]]></description>
 	</item>

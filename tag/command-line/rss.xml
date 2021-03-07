@@ -22,10 +22,10 @@
 
 <p>The command I ended up using was:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for %f in (*.*) do rename "%f" "prefix-%f"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for %f in (*.*) do rename "%f" "prefix-%f"
 </code></pre></div></div>
 
-<p>This will add <code class="highlighter-rouge">prefix-</code> to all files in that folder.</p>
+<p>This will add <code class="language-plaintext highlighter-rouge">prefix-</code> to all files in that folder.</p>
 
 	  ]]></description>
 	</item>

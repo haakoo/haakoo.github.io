@@ -138,10 +138,10 @@
 
         <section class="post-content">
 
-            <p>I struggled while trying to limit access to our internal omnibus Gitlab instance using the LDAP-setting <code class="highlighter-rouge">user_filter:</code>. We use nested groups in Microsoft AD to handle users and access rights, which works with Gitlab, when you know about the secret sauce.</p>
+            <p>I struggled while trying to limit access to our internal omnibus Gitlab instance using the LDAP-setting <code class="language-plaintext highlighter-rouge">user_filter:</code>. We use nested groups in Microsoft AD to handle users and access rights, which works with Gitlab, when you know about the secret sauce.</p>
 
 <h2 id="licensing---you-need-an-enterprise-license">Licensing - you need an enterprise license</h2>
-<p>First I tried getting it to work with our Gitlab instance which is running the free community edition. I read through the docs about <a href="https://docs.gitlab.com/ce/administration/auth/ldap.html">LDAP</a>, added <code class="highlighter-rouge">user_filter:</code> to our settings file and it didn’t work. Users that were added directly to the AD group that was used as a filter got access, but not users in groups in the “main” group, e.g. the group <em>Gitlab-access</em> contains <em>User1</em> and <em>User2</em> and <em>Engineering-group</em>, and <em>Enginerring-group</em> contains <em>User3</em>. Using the following filter:</p>
+<p>First I tried getting it to work with our Gitlab instance which is running the free community edition. I read through the docs about <a href="https://docs.gitlab.com/ce/administration/auth/ldap.html">LDAP</a>, added <code class="language-plaintext highlighter-rouge">user_filter:</code> to our settings file and it didn’t work. Users that were added directly to the AD group that was used as a filter got access, but not users in groups in the “main” group, e.g. the group <em>Gitlab-access</em> contains <em>User1</em> and <em>User2</em> and <em>Engineering-group</em>, and <em>Enginerring-group</em> contains <em>User3</em>. Using the following filter:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ss">user_filter: </span><span class="s1">'(&amp;(objectClass=person)(memberOf=cn=Gitlab-access,dc=domain,dc=com)'</span>
 </code></pre></div></div>
@@ -152,10 +152,10 @@
 
 <p>I went along and asked for an EE trial license to see if I could get it to work.</p>
 
-<p><em><strong>Edit 2017-07-18:</strong> It turns out that it is possible to use nested AD groups with <code class="highlighter-rouge">user_filter:</code> in Gitlab CE. After I contacted Gitlab about the confusion the documentation has been <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/12871">updated</a>.</em></p>
+<p><em><strong>Edit 2017-07-18:</strong> It turns out that it is possible to use nested AD groups with <code class="language-plaintext highlighter-rouge">user_filter:</code> in Gitlab CE. After I contacted Gitlab about the confusion the documentation has been <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/12871">updated</a>.</em></p>
 
 <h2 id="special-ad-ldap-query-rules">Special AD LDAP query rules</h2>
-<p>The second hurdle was to realise that the <em>plain</em> LDAP query I show higher up wont work because of Microsoft AD. You need to add a special rule object identifier (OID) to get a <em>recursive</em> version of <code class="highlighter-rouge">memberOf</code> called <code class="highlighter-rouge">LDAP_MATCHING_RULE_IN_CHAIN</code>. More information over at <a href="https://msdn.microsoft.com/en-us/library/aa746475(v=vs.85).aspx">MDSN</a>:</p>
+<p>The second hurdle was to realise that the <em>plain</em> LDAP query I show higher up wont work because of Microsoft AD. You need to add a special rule object identifier (OID) to get a <em>recursive</em> version of <code class="language-plaintext highlighter-rouge">memberOf</code> called <code class="language-plaintext highlighter-rouge">LDAP_MATCHING_RULE_IN_CHAIN</code>. More information over at <a href="https://msdn.microsoft.com/en-us/library/aa746475(v=vs.85).aspx">MDSN</a>:</p>
 
 <blockquote>
   <p>This rule is limited to filters that apply to the DN. This is a special “extended” match operator that walks the chain of ancestry in objects all the way to the root until it finds a match.</p>
@@ -163,7 +163,7 @@
 
 <p>The resources that helped me understand this were mainly the Stackoverflow questions <a href="https://stackoverflow.com/questions/6195812/ldap-nested-group-membership">ldap nested group membership</a> and <a href="https://stackoverflow.com/questions/9945518/can-ldap-matching-rule-in-chain-return-subtree-search-results-with-attributes">Can LDAP_MATCHING_RULE_IN_CHAIN return ‘subtree search results’ with attributes (specifically “memberOf”)?</a>. I also found some information over at Atlassians help page <a href="https://confluence.atlassian.com/crowdkb/active-directory-user-filter-does-not-search-nested-groups-715130424.html">Active Directory user filter does not search nested groups</a></p>
 
-<p>The <code class="highlighter-rouge">user_filter:</code> setting that finally worked was the following:</p>
+<p>The <code class="language-plaintext highlighter-rouge">user_filter:</code> setting that finally worked was the following:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ss">user_filter: </span><span class="s1">'(&amp;(objectClass=person)(memberOf:1.2.840.113556.1.4.1941:=cn=Gitlab-access,dc=domain,dc=com)'</span>
 </code></pre></div></div>
@@ -253,7 +253,7 @@
 
         <!-- The tiny footer at the very bottom -->
         <footer class="site-footer clearfix">
-          <!-- <section class="copyright"><a href="/">nothing gold can stay</a> &copy; 2020</section> -->
+          <!-- <section class="copyright"><a href="/">nothing gold can stay</a> &copy; 2021</section> -->
           <section class="copyright">The content on this website, of which Håkon K. Olafsen is the author, is licensed under<br /> Creative Commons <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</a></section>
           <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/jekyller/jasper">Jasper</a></section>
         </footer>

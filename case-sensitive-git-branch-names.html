@@ -146,16 +146,16 @@
 
         <section class="post-content">
 
-            <p>I’ve had some fun with <code class="highlighter-rouge">git</code> again… I was checking out a remote branch with <code class="highlighter-rouge">git</code> on the command line and couldn’t pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.</p>
+            <p>I’ve had some fun with <code class="language-plaintext highlighter-rouge">git</code> again… I was checking out a remote branch with <code class="language-plaintext highlighter-rouge">git</code> on the command line and couldn’t pull down updates. Eventually I found out that the problem was case sensitivity in the branch name.</p>
 
-<p>I used <code class="highlighter-rouge">git checkout branch-name</code> to get a local copy of the remote branch. When I tried to use <code class="highlighter-rouge">git pull</code> in that branch I got the following error message:</p>
+<p>I used <code class="language-plaintext highlighter-rouge">git checkout branch-name</code> to get a local copy of the remote branch. When I tried to use <code class="language-plaintext highlighter-rouge">git pull</code> in that branch I got the following error message:</p>
 
 <pre><code class="language-git">Your configuration specifies to merge with the ref 'refs/heads/branch-name' from the remote, but no such ref was fetched.
 </code></pre>
 
 <p>I tried to search for an fix, but couldn’t find anything that worked. The most common explaination for this error message is that the remote branch is missing.</p>
 
-<p>Eventually I remembered that I had used a capital letter in the branch name when creating it. The actuall branch name was something like <code class="highlighter-rouge">branch-Name</code>, notice the capital <strong><em>N</em></strong>. By having the correct capitalising of the branch name during checkout, <code class="highlighter-rouge">git pull</code> works.</p>
+<p>Eventually I remembered that I had used a capital letter in the branch name when creating it. The actuall branch name was something like <code class="language-plaintext highlighter-rouge">branch-Name</code>, notice the capital <strong><em>N</em></strong>. By having the correct capitalising of the branch name during checkout, <code class="language-plaintext highlighter-rouge">git pull</code> works.</p>
 
 <p>This was checking out from Gitlab on a Linux server and to a Windows 10 machine.</p>
 
@@ -240,7 +240,7 @@
 
         <!-- The tiny footer at the very bottom -->
         <footer class="site-footer clearfix">
-          <!-- <section class="copyright"><a href="/">nothing gold can stay</a> &copy; 2020</section> -->
+          <!-- <section class="copyright"><a href="/">nothing gold can stay</a> &copy; 2021</section> -->
           <section class="copyright">The content on this website, of which Håkon K. Olafsen is the author, is licensed under<br /> Creative Commons <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</a></section>
           <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/jekyller/jasper">Jasper</a></section>
         </footer>

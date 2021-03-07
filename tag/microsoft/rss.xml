@@ -21,7 +21,7 @@
 	     <p>On Windows I prefer to use Visual Studio’s diff and merge tools. And since I use git I decided to change the default diff and merge tools to Visual Studio 2017 (VS2017).</p>
 
 <h2 id="sourcetree-app">SourceTree App</h2>
-<p>I first changed the diff and merge tools in SourceTree App, just to test the settings. I found a nice blog post <a href="http://blog.dudak.me/2016/using-visual-studio-as-diffmerge-tool-in-sourcetree/">Using Visual Studio as diff/merge tool in Git and SourceTree</a> by Michał Dudak explaining how to do this for VS 2015. Since Visual Studio 2017 have a different folder structure I had to look for <code class="highlighter-rouge">vsdiffmerge.exe</code> and with the help of the <a href="https://gist.github.com/DamianReeves/35adf89992f8d871afe6#gistcomment-2024718">comments for a Gist</a> I found the correct location.</p>
+<p>I first changed the diff and merge tools in SourceTree App, just to test the settings. I found a nice blog post <a href="http://blog.dudak.me/2016/using-visual-studio-as-diffmerge-tool-in-sourcetree/">Using Visual Studio as diff/merge tool in Git and SourceTree</a> by Michał Dudak explaining how to do this for VS 2015. Since Visual Studio 2017 have a different folder structure I had to look for <code class="language-plaintext highlighter-rouge">vsdiffmerge.exe</code> and with the help of the <a href="https://gist.github.com/DamianReeves/35adf89992f8d871afe6#gistcomment-2024718">comments for a Gist</a> I found the correct location.</p>
 
 <p>In the <em>Diff Options</em> you choose to use <em>Custom tools</em> and use the following settings:</p>
 
@@ -39,7 +39,7 @@
 
 <h2 id="git-defaults-using-git-bash">Git defaults using Git Bash</h2>
 
-<p>To change the git defaults using <code class="highlighter-rouge">Git Bash</code> you can do the following:</p>
+<p>To change the git defaults using <code class="language-plaintext highlighter-rouge">Git Bash</code> you can do the following:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> difftool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="se">\$</span><span class="s2">LOCAL </span><span class="se">\$</span><span class="s2">REMOTE Source Target //ignorespace //t"</span>
 
@@ -52,7 +52,7 @@ git config <span class="nt">--global</span> merge.tool visualstudio
 
 <h2 id="git-defaults-using-cmdexe">Git defaults using cmd.exe</h2>
 
-<p>To change the git defaults using <code class="highlighter-rouge">cmd.exe</code> you can do the following:</p>
+<p>To change the git defaults using <code class="language-plaintext highlighter-rouge">cmd.exe</code> you can do the following:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> difftool.visualstudio.cmd <span class="s2">"'C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/vsdiffmerge.exe' </span><span class="nv">$LOCAL</span><span class="s2"> </span><span class="nv">$REMOTE</span><span class="s2"> Source Target //ignorespace //t"</span>
 
