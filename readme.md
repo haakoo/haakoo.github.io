@@ -11,9 +11,15 @@
 https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075
 
 ```
-master <- generated static site content
+master <- generated static site content - hosted by _github pages_
 release <- Jekyll code to be generated into site
 develop <- Branch that contains changes until merged into release
 ```
 
 **Does it work?**
+
+## Updating and testing locally
+
+Update all gems: `bundle update`
+
+Build and serv locally: `bundle exec jekyll serve`
