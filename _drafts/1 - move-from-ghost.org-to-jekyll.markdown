@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introduction to unmanned systems
+title: Moving the blog from Ghost.org to Jekyll
 tags:
 - blog
 - english
@@ -8,14 +8,11 @@ tags:
 - jekyll
 ---
 
-# Moving the blog from Ghost.org to Jekyll
-
 My process of moving from Ghost.org to Jekyll, on Github pages (Gitlab-pages?).
 
 ## Install Jekyll locally
 
 Link-to-gihub-resources
-
 
 ## Export and convert data from Ghost.org
 
