@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>haakoo.github.io/</title>
+   
+   <link></link>
+   <description>my ramblings about *</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Creating a pdf with multiple pictures</title>
+	  <link>//creating-a-pdf-with-multiple-pictures</link>
+	  <author></author>
+	  <pubDate>2021-08-01T17:45:00+00:00</pubDate>
+	  <guid>//creating-a-pdf-with-multiple-pictures</guid>
+	  <description><![CDATA[
+	     <p>I needed to create a PDF with multiple pictures per page. The pictures had to be numbered and include a timestamp. All the photos were in Lightroom, which we use to manage our photos. Using a plugin, I added the necessary watermarks during export. Trying create a PDF with the 50 or so pictures in chronological order using Windows 10’s <em>print photo</em> didn’t work very well. I needed a different solution.</p>
+
+<p>Below, I’ll go through the different steps I used to create the PDF.</p>
+
+<h2 id="export-images-from-adobe-lightroom">Export images from Adobe Lightroom</h2>
+
+<p>First, I used a plugin called <a href="https://www.photographers-toolbox.com/products/lrmogrify2.php">LR/Mogrify 2</a> from <a href="https://www.photographers-toolbox.com/index.php">Photographer’s Toolbox</a> by Arctic Whiteness. This is a plugin that adds functionality to the export dialogue in Adobe Lightroom.</p>
+
+<p>The settings I used to create the two watermarks were:</p>
+
+<p><img src="assets\images\2021\08\2021-08-01-LR-Mogrify-plugin-settings01.png" alt="Settings to add the picture date as watermark" /></p>
+
+<p><img src="assets\images\2021\08\2021-08-01-LR-Mogrify-plugin-settings02.png" alt="Settings to add the picture number as watermark" /></p>
+
+<h2 id="creating-the-pdf">Creating the PDF</h2>
+
+<p>To create the PDF I used <a href="https://pandoc.org">Pandoc</a> to compile a very simple markdown file. The markdown file only contained image insertions as shown below:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![](</span><span class="sx">picture001.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+<span class="p">![](</span><span class="sx">picture002.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+<span class="p">![](</span><span class="sx">picture003.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+
+<span class="p">![](</span><span class="sx">picture004.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+<span class="p">![](</span><span class="sx">picture005.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+<span class="p">![](</span><span class="sx">picture006.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+
+...
+</code></pre></div></div>
+
+<p>I then compiled the markdown file to a PDF using the following pandoc command:</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">pandoc document.md -V geometry:margin=10mm -V papersize=a4 -f markdown -o document.pdf
+</span></code></pre></div></div>
+
+<p>I’ve created an example file (<a href="assets\files\2021\08\2021-08-01-Finished-PDF-with-pictures.pdf">2021-08-01-Finished-PDF-with-pictures.pdf</a> (13 MB)) sporting our dog <a href="https://www.instagram.com/odinthevikingtoller">Odin the Viking Toller</a>.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

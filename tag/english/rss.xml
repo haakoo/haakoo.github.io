@@ -12,6 +12,52 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
+	  <title>Creating a pdf with multiple pictures</title>
+	  <link>//creating-a-pdf-with-multiple-pictures</link>
+	  <author></author>
+	  <pubDate>2021-08-01T17:45:00+00:00</pubDate>
+	  <guid>//creating-a-pdf-with-multiple-pictures</guid>
+	  <description><![CDATA[
+	     <p>I needed to create a PDF with multiple pictures per page. The pictures had to be numbered and include a timestamp. All the photos were in Lightroom, which we use to manage our photos. Using a plugin, I added the necessary watermarks during export. Trying create a PDF with the 50 or so pictures in chronological order using Windows 10’s <em>print photo</em> didn’t work very well. I needed a different solution.</p>
+
+<p>Below, I’ll go through the different steps I used to create the PDF.</p>
+
+<h2 id="export-images-from-adobe-lightroom">Export images from Adobe Lightroom</h2>
+
+<p>First, I used a plugin called <a href="https://www.photographers-toolbox.com/products/lrmogrify2.php">LR/Mogrify 2</a> from <a href="https://www.photographers-toolbox.com/index.php">Photographer’s Toolbox</a> by Arctic Whiteness. This is a plugin that adds functionality to the export dialogue in Adobe Lightroom.</p>
+
+<p>The settings I used to create the two watermarks were:</p>
+
+<p><img src="assets\images\2021\08\2021-08-01-LR-Mogrify-plugin-settings01.png" alt="Settings to add the picture date as watermark" /></p>
+
+<p><img src="assets\images\2021\08\2021-08-01-LR-Mogrify-plugin-settings02.png" alt="Settings to add the picture number as watermark" /></p>
+
+<h2 id="creating-the-pdf">Creating the PDF</h2>
+
+<p>To create the PDF I used <a href="https://pandoc.org">Pandoc</a> to compile a very simple markdown file. The markdown file only contained image insertions as shown below:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![](</span><span class="sx">picture001.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+<span class="p">![](</span><span class="sx">picture002.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+<span class="p">![](</span><span class="sx">picture003.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+
+<span class="p">![](</span><span class="sx">picture004.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+<span class="p">![](</span><span class="sx">picture005.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+<span class="p">![](</span><span class="sx">picture006.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+
+...
+</code></pre></div></div>
+
+<p>I then compiled the markdown file to a PDF using the following pandoc command:</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">pandoc document.md -V geometry:margin=10mm -V papersize=a4 -f markdown -o document.pdf
+</span></code></pre></div></div>
+
+<p>I’ve created an example file (<a href="assets\files\2021\08\2021-08-01-Finished-PDF-with-pictures.pdf">2021-08-01-Finished-PDF-with-pictures.pdf</a> (13 MB)) sporting our dog <a href="https://www.instagram.com/odinthevikingtoller">Odin the Viking Toller</a>.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
 	  <title>Trouble with Travis</title>
 	  <link>//trouble-with-travis</link>
 	  <author></author>
@@ -296,40 +342,6 @@ git config <span class="nt">--global</span> merge.tool visualstudio
 
 <h2 id="solution">Solution?</h2>
 <p>Use a different USB stick. I had a SanDisk stick that worked as expected.</p>
-
-	  ]]></description>
-	</item>
-
-	<item>
-	  <title>Picture orientation bug in iOS and macOS</title>
-	  <link>//picture-orientation-bug-in-ios-and-macos</link>
-	  <author></author>
-	  <pubDate>2017-03-08T20:51:40+00:00</pubDate>
-	  <guid>//picture-orientation-bug-in-ios-and-macos</guid>
-	  <description><![CDATA[
-	     <p>A friend showed me a problem she had with one of the pictures on her webpage, http://lenefredriksen.com/. In Safari, Chrome and Vivaldi on macOS Sierra and Chrome and Vivaldi on Windows 7, all the pictures had the correct orientation. As in the following screen capture of Safari on macOS below.</p>
-
-<p><img src="/assets/images/2017/03/Safari.png" alt="Screen capture of lenefredriksen.com in Safari on macOS Sierra" /></p>
-
-<p>In Safari on iOS, one of the pictures on the front page was rotated 90 degrees clockwise, as seen in the screen capture from my iPad below. I checked the source in both macOS and on my phone, but it was the same on both platforms and it looked fine.</p>
-
-<p><img src="/assets/images/2017/03/iPad.PNG" alt="Screen capture of lenefredriksen.com in Safari on iOS" /></p>
-
-<p>My next step was to download the picture that was rotated and one of the other pictures to compare them. When opening both pictures in QuickLook on my Mac, one was rotated and one was not. This sort of made sense, since that’s how they appeared on the webpage in iOS.</p>
-
-<p><img src="/assets/images/2017/03/MacOS-Sierra-QuickLook.png" alt="Screen capture of the rotated image in QuickLook on macOS Sierra" /></p>
-
-<p>What didn’t make sense was why both were the right way up on almost all platforms and browsers. Looking at the EXIF data I found that the orientation was set to <code class="language-plaintext highlighter-rouge">1 (Normal)</code> for the one that was right way up, and <code class="language-plaintext highlighter-rouge">6 (Rotated 90 degrees counter clockwise)</code> for the picture that looked rotated.</p>
-
-<p><img src="/assets/images/2017/03/Orientations.png" alt="Showing the EXIF information for the two images in Previews Inspector" /></p>
-
-<p><strong>It turns out that the problem is that QuickLook and Preview on macOS, and Safari on iOS don’t rotate the picture according to the EXIF data.</strong></p>
-
-<p>The solution was simple: open the rotated picture in Preview and rotate it so it’s correct, and then save it. I assume the same can be done using Windows Photo Viewer if you’re using Windows. If it looks the right way up when you open it, try rotating back and forth and save the changes.</p>
-
-<p>A last hint at the end, you’ll find the Inspector for Preview under <code class="language-plaintext highlighter-rouge">Tool</code>and <code class="language-plaintext highlighter-rouge">Show Inspector</code>.</p>
-
-<p><img src="/assets/images/2017/03/Preview-Show-Inspector.png" alt="Screen capture that show where the Inspector can be found in the Preview menus" /></p>
 
 	  ]]></description>
 	</item>

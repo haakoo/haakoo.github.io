@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Creating a pdf with multiple pictures</title>
+        
+          <description>&lt;p&gt;I needed to create a PDF with multiple pictures per page. The pictures had to be numbered and include a timestamp. All the photos were in Lightroom, which we use to manage our photos. Using a plugin, I added the necessary watermarks during export. Trying create a PDF with the 50 or so pictures in chronological order using Windows 10’s &lt;em&gt;print photo&lt;/em&gt; didn’t work very well. I needed a different solution.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 01 Aug 2021 17:45:00 +0000</pubDate>
+        <link>
+        /creating-a-pdf-with-multiple-pictures</link>
+        <guid isPermaLink="true">/creating-a-pdf-with-multiple-pictures</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Trouble with Travis</title>
         
           <description>&lt;p&gt;Today I learnt that Travis don’t like &lt;em&gt;tags&lt;/em&gt; with spaces in them. It took me over an hour to figure out, but there it is.&lt;/p&gt;

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Page Meta -->
+    <title>Creating a pdf with multiple pictures</title>
+    <meta name="description" content="my ramblings about *" />
+
+    <!-- Mobile Meta -->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Brand icon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" >
+
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!-- Ghost outputs important style and meta data with this tag -->
+        <link rel="canonical" href="//creating-a-pdf-with-multiple-pictures" />
+    <meta name="referrer" content="origin" />
+    <link rel="next" href="/page2/" />
+
+    <meta property="og:site_name" content="nothing gold can stay" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Creating a pdf with multiple pictures" />
+    <meta property="og:description" content="my ramblings about *" />
+    <meta property="og:url" content="//creating-a-pdf-with-multiple-pictures" />
+    <meta property="og:image" content="/assets/images/2021/08/2021-08-01-Finished-PDF-with-pictures.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Creating a pdf with multiple pictures" />
+    <meta name="twitter:description" content="my ramblings about *" />
+    <meta name="twitter:url" content="//creating-a-pdf-with-multiple-pictures" />
+    <meta name="twitter:image:src" content="/assets/images/2021/08/2021-08-01-Finished-PDF-with-pictures.jpg" />
+
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Website",
+    "publisher": "nothing gold can stay",
+    "name": "Creating a pdf with multiple pictures",
+    "url": "//creating-a-pdf-with-multiple-pictures",
+    "image": "/assets/images/2021/08/2021-08-01-Finished-PDF-with-pictures.jpg",
+    "description": "my ramblings about *"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.0.0" />
+    <link rel="alternate" type="application/rss+xml" title="nothing gold can stay" href="/feed.xml" />
+
+
+</head>
+<body class="home-template nav-closed">
+
+    <!-- The blog navigation links -->
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        <li class="nav-home " role="presentation"><a href="/">Home</a></li>
+        <li class="nav-about " role="presentation"><a href="/about">About</a></li>
+        <li class="nav-twitter role="presentation"><a href="https://twitter.com/haakoo">@haakoo</a></li>
+        <li class="nav-email role="presentation"><a href="mailto:haakoo@ifi.uio.no">email</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The comment above "< default" means - insert everything in this file into -->
+    <!-- the [body] of the default.hbs template, which contains our header/footer. -->
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<header class="main-header post-head " style="background-image: url(/assets/images/2021/08/2021-08-01-Finished-PDF-with-pictures.jpg) ">
+    <nav class="main-nav  overlay  clearfix">
+        
+        <a class="blog-logo text-logo" href="/">nothing gold can stay</a>
+        
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Creating a pdf with multiple pictures</h1>
+            <section class="post-meta">
+            <!-- <a href='/'></a> -->
+
+            
+                
+                    <a href='/author/haakoo'>Håkon K. Olafsen</a>
+                
+            
+            <time class="post-date" datetime="2021-08-01">01 Aug 2021</time>
+                <!-- [[tags prefix=" on "]] -->
+                
+                on
+                
+                    
+                       <a href='/tag/english'>English</a>,
+                    
+                
+                    
+                       <a href='/tag/adobe lightroom'>Adobe lightroom</a>,
+                    
+                
+                    
+                       <a href='/tag/markdown'>Markdown</a>,
+                    
+                
+                    
+                       <a href='/tag/pandoc'>Pandoc</a>
+                    
+                
+                
+            </section>
+        </header>
+
+        <section class="post-content">
+
+            <p>I needed to create a PDF with multiple pictures per page. The pictures had to be numbered and include a timestamp. All the photos were in Lightroom, which we use to manage our photos. Using a plugin, I added the necessary watermarks during export. Trying create a PDF with the 50 or so pictures in chronological order using Windows 10’s <em>print photo</em> didn’t work very well. I needed a different solution.</p>
+
+<p>Below, I’ll go through the different steps I used to create the PDF.</p>
+
+<h2 id="export-images-from-adobe-lightroom">Export images from Adobe Lightroom</h2>
+
+<p>First, I used a plugin called <a href="https://www.photographers-toolbox.com/products/lrmogrify2.php">LR/Mogrify 2</a> from <a href="https://www.photographers-toolbox.com/index.php">Photographer’s Toolbox</a> by Arctic Whiteness. This is a plugin that adds functionality to the export dialogue in Adobe Lightroom.</p>
+
+<p>The settings I used to create the two watermarks were:</p>
+
+<p><img src="assets\images\2021\08\2021-08-01-LR-Mogrify-plugin-settings01.png" alt="Settings to add the picture date as watermark" /></p>
+
+<p><img src="assets\images\2021\08\2021-08-01-LR-Mogrify-plugin-settings02.png" alt="Settings to add the picture number as watermark" /></p>
+
+<h2 id="creating-the-pdf">Creating the PDF</h2>
+
+<p>To create the PDF I used <a href="https://pandoc.org">Pandoc</a> to compile a very simple markdown file. The markdown file only contained image insertions as shown below:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![](</span><span class="sx">picture001.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+<span class="p">![](</span><span class="sx">picture002.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+<span class="p">![](</span><span class="sx">picture003.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+
+<span class="p">![](</span><span class="sx">picture004.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+<span class="p">![](</span><span class="sx">picture005.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+<span class="p">![](</span><span class="sx">picture006.jpg</span><span class="p">)</span>{width=33%}<span class="se">\ </span>
+
+...
+</code></pre></div></div>
+
+<p>I then compiled the markdown file to a PDF using the following pandoc command:</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">pandoc document.md -V geometry:margin=10mm -V papersize=a4 -f markdown -o document.pdf
+</span></code></pre></div></div>
+
+<p>I’ve created an example file (<a href="assets\files\2021\08\2021-08-01-Finished-PDF-with-pictures.pdf">2021-08-01-Finished-PDF-with-pictures.pdf</a> (13 MB)) sporting our dog <a href="https://www.instagram.com/odinthevikingtoller">Odin the Viking Toller</a>.</p>
+
+
+        </section>
+
+        <footer class="post-footer">
+
+            <!-- Everything inside the #author tags pulls data from the author -->
+            <!-- #author-->
+            
+                
+                    
+                        <figure class="author-image">
+                            <a class="img" href="/author/haakoo" style="background-image: url(/assets/images/haakoo.jpg)"><span class="hidden">haakoo's Picture</span></a>
+                        </figure>
+                    
+
+                    <section class="author">
+                        <h4><a href="/author/haakoo">Håkon K. Olafsen</a></h4>
+
+                        
+                            <p> Awesome Norwegian guy</p>
+                        
+                        <div class="author-meta">
+                            <span class="author-location icon-location"> Oslo, Norway</span>
+                            <span class="author-link icon-link"><a href="https://blog.hakonkolafsen.no/"> blog.hakonkolafsen.no</a></span>
+                        </div>
+                    </section>
+
+                    <!-- /author  -->
+
+                    <section class="share">
+                        <h4>Share this post</h4>
+                        <a class="icon-twitter" href="http://twitter.com/share?text=Creating a pdf with multiple pictures&amp;url=creating-a-pdf-with-multiple-pictures"
+                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                            <span class="hidden">Twitter</span>
+                        </a>
+                        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=creating-a-pdf-with-multiple-pictures"
+                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                            <span class="hidden">Facebook</span>
+                        </a>
+                    </section>
+                
+            
+
+            <!-- Add Disqus Comments -->
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+<aside class="read-next">
+
+    <!-- [[! next_post ]] -->
+    
+    <!-- [[! /next_post ]] -->
+    <!-- [[! prev_post ]] -->
+    
+        <a class="read-next-story prev " style="background-image: url(/assets/images/2019/12/Travis-silent-build-fail.png)" href="/trouble-with-travis">
+            <section class="post">
+                <h2>Trouble with Travis</h2>
+                <p>Today I learnt that Travis don’t like tags with spaces in them. It took me...</p>
+            </section>
+        </a>
+    
+    <!-- [[! /prev_post ]] -->
+</aside>
+
+<!-- /post -->
+
+
+        <!-- The tiny footer at the very bottom -->
+        <footer class="site-footer clearfix">
+          <!-- <section class="copyright"><a href="/">nothing gold can stay</a> &copy; 2021</section> -->
+          <section class="copyright">The content on this website, of which Håkon K. Olafsen is the author, is licensed under<br /> Creative Commons <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</a></section>
+          <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/jekyller/jasper">Jasper</a></section>
+        </footer>
+    </div>
+    <!-- highlight.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- jQuery needs to come before `` so that jQuery can be used in code injection -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Ghost outputs important scripts and data with this tag -->
+    <!--  -->
+    <!-- Add Google Analytics  -->
+        <!-- Google Analytics Tracking code -->
+     <script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	    ga('create', '', 'auto');
+	    ga('send', 'pageview');
+
+     </script>
+    <!-- Fitvids makes video embeds responsive and awesome -->
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <!-- The main JavaScript file for Casper -->
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>
